@@ -143,7 +143,7 @@ static uint32   uiLED_SEGBlinkDly   = 0;
 * 其它    ：
 * 生成时间：2017-10-15 11:5
 ****************************************************************************************/
-static void Led_Display(uint8 value)
+static void Led_Display(uint16 value)
 {
 	//煤气泄露图标 aucSEG_CurServiceValue[0]/[1]还包括数码管的数字
 	if (value & LED_DIS_GAS_LEAK)
@@ -157,15 +157,15 @@ static void Led_Display(uint8 value)
 		aucSEG_CurServiceValue[1] &= (~HT1621_USER_DEF_VALUE);
 	}
 	
-//	//T9 气阀关闭状态
-//	if (value & LED_DIS_GASCHECK)
-//	{
-//		aucSEG_CurServiceValue[3] |= SEG_SIGN_GASCHECK_VALUE;
-//	}
-//	else
-//	{
-//		aucSEG_CurServiceValue[3] &= (~SEG_SIGN_GASCHECK_VALUE);
-//	}
+	//T9 气阀关闭状态
+	if (value & LED_DIS_GASCHECK)
+	{
+		aucSEG_CurServiceValue[3] |= SEG_SIGN_GASCHECK_VALUE;
+	}
+	else
+	{
+		aucSEG_CurServiceValue[3] &= (~SEG_SIGN_GASCHECK_VALUE);
+	}
 	
 	//右边三个图标
 	//value为状态值   
@@ -221,7 +221,7 @@ static void Led_Display(uint8 value)
 * 其它    ：
 * 生成时间：2017-10-15 11:5
 ****************************************************************************************/
-void Led_DisplayOn(uint8 value)
+void Led_DisplayOn(uint16 value)
 {
 	ucLed_DisValue |= value;
 }
@@ -234,7 +234,7 @@ void Led_DisplayOn(uint8 value)
 * 其它    ：
 * 生成时间：2017-10-15 11:5
 ****************************************************************************************/
-void Led_DisplayOff(uint8 value)
+void Led_DisplayOff(uint16 value)
 {
 	ucLed_DisValue &= (~value);
 }
@@ -387,7 +387,7 @@ static void Led_DisplayService(void)
 
 /****************************************************************************************
 * 函数名称：
-* 功能描述: 
+* 功能描述: 更新SEG值
 * 入口参数：
 * 返回值  ：
 * 其它    ：
@@ -475,7 +475,7 @@ static void LED_SEG_Service(void)
 			if (2 == count)
 			{
 				bLED_DotBlinkState = ret;
-
+				//数码管数据进行操作
 				if (ret)
 					aucSEG_CurServiceValue[count] = a_pHT1621_CodeTab[count][value[count]] | HT1621_USER_DEF_VALUE;
 				else

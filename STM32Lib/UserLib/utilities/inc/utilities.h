@@ -28,6 +28,7 @@
 //CRC
 #define     CRC_INITIAL                 0xFFFF                  //Initial FCS value
 #define     CHECK_SUM                   0xF0B8                  //Good final FCS value
+//#define     CHECK_SUM                   0x0000                  //Good final FCS value
 
 #define     CRC16_INITIAL               0xFFFF                  //crc16校验初始值
 #define     CRC16_CHECK_SUM             0x0                     //crc16校验结果，连校验位一起校验后

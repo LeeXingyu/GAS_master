@@ -32,9 +32,11 @@
 /* 全局变量声明 -----------------------------------------------------------------------*/
 static BOOL	bGasStove_FireState = FALSE;
 static BOOL bCooker_SysIdMatchState = FALSE;
-
+static BOOL bGasStove_BatState = FALSE;
+static BOOL bGasStove_GasCtrlState = FALSE;
 static uint32 uiFireState_ChkDly = 0;
-
+static uint32 uiBatState_ChkDly = 0;
+static uint32 uiGasCtrlState_ChkDly = 0;
 /* 静态变量定义 -----------------------------------------------------------------------*/
 
 /****************************************************************************************
@@ -79,7 +81,7 @@ void GasStove_Flameout(void)
 {
 	Cooker_Parse_t entity;
 
-	entity.cmd			= eCOOKER_CTRL_FIRE;
+	entity.cmd			= eCOOKER_CTRL_Gas;
 	entity.payload[0]	= COOKER_PARSE_FALSE;
 	entity.length		= 1;
 
@@ -121,7 +123,7 @@ BOOL Cooker_SysIdMatchResult(void)
 
 /****************************************************************************************
 * 函数名称：Cooker_AFNChk()
-* 功能描述: 
+* 功能描述: 对从机信号的cmd进行分析
 * 入口参数：
 * 返回值  ：
 * 其它    ：
@@ -133,6 +135,7 @@ void Cooker_AFNChk(Cooker_Parse_t *entity)
 	{
 		case eCOOKER_SET_SYS_ID:
 		{
+			//对码成功
 			bCooker_SysIdMatchState = TRUE;
 		}
 		break;
@@ -159,18 +162,78 @@ void Cooker_AFNChk(Cooker_Parse_t *entity)
 			}
 		}
 		break;
-		case eCOOKER_CTRL_FIRE:
+		case eCOOKER_CTRL_Gas:    //气阀控制
 		{
+			if (1 == entity->length)
+			{
+				if (COOKER_PARSE_FALSE == entity->payload[0])
+				{
+					Led_DisplayOn(LED_DIS_GASCHECK);
+					bGasStove_GasCtrlState = TRUE;
+				}
+				else
+				{
+					Led_DisplayOff(LED_DIS_GASCHECK);
+					bGasStove_GasCtrlState = FALSE;
+				}
+				uiGasCtrlState_ChkDly = BSP_OS_TimeGet();
 
+			}
 		}
 		break;
-		//case eCOOKER_RSP:
-		//{
+		case eCOOKER_STATE_Gas:        //气压状态
+		{
+			if (1 == entity->length)
+			{
+				if (COOKER_PARSE_TRUE == entity->payload[0])
+				{
+					Led_DisplayOn(LED_DIS_GAS_FIRE);
+					bGasStove_FireState = TRUE;
+				}
+				else
+				{
+					Led_DisplayOff(LED_DIS_GAS_FIRE);
+					bGasStove_FireState = FALSE;
+				}
+				uiFireState_ChkDly = BSP_OS_TimeGet();
 
-		//}
-		//break;
+			}
+		}
+		break;
+		case eCOOKER_STATE_Bat:
+		{
+			if (1 == entity->length)
+			{
+				if (COOKER_PARSE_FALSE == entity->payload[0])				
+				{
+					Led_DisplayOn(LED_DIS_BATTERY);
+					bGasStove_BatState = TRUE;
+				}
+				else
+				{
+					Led_DisplayOff(LED_DIS_BATTERY);
+					bGasStove_BatState = FALSE;
+				}
+				uiBatState_ChkDly = BSP_OS_TimeGet();
+			}	
+		}
+		break;
 		default: break;
 	}
+}
+
+void GasStove_GasBatStateChkService(void)
+{
+	if((!bGasStove_BatState) && (BSP_OS_Timeout(uiBatState_ChkDly, GSA_STOVE_OFF_FIRE_TIME)))
+	{
+		Led_DisplayOff(LED_DIS_BATTERY);
+		bGasStove_BatState = FALSE;
+	} 
+	if((!bGasStove_GasCtrlState) && (BSP_OS_Timeout(uiGasCtrlState_ChkDly, GSA_STOVE_OFF_FIRE_TIME)))
+	{
+		Led_DisplayOff(LED_DIS_BATTERY);
+		bGasStove_BatState = FALSE;
+	} 	
 }
 
 

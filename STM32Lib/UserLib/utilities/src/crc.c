@@ -79,7 +79,7 @@ const static uint16 crc16_ccitt_table[256] =
 * 其它    : 校准结果
 ****************************************************************************************/
 uint16 crc16_ccitt_byte(uint16 check, uint8 dat)
-{
+{ 
     //uint8 i;
 
     //check ^= dat;
@@ -90,9 +90,24 @@ uint16 crc16_ccitt_byte(uint16 check, uint8 dat)
 
     //return (check);
 
+   //CRC16-X25
 	check = (check >> 8) ^ crc16_ccitt_table[(check ^ dat) & 0xFF];
+  
+  //CRC16-modus
+//        unsigned int j, tmp;
+//        check ^= dat;
+//        for (j = 0; j < 8; j++)
+//        {
+//            tmp = (unsigned int)(check & 0x0001);
+//            check >>= 1;
+//            if (tmp == 1)
+//            {
+//                check ^= 0x0000;    //异或多项式
+//            }
+//        }
 
-	return (check);
+
+	      return (check);
 }
 
 /****************************************************************************************

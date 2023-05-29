@@ -52,16 +52,17 @@ extern void GasStove_Init(void);
 
 extern void Cooker_ExtPinGPIOInit(void);
 extern void FanRotation_Service(void);
-
+extern void GasStove_GasBatStateChkService(void);
 extern void GasStove_FireStateChkService(void);
 extern void Cooker_WirelessSendLoad(char *load, unsigned int len);
 extern void LED_SEG_Service(void);
-
+extern void bat_dis(void);
 /* 全局变量声明 -----------------------------------------------------------------------*/
-
+char i = 0;
 /* 静态变量定义 -----------------------------------------------------------------------*/
 extern unsigned int Cooker_Load(Cooker_Parse_t *entity);
 extern void TM1650_GPIOInit(void);
+extern void GasStove_Flameout(void);
 Cooker_Parse_t entity;
 
 /****************************************************************************************
@@ -118,46 +119,50 @@ int main(void)
 //	Package_SX1212_Init();
     while (1)
     {
+			
 #if (defined(CODE_DEBUG))
         CLI_SerialAppTask();
 #endif  //#if (defined(CODE_DEBUG))
 
 		FanRotation_Service();
 		HT1621_SignService();
-			
-//		{
-//			unsigned char rc = ERROR;
+		for(i = 0; i<30; i++)	
+		{
+			unsigned char rc = ERROR;
 
-//			ReceiveRfFrame((unsigned char *)(&RF_Pkt), sizeof(RF_Pkt), &rc);
-//			if(rc == OK)
-//			{
-//                uint16 count;
-//                
-//				APP_TRACE("\n1.接收到数据, KEY: %u->", (unsigned int)RF_Pkt.key);
+			ReceiveRfFrame((unsigned char *)(&RF_Pkt), sizeof(RF_Pkt), &rc);
+			if(rc == OK)
+			{
+                uint16 count;
+                
+				APP_TRACE("\n1.接收到数据, KEY: %u->", (unsigned int)RF_Pkt.key);
 
-//                count = 0;
-//				while (count < RF_Pkt.key)
-//				{
-//						APP_TRACE("%02X ", RF_Pkt.fill[count]);
-//						count++;
-//				}
-//				APP_TRACE("\r\n");
-//                
-//				count = 0;
-//				while (count < RF_Pkt.key)
-//				{
-//					Cooker_Parse(RF_Pkt.fill[count++]);  
-//				}
-//			}
-//		}
+                count = 0;
+				while (count < RF_Pkt.key)
+				{
+						APP_TRACE("%02X ", RF_Pkt.fill[count]);
+						count++;
+				}
+				APP_TRACE("\r\n");
+                
+				count = 0;
+				while (count < RF_Pkt.key)
+				{
+					Cooker_Parse(RF_Pkt.fill[count++]);  
+				}
+				break;
+			}
 
-//		ChordTone_CtrlService();
+		} 
 
-//		KeyBoard_Service();
-//		
+		ChordTone_CtrlService();
+
+		KeyBoard_Service();
+		
 		GasStove_DisplayService();
 
-//		GasStove_FireStateChkService();
+		GasStove_FireStateChkService();
+		GasStove_GasBatStateChkService();	
     }
 }
 

@@ -401,7 +401,7 @@ static BOOL bChordTone_Running = FALSE;
 ****************************************************************************************/
 void ChordTone_CtrlService(void)
 {
-	static ChordTone_t	tTone;
+/*	static ChordTone_t	tTone;
 	static uint32		uiChordTone_RunDly = 0;
 
 	if (BSP_OS_Timeout(uiChordTone_RunDly, 10))
@@ -467,7 +467,7 @@ void ChordTone_CtrlService(void)
             bChordTone_Running = FALSE; 
         }
         break;
-	}
+	}*/
 }
 
 /****************************************************************************************
@@ -480,7 +480,7 @@ void ChordTone_CtrlService(void)
 ****************************************************************************************/
 void ChordTone_Start(ChordTone_Music_e eMusic)
 {
-	BOOL ret = TRUE;
+/*	BOOL ret = TRUE;
 
     if (bChordTone_Running)
     {
@@ -531,7 +531,7 @@ void ChordTone_Start(ChordTone_Music_e eMusic)
 	}
 
 	if (ret)
-		ucBuzzerState = BUZZER_STATE_START;
+		ucBuzzerState = BUZZER_STATE_START;*/
 }
 
 /****************************************************************************************

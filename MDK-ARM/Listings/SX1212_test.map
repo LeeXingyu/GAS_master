@@ -26,7 +26,15 @@ Section Cross References
     app.o(i.main) refers to sx1212.o(i._SpiConfig) for _SpiConfig
     app.o(i.main) refers to platform_extpin.o(i.FanRotation_Service) for FanRotation_Service
     app.o(i.main) refers to ht1621.o(i.HT1621_SignService) for HT1621_SignService
+    app.o(i.main) refers to sx1212.o(i.ReceiveRfFrame) for ReceiveRfFrame
+    app.o(i.main) refers to cooker_parse.o(i.Cooker_Parse) for Cooker_Parse
+    app.o(i.main) refers to chordtone.o(i.ChordTone_CtrlService) for ChordTone_CtrlService
+    app.o(i.main) refers to keyboard.o(i.KeyBoard_Service) for KeyBoard_Service
     app.o(i.main) refers to gasstove_service.o(i.GasStove_DisplayService) for GasStove_DisplayService
+    app.o(i.main) refers to cooker_extafn.o(i.GasStove_FireStateChkService) for GasStove_FireStateChkService
+    app.o(i.main) refers to cooker_extafn.o(i.GasStove_GasBatStateChkService) for GasStove_GasBatStateChkService
+    app.o(i.main) refers to app.o(.data) for i
+    app.o(i.main) refers to sx1212.o(.bss) for RF_Pkt
     gasstove_service.o(i.GasStove_AlarmChk) refers to platform_extpin.o(i.GasStove_FanRotation) for GasStove_FanRotation
     gasstove_service.o(i.GasStove_AlarmChk) refers to ht1621.o(i.Led_DisplayOn) for Led_DisplayOn
     gasstove_service.o(i.GasStove_AlarmChk) refers to ht1621.o(i.Led_DisplayOff) for Led_DisplayOff
@@ -393,27 +401,16 @@ Section Cross References
     sx1212.o(i.SpiInOut) refers to platform_sx1212.o(i.SX1212_MOSISet) for SX1212_MOSISet
     sx1212.o(i.SpiInOut) refers to platform_sx1212.o(i.SX1212_SCKSet) for SX1212_SCKSet
     sx1212.o(i.SpiInOut) refers to platform_sx1212.o(i.SX1212_MISOGet) for SX1212_MISOGet
+    sx1212.o(i.Updata_Awaken_Config) refers to sx1212.o(i._SpiConfig) for _SpiConfig
+    sx1212.o(i.Updata_Normal_Config) refers to sx1212.o(i._SpiConfig) for _SpiConfig
     sx1212.o(i._SpiConfig) refers to platform_sx1212.o(i.SX1212_NSSCfgSet) for SX1212_NSSCfgSet
     sx1212.o(i._SpiConfig) refers to platform_sx1212.o(i.SX1212_NSSDataSet) for SX1212_NSSDataSet
     sx1212.o(i._SpiConfig) refers to platform_sx1212.o(i.SX1212_MOSISet) for SX1212_MOSISet
     sx1212.o(i._SpiConfig) refers to platform_sx1212.o(i.SX1212_SCKSet) for SX1212_SCKSet
     sx1212.o(i._SpiConfig) refers to sx1212.o(i.SpiInOut) for SpiInOut
-    chordtone.o(i.ChordTone_CtrlService) refers to stm32fxxx_misc.o(i.BSP_OS_Timeout) for BSP_OS_Timeout
-    chordtone.o(i.ChordTone_CtrlService) refers to stm32fxxx_misc.o(i.BSP_OS_TimeGet) for BSP_OS_TimeGet
-    chordtone.o(i.ChordTone_CtrlService) refers to platform_chordtone.o(i.Buzzer_PwrOn) for Buzzer_PwrOn
-    chordtone.o(i.ChordTone_CtrlService) refers to platform_chordtone.o(i.ChordTone_PWMEnable) for ChordTone_PWMEnable
-    chordtone.o(i.ChordTone_CtrlService) refers to platform_chordtone.o(i.Buzzer_PwrOff) for Buzzer_PwrOff
-    chordtone.o(i.ChordTone_CtrlService) refers to platform_chordtone.o(i.ChordTone_PWMDisable) for ChordTone_PWMDisable
-    chordtone.o(i.ChordTone_CtrlService) refers to chordtone.o(.data) for uiChordTone_RunDly
-    chordtone.o(i.ChordTone_CtrlService) refers to chordtone.o(.bss) for tTone
     chordtone.o(i.ChordTone_Init) refers to platform_chordtone.o(i.Buzzer_GPIOInit) for Buzzer_GPIOInit
     chordtone.o(i.ChordTone_Init) refers to platform_chordtone.o(i.ChordTone_PWMDevInit) for ChordTone_PWMDevInit
     chordtone.o(i.ChordTone_Init) refers to platform_chordtone.o(i.Buzzer_PwrOff) for Buzzer_PwrOff
-    chordtone.o(i.ChordTone_Start) refers to stm32fxxx_misc.o(i.__ARM_common_switch8) for __ARM_common_switch8
-    chordtone.o(i.ChordTone_Start) refers to platform_chordtone.o(i.Buzzer_PwrOff) for Buzzer_PwrOff
-    chordtone.o(i.ChordTone_Start) refers to platform_chordtone.o(i.ChordTone_PWMDisable) for ChordTone_PWMDisable
-    chordtone.o(i.ChordTone_Start) refers to chordtone.o(.data) for bChordTone_Running
-    chordtone.o(i.ChordTone_Start) refers to chordtone.o(.constdata) for a_tChordTone_1_SingleSong
     keyboard.o(i.KeyBoard_FunReg) refers to keyboard.o(.bss) for a_pfnKeyBoard_Fun
     keyboard.o(i.KeyBoard_InState) refers to stm32f0xx_gpio.o(i.GPIO_ReadInputDataBit) for GPIO_ReadInputDataBit
     keyboard.o(i.KeyBoard_Init) refers to stm32f0xx_rcc.o(i.RCC_AHBPeriphClockCmd) for RCC_AHBPeriphClockCmd
@@ -451,6 +448,7 @@ Section Cross References
     rtc.o(i.rtc_init) refers to stm32fxxx_rtc.o(i.STM32Fxxx_RTCInit) for STM32Fxxx_RTCInit
     rtc.o(i.set_rtc) refers to utilities.o(i.CheckRTCRight) for CheckRTCRight
     rtc.o(i.set_rtc) refers to stm32fxxx_rtc.o(i.BSP_RTCSet) for BSP_RTCSet
+    cooker_extafn.o(i.Cooker_AFNChk) refers to stm32fxxx_misc.o(i.__ARM_common_switch8) for __ARM_common_switch8
     cooker_extafn.o(i.Cooker_AFNChk) refers to ht1621.o(i.Led_DisplayOn) for Led_DisplayOn
     cooker_extafn.o(i.Cooker_AFNChk) refers to ht1621.o(i.Led_DisplayOff) for Led_DisplayOff
     cooker_extafn.o(i.Cooker_AFNChk) refers to stm32fxxx_misc.o(i.BSP_OS_TimeGet) for BSP_OS_TimeGet
@@ -464,6 +462,9 @@ Section Cross References
     cooker_extafn.o(i.GasStove_FireStateChkService) refers to ht1621.o(i.Led_DisplayOff) for Led_DisplayOff
     cooker_extafn.o(i.GasStove_FireStateChkService) refers to cooker_extafn.o(.data) for bGasStove_FireState
     cooker_extafn.o(i.GasStove_Flameout) refers to cooker_parse.o(i.Cooker_Load) for Cooker_Load
+    cooker_extafn.o(i.GasStove_GasBatStateChkService) refers to stm32fxxx_misc.o(i.BSP_OS_Timeout) for BSP_OS_Timeout
+    cooker_extafn.o(i.GasStove_GasBatStateChkService) refers to ht1621.o(i.Led_DisplayOff) for Led_DisplayOff
+    cooker_extafn.o(i.GasStove_GasBatStateChkService) refers to cooker_extafn.o(.data) for bGasStove_BatState
     cooker_parse.o(i.CookerParse_Addr) refers to cooker_parse.o(.data) for usCooker_ParseLength
     cooker_parse.o(i.CookerParse_Addr) refers to cooker_parse.o(.bss) for tCooker_Entity
     cooker_parse.o(i.CookerParse_Check) refers to cooker_parse.o(i.Cooker_GetId) for Cooker_GetId
@@ -808,6 +809,7 @@ Removing Unused input sections from the image.
     Removing stm32f0xx_tim.o(i.TIM_ClearOC4Ref), (20 bytes).
     Removing stm32f0xx_tim.o(i.TIM_Cmd), (28 bytes).
     Removing stm32f0xx_tim.o(i.TIM_CounterModeConfig), (24 bytes).
+    Removing stm32f0xx_tim.o(i.TIM_CtrlPWMOutputs), (34 bytes).
     Removing stm32f0xx_tim.o(i.TIM_DMACmd), (20 bytes).
     Removing stm32f0xx_tim.o(i.TIM_DMAConfig), (12 bytes).
     Removing stm32f0xx_tim.o(i.TIM_DeInit), (260 bytes).
@@ -834,6 +836,7 @@ Removing Unused input sections from the image.
     Removing stm32f0xx_tim.o(i.TIM_ITRxExternalClockConfig), (24 bytes).
     Removing stm32f0xx_tim.o(i.TIM_InternalClockConfig), (16 bytes).
     Removing stm32f0xx_tim.o(i.TIM_OC1FastConfig), (24 bytes).
+    Removing stm32f0xx_tim.o(i.TIM_OC1Init), (148 bytes).
     Removing stm32f0xx_tim.o(i.TIM_OC1NPolarityConfig), (24 bytes).
     Removing stm32f0xx_tim.o(i.TIM_OC1PolarityConfig), (24 bytes).
     Removing stm32f0xx_tim.o(i.TIM_OC1PreloadConfig), (24 bytes).
@@ -929,36 +932,21 @@ Removing Unused input sections from the image.
     Removing stm32f0xx_usart.o(i.USART_SmartCardNACKCmd), (24 bytes).
     Removing stm32f0xx_usart.o(i.USART_StopModeWakeUpSourceConfig), (18 bytes).
     Removing stm32f0xx_usart.o(i.USART_StructInit), (24 bytes).
-    Removing sx1212.o(i.ReceiveRfFrame), (104 bytes).
-    Removing chordtone.o(i.ChordTone_CtrlService), (244 bytes).
-    Removing chordtone.o(.bss), (12 bytes).
+    Removing sx1212.o(i.Updata_Awaken_Config), (36 bytes).
+    Removing sx1212.o(i.Updata_Normal_Config), (36 bytes).
+    Removing chordtone.o(.constdata), (2472 bytes).
+    Removing chordtone.o(.data), (9 bytes).
     Removing keyboard.o(.rev16_text), (4 bytes).
     Removing keyboard.o(.revsh_text), (4 bytes).
-    Removing keyboard.o(i.KeyBoard_InState), (96 bytes).
-    Removing keyboard.o(i.KeyBoard_Service), (292 bytes).
-    Removing keyboard.o(.constdata), (5 bytes).
-    Removing keyboard.o(.data), (8 bytes).
-    Removing cooker_extafn.o(i.Cooker_AFNChk), (112 bytes).
-    Removing cooker_extafn.o(i.GasStove_FireStateChkService), (52 bytes).
-    Removing cooker_parse.o(i.CookerParse_Addr), (52 bytes).
-    Removing cooker_parse.o(i.CookerParse_Check), (80 bytes).
-    Removing cooker_parse.o(i.CookerParse_Cmd), (36 bytes).
-    Removing cooker_parse.o(i.CookerParse_Header), (28 bytes).
-    Removing cooker_parse.o(i.CookerParse_Length), (20 bytes).
-    Removing cooker_parse.o(i.CookerParse_Nop), (2 bytes).
-    Removing cooker_parse.o(i.CookerParse_Payload), (64 bytes).
     Removing cooker_parse.o(i.Cooker_AFNChk), (2 bytes).
-    Removing cooker_parse.o(i.Cooker_Parse), (152 bytes).
-    Removing cooker_parse.o(.bss), (44 bytes).
-    Removing cooker_parse.o(.constdata), (28 bytes).
-    Removing cooker_parse.o(.data), (16 bytes).
     Removing platform_sx1212.o(.rev16_text), (4 bytes).
     Removing platform_sx1212.o(.revsh_text), (4 bytes).
-    Removing platform_sx1212.o(i.SX1212_IRQ0Get), (24 bytes).
     Removing platform_chordtone.o(.rev16_text), (4 bytes).
     Removing platform_chordtone.o(.revsh_text), (4 bytes).
     Removing platform_chordtone.o(i.Buzzer_PwrOn), (20 bytes).
+    Removing platform_chordtone.o(i.ChordTone_PWMDisable), (76 bytes).
     Removing platform_chordtone.o(i.ChordTone_PWMEnable), (172 bytes).
+    Removing platform_chordtone.o(.data), (5 bytes).
     Removing platform_extpin.o(.rev16_text), (4 bytes).
     Removing platform_extpin.o(.revsh_text), (4 bytes).
     Removing platform_ht1621.o(.rev16_text), (4 bytes).
@@ -990,7 +978,7 @@ Removing Unused input sections from the image.
     Removing crc.o(i.crc16_ccitt_block), (44 bytes).
     Removing crc.o(i.crc_block_ethernet), (216 bytes).
 
-393 unused section(s) (total 16093 bytes) removed from the image.
+380 unused section(s) (total 17438 bytes) removed from the image.
 
 ==============================================================================
 
@@ -1002,21 +990,21 @@ Image Symbol Table
 
     ../clib/microlib/division.c              0x00000000   Number         0  uidiv.o ABSOLUTE
     ../clib/microlib/division.c              0x00000000   Number         0  idiv.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7a.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7b.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9b.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8a.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8b.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9a.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry2.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7a.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry5.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9b.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10a.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11a.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11b.o ABSOLUTE
-    ../clib/microlib/string/memcpy.c         0x00000000   Number         0  memcpya.o ABSOLUTE
     ../clib/microlib/string/memcpy.c         0x00000000   Number         0  memcpyb.o ABSOLUTE
+    ../clib/microlib/string/memcpy.c         0x00000000   Number         0  memcpya.o ABSOLUTE
     ../clib/microlib/string/memset.c         0x00000000   Number         0  memseta.o ABSOLUTE
     ..\STM32Lib\STM32_Device_Lib\CMSIS\CM0\Device\ST\STM32F0xx\Source\Templates\arm\startup_stm32f051.s 0x00000000   Number         0  startup_stm32f051.o ABSOLUTE
     ..\STM32Lib\STM32_Device_Lib\CMSIS\CM0\Device\ST\STM32F0xx\Source\Templates\system_stm32f0xx.c 0x00000000   Number         0  system_stm32f0xx.o ABSOLUTE
@@ -1105,306 +1093,319 @@ Image Symbol Table
     i.CRC_CalcCRC                            0x0800032c   Section        0  stm32f0xx_crc.o(i.CRC_CalcCRC)
     i.CRC_ResetDR                            0x0800033c   Section        0  stm32f0xx_crc.o(i.CRC_ResetDR)
     i.CheckRTCRight                          0x08000350   Section        0  utilities.o(i.CheckRTCRight)
-    i.ChordTone_Init                         0x080003fa   Section        0  chordtone.o(i.ChordTone_Init)
+    i.ChordTone_CtrlService                  0x080003fa   Section        0  chordtone.o(i.ChordTone_CtrlService)
+    i.ChordTone_Init                         0x080003fc   Section        0  chordtone.o(i.ChordTone_Init)
     i.ChordTone_PWMDevInit                   0x0800040c   Section        0  platform_chordtone.o(i.ChordTone_PWMDevInit)
-    i.ChordTone_PWMDisable                   0x08000448   Section        0  platform_chordtone.o(i.ChordTone_PWMDisable)
-    i.ChordTone_Start                        0x08000494   Section        0  chordtone.o(i.ChordTone_Start)
-    i.Cooker_ExtPinGPIOInit                  0x080005e8   Section        0  platform_extpin.o(i.Cooker_ExtPinGPIOInit)
-    i.Cooker_GetId                           0x08000622   Section        0  cooker_parse.o(i.Cooker_GetId)
-    i.Cooker_Load                            0x08000638   Section        0  cooker_parse.o(i.Cooker_Load)
-    i.Cooker_SysIdMatch                      0x080006f4   Section        0  cooker_extafn.o(i.Cooker_SysIdMatch)
-    i.Cooker_SysIdMatchResult                0x08000714   Section        0  cooker_extafn.o(i.Cooker_SysIdMatchResult)
-    i.Cooker_WirelessSendLoad                0x08000720   Section        0  cooker_parse.o(i.Cooker_WirelessSendLoad)
-    i.FLASH_ClearFlag                        0x08000750   Section        0  stm32f0xx_flash.o(i.FLASH_ClearFlag)
-    i.FLASH_ErasePage                        0x0800075c   Section        0  stm32f0xx_flash.o(i.FLASH_ErasePage)
-    i.FLASH_GetStatus                        0x080007a8   Section        0  stm32f0xx_flash.o(i.FLASH_GetStatus)
-    i.FLASH_Lock                             0x080007e4   Section        0  stm32f0xx_flash.o(i.FLASH_Lock)
-    i.FLASH_ProgramWord                      0x080007f8   Section        0  stm32f0xx_flash.o(i.FLASH_ProgramWord)
-    i.FLASH_Unlock                           0x08000864   Section        0  stm32f0xx_flash.o(i.FLASH_Unlock)
-    i.FLASH_WaitForLastOperation             0x08000888   Section        0  stm32f0xx_flash.o(i.FLASH_WaitForLastOperation)
-    i.FanRotation_Level                      0x080008b0   Section        0  platform_extpin.o(i.FanRotation_Level)
-    FanRotation_Level                        0x080008b1   Thumb Code    24  platform_extpin.o(i.FanRotation_Level)
-    i.FanRotation_Service                    0x080008c8   Section        0  platform_extpin.o(i.FanRotation_Service)
-    i.GPIO_Init                              0x0800090c   Section        0  stm32f0xx_gpio.o(i.GPIO_Init)
-    i.GPIO_PinAFConfig                       0x0800099c   Section        0  stm32f0xx_gpio.o(i.GPIO_PinAFConfig)
-    i.GPIO_ReadInputDataBit                  0x080009e0   Section        0  stm32f0xx_gpio.o(i.GPIO_ReadInputDataBit)
-    i.GPIO_ResetBits                         0x080009f4   Section        0  stm32f0xx_gpio.o(i.GPIO_ResetBits)
-    i.GPIO_SetBits                           0x080009f8   Section        0  stm32f0xx_gpio.o(i.GPIO_SetBits)
-    i.GasStove_AlarmChk                      0x080009fc   Section        0  gasstove_service.o(i.GasStove_AlarmChk)
-    GasStove_AlarmChk                        0x080009fd   Thumb Code   382  gasstove_service.o(i.GasStove_AlarmChk)
-    i.GasStove_DisRTC                        0x08000bb8   Section        0  gasstove_service.o(i.GasStove_DisRTC)
-    GasStove_DisRTC                          0x08000bb9   Thumb Code   208  gasstove_service.o(i.GasStove_DisRTC)
-    i.GasStove_DisSet                        0x08000ca8   Section        0  gasstove_service.o(i.GasStove_DisSet)
-    GasStove_DisSet                          0x08000ca9   Thumb Code   102  gasstove_service.o(i.GasStove_DisSet)
-    i.GasStove_DisSetButton                  0x08000d28   Section        0  gasstove_service.o(i.GasStove_DisSetButton)
-    GasStove_DisSetButton                    0x08000d29   Thumb Code   338  gasstove_service.o(i.GasStove_DisSetButton)
-    i.GasStove_DisSettingEndTime             0x08000ec4   Section        0  gasstove_service.o(i.GasStove_DisSettingEndTime)
-    GasStove_DisSettingEndTime               0x08000ec5   Thumb Code    76  gasstove_service.o(i.GasStove_DisSettingEndTime)
-    i.GasStove_DisSettingRTC                 0x08000f18   Section        0  gasstove_service.o(i.GasStove_DisSettingRTC)
-    GasStove_DisSettingRTC                   0x08000f19   Thumb Code    16  gasstove_service.o(i.GasStove_DisSettingRTC)
-    i.GasStove_DisSettingStartTime           0x08000f2c   Section        0  gasstove_service.o(i.GasStove_DisSettingStartTime)
-    GasStove_DisSettingStartTime             0x08000f2d   Thumb Code    76  gasstove_service.o(i.GasStove_DisSettingStartTime)
-    i.GasStove_DisTiming                     0x08000f80   Section        0  gasstove_service.o(i.GasStove_DisTiming)
-    GasStove_DisTiming                       0x08000f81   Thumb Code   190  gasstove_service.o(i.GasStove_DisTiming)
-    i.GasStove_DisplayService                0x0800105c   Section        0  gasstove_service.o(i.GasStove_DisplayService)
-    i.GasStove_ExtEnsure                     0x08001104   Section        0  gasstove_service.o(i.GasStove_ExtEnsure)
-    GasStove_ExtEnsure                       0x08001105   Thumb Code   260  gasstove_service.o(i.GasStove_ExtEnsure)
-    i.GasStove_FanRotation                   0x08001240   Section        0  platform_extpin.o(i.GasStove_FanRotation)
-    i.GasStove_FireState                     0x0800124c   Section        0  cooker_extafn.o(i.GasStove_FireState)
-    i.GasStove_Flameout                      0x08001258   Section        0  cooker_extafn.o(i.GasStove_Flameout)
-    i.GasStove_GasSensor                     0x08001272   Section        0  platform_extpin.o(i.GasStove_GasSensor)
-    i.GasStove_GasSensorAlarmCancle          0x0800128c   Section        0  gasstove_service.o(i.GasStove_GasSensorAlarmCancle)
-    GasStove_GasSensorAlarmCancle            0x0800128d   Thumb Code    18  gasstove_service.o(i.GasStove_GasSensorAlarmCancle)
-    i.GasStove_GasSensorAlarmChk             0x080012a4   Section        0  gasstove_service.o(i.GasStove_GasSensorAlarmChk)
-    GasStove_GasSensorAlarmChk               0x080012a5   Thumb Code   136  gasstove_service.o(i.GasStove_GasSensorAlarmChk)
-    i.GasStove_Init                          0x0800133c   Section        0  gasstove_service.o(i.GasStove_Init)
-    i.GasStove_TimingIRQHandler              0x080013dc   Section        0  gasstove_service.o(i.GasStove_TimingIRQHandler)
-    GasStove_TimingIRQHandler                0x080013dd   Thumb Code    48  gasstove_service.o(i.GasStove_TimingIRQHandler)
-    i.HT1621_Delay                           0x08001418   Section        0  platform_ht1621.o(i.HT1621_Delay)
-    HT1621_Delay                             0x08001419   Thumb Code    18  platform_ht1621.o(i.HT1621_Delay)
-    i.HT1621_GPIOInit                        0x0800142c   Section        0  platform_ht1621.o(i.HT1621_GPIOInit)
-    HT1621_GPIOInit                          0x0800142d   Thumb Code    92  platform_ht1621.o(i.HT1621_GPIOInit)
-    i.HT1621_Init                            0x0800148c   Section        0  platform_ht1621.o(i.HT1621_Init)
-    i.HT1621_SignService                     0x080014dc   Section        0  ht1621.o(i.HT1621_SignService)
-    i.HT1621_WriteCmd                        0x08001558   Section        0  platform_ht1621.o(i.HT1621_WriteCmd)
-    i.HT1621_WriteData                       0x08001612   Section        0  platform_ht1621.o(i.HT1621_WriteData)
-    i.InitSX1212                             0x08001744   Section        0  sx1212.o(i.InitSX1212)
-    i.KeyBoard_FunReg                        0x08001790   Section        0  keyboard.o(i.KeyBoard_FunReg)
-    i.KeyBoard_Init                          0x080017bc   Section        0  keyboard.o(i.KeyBoard_Init)
-    i.LED_SEGBlinkSet                        0x08001834   Section        0  ht1621.o(i.LED_SEGBlinkSet)
-    i.LED_SEG_Service                        0x08001858   Section        0  ht1621.o(i.LED_SEG_Service)
-    LED_SEG_Service                          0x08001859   Thumb Code   258  ht1621.o(i.LED_SEG_Service)
-    i.LED_SEG_Update                         0x0800197c   Section        0  ht1621.o(i.LED_SEG_Update)
-    i.LeapYear                               0x0800198c   Section        0  utilities.o(i.LeapYear)
-    i.Led_Display                            0x080019c8   Section        0  ht1621.o(i.Led_Display)
-    Led_Display                              0x080019c9   Thumb Code   296  ht1621.o(i.Led_Display)
-    i.Led_DisplayOff                         0x08001af4   Section        0  ht1621.o(i.Led_DisplayOff)
-    i.Led_DisplayOn                          0x08001b04   Section        0  ht1621.o(i.Led_DisplayOn)
-    i.Led_DisplayService                     0x08001b14   Section        0  ht1621.o(i.Led_DisplayService)
-    Led_DisplayService                       0x08001b15   Thumb Code   542  ht1621.o(i.Led_DisplayService)
-    i.NVIC_SetPriority                       0x08001d58   Section        0  stm32fxxx_misc.o(i.NVIC_SetPriority)
-    NVIC_SetPriority                         0x08001d59   Thumb Code   110  stm32fxxx_misc.o(i.NVIC_SetPriority)
-    i.PWR_BackupAccessCmd                    0x08001dd0   Section        0  stm32f0xx_pwr.o(i.PWR_BackupAccessCmd)
-    i.RCC_AHBPeriphClockCmd                  0x08001df8   Section        0  stm32f0xx_rcc.o(i.RCC_AHBPeriphClockCmd)
-    i.RCC_APB1PeriphClockCmd                 0x08001e18   Section        0  stm32f0xx_rcc.o(i.RCC_APB1PeriphClockCmd)
-    i.RCC_GetFlagStatus                      0x08001e38   Section        0  stm32f0xx_rcc.o(i.RCC_GetFlagStatus)
-    i.RCC_LSEConfig                          0x08001e80   Section        0  stm32f0xx_rcc.o(i.RCC_LSEConfig)
-    i.RCC_RTCCLKCmd                          0x08001ea8   Section        0  stm32f0xx_rcc.o(i.RCC_RTCCLKCmd)
-    i.RCC_RTCCLKConfig                       0x08001ed0   Section        0  stm32f0xx_rcc.o(i.RCC_RTCCLKConfig)
-    i.RTC_Bcd2ToByte                         0x08001ee0   Section        0  stm32f0xx_rtc.o(i.RTC_Bcd2ToByte)
-    RTC_Bcd2ToByte                           0x08001ee1   Thumb Code    26  stm32f0xx_rtc.o(i.RTC_Bcd2ToByte)
-    i.RTC_ByteToBcd2                         0x08001efa   Section        0  stm32f0xx_rtc.o(i.RTC_ByteToBcd2)
-    RTC_ByteToBcd2                           0x08001efb   Thumb Code    28  stm32f0xx_rtc.o(i.RTC_ByteToBcd2)
-    i.RTC_ClearFlag                          0x08001f18   Section        0  stm32f0xx_rtc.o(i.RTC_ClearFlag)
-    i.RTC_EnterInitMode                      0x08001f38   Section        0  stm32f0xx_rtc.o(i.RTC_EnterInitMode)
-    i.RTC_ExitInitMode                       0x08001f90   Section        0  stm32f0xx_rtc.o(i.RTC_ExitInitMode)
-    i.RTC_GetDate                            0x08001fa4   Section        0  stm32f0xx_rtc.o(i.RTC_GetDate)
-    i.RTC_GetTime                            0x08002004   Section        0  stm32f0xx_rtc.o(i.RTC_GetTime)
-    i.RTC_Init                               0x08002060   Section        0  stm32f0xx_rtc.o(i.RTC_Init)
-    i.RTC_ReadBackupRegister                 0x080020b8   Section        0  stm32f0xx_rtc.o(i.RTC_ReadBackupRegister)
-    i.RTC_SetDate                            0x080020d8   Section        0  stm32f0xx_rtc.o(i.RTC_SetDate)
-    i.RTC_SetTime                            0x080021a8   Section        0  stm32f0xx_rtc.o(i.RTC_SetTime)
-    i.RTC_WaitForSynchro                     0x08002280   Section        0  stm32f0xx_rtc.o(i.RTC_WaitForSynchro)
-    i.RTC_WriteBackupRegister                0x080022ec   Section        0  stm32f0xx_rtc.o(i.RTC_WriteBackupRegister)
-    i.STM32Fxx_FlashPageWrite                0x08002308   Section        0  stm32fxx_flash.o(i.STM32Fxx_FlashPageWrite)
-    i.STM32Fxxx_CountDelayus                 0x08002378   Section        0  stm32fxxx_misc.o(i.STM32Fxxx_CountDelayus)
-    i.STM32Fxxx_FlashErase                   0x080023c8   Section        0  stm32fxx_flash.o(i.STM32Fxxx_FlashErase)
-    i.STM32Fxxx_FlashRead                    0x0800240a   Section        0  stm32fxx_flash.o(i.STM32Fxxx_FlashRead)
-    i.STM32Fxxx_FlashWrite                   0x0800243a   Section        0  stm32fxx_flash.o(i.STM32Fxxx_FlashWrite)
-    i.STM32Fxxx_GetEtag                      0x08002498   Section        0  stm32fxxx_misc.o(i.STM32Fxxx_GetEtag)
-    i.STM32Fxxx_RTCInit                      0x080024ec   Section        0  stm32fxxx_rtc.o(i.STM32Fxxx_RTCInit)
-    i.STM32Fxxx_Serail_EventISR_Handler      0x08002570   Section        0  stm32fxxx_serial.o(i.STM32Fxxx_Serail_EventISR_Handler)
-    STM32Fxxx_Serail_EventISR_Handler        0x08002571   Thumb Code    60  stm32fxxx_serial.o(i.STM32Fxxx_Serail_EventISR_Handler)
-    i.SX1212_DelayMs                         0x080025b8   Section        0  platform_sx1212.o(i.SX1212_DelayMs)
-    i.SX1212_Delayus                         0x080025c4   Section        0  platform_sx1212.o(i.SX1212_Delayus)
-    i.SX1212_DevInit                         0x080025d0   Section        0  platform_sx1212.o(i.SX1212_DevInit)
-    i.SX1212_IRQ1Get                         0x0800263c   Section        0  platform_sx1212.o(i.SX1212_IRQ1Get)
-    i.SX1212_MISOGet                         0x08002654   Section        0  platform_sx1212.o(i.SX1212_MISOGet)
-    i.SX1212_MOSISet                         0x08002670   Section        0  platform_sx1212.o(i.SX1212_MOSISet)
-    i.SX1212_NSSCfgSet                       0x08002690   Section        0  platform_sx1212.o(i.SX1212_NSSCfgSet)
-    i.SX1212_NSSDataSet                      0x080026b0   Section        0  platform_sx1212.o(i.SX1212_NSSDataSet)
-    i.SX1212_SCKSet                          0x080026d0   Section        0  platform_sx1212.o(i.SX1212_SCKSet)
-    i.SendRfFrame                            0x080026f0   Section        0  sx1212.o(i.SendRfFrame)
-    i.SetRFMode                              0x0800274c   Section        0  sx1212.o(i.SetRFMode)
-    i.SetSysClock                            0x08002930   Section        0  system_stm32f0xx.o(i.SetSysClock)
-    SetSysClock                              0x08002931   Thumb Code   206  system_stm32f0xx.o(i.SetSysClock)
-    i.SettingEndTime_Ensure                  0x08002a08   Section        0  gasstove_service.o(i.SettingEndTime_Ensure)
-    SettingEndTime_Ensure                    0x08002a09   Thumb Code   106  gasstove_service.o(i.SettingEndTime_Ensure)
-    i.SettingRTC_AddHour                     0x08002a80   Section        0  gasstove_service.o(i.SettingRTC_AddHour)
-    SettingRTC_AddHour                       0x08002a81   Thumb Code    64  gasstove_service.o(i.SettingRTC_AddHour)
-    i.SettingRTC_AddMinute                   0x08002ac4   Section        0  gasstove_service.o(i.SettingRTC_AddMinute)
-    SettingRTC_AddMinute                     0x08002ac5   Thumb Code    30  gasstove_service.o(i.SettingRTC_AddMinute)
-    i.SettingRTC_AddTenMinute                0x08002ae8   Section        0  gasstove_service.o(i.SettingRTC_AddTenMinute)
-    SettingRTC_AddTenMinute                  0x08002ae9   Thumb Code    30  gasstove_service.o(i.SettingRTC_AddTenMinute)
-    i.SettingRTC_Ensure                      0x08002b0c   Section        0  gasstove_service.o(i.SettingRTC_Ensure)
-    SettingRTC_Ensure                        0x08002b0d   Thumb Code   124  gasstove_service.o(i.SettingRTC_Ensure)
-    i.SettingStartTime_Ensure                0x08002b8c   Section        0  gasstove_service.o(i.SettingStartTime_Ensure)
-    SettingStartTime_Ensure                  0x08002b8d   Thumb Code   106  gasstove_service.o(i.SettingStartTime_Ensure)
-    i.SettingStartTime_Hour                  0x08002c04   Section        0  gasstove_service.o(i.SettingStartTime_Hour)
-    SettingStartTime_Hour                    0x08002c05   Thumb Code    36  gasstove_service.o(i.SettingStartTime_Hour)
-    i.SettingStartTime_Minute                0x08002c2c   Section        0  gasstove_service.o(i.SettingStartTime_Minute)
-    SettingStartTime_Minute                  0x08002c2d   Thumb Code    36  gasstove_service.o(i.SettingStartTime_Minute)
-    i.SettingStartTime_TenMinute             0x08002c54   Section        0  gasstove_service.o(i.SettingStartTime_TenMinute)
-    SettingStartTime_TenMinute               0x08002c55   Thumb Code    36  gasstove_service.o(i.SettingStartTime_TenMinute)
-    i.SettingTiming_Cancle                   0x08002c7c   Section        0  gasstove_service.o(i.SettingTiming_Cancle)
-    SettingTiming_Cancle                     0x08002c7d   Thumb Code    44  gasstove_service.o(i.SettingTiming_Cancle)
-    i.SettingTiming_Ensure                   0x08002cbc   Section        0  gasstove_service.o(i.SettingTiming_Ensure)
-    SettingTiming_Ensure                     0x08002cbd   Thumb Code   106  gasstove_service.o(i.SettingTiming_Ensure)
-    i.SettingTiming_Hour                     0x08002d48   Section        0  gasstove_service.o(i.SettingTiming_Hour)
-    SettingTiming_Hour                       0x08002d49   Thumb Code    76  gasstove_service.o(i.SettingTiming_Hour)
-    i.SettingTiming_Minute                   0x08002dac   Section        0  gasstove_service.o(i.SettingTiming_Minute)
-    SettingTiming_Minute                     0x08002dad   Thumb Code    76  gasstove_service.o(i.SettingTiming_Minute)
-    i.SettingTiming_TenMinute                0x08002e10   Section        0  gasstove_service.o(i.SettingTiming_TenMinute)
-    SettingTiming_TenMinute                  0x08002e11   Thumb Code    76  gasstove_service.o(i.SettingTiming_TenMinute)
-    i.Setting_SysIdMatch                     0x08002e74   Section        0  gasstove_service.o(i.Setting_SysIdMatch)
-    Setting_SysIdMatch                       0x08002e75   Thumb Code    34  gasstove_service.o(i.Setting_SysIdMatch)
-    i.Setting_SysIdMatchEnsure               0x08002ea0   Section        0  gasstove_service.o(i.Setting_SysIdMatchEnsure)
-    Setting_SysIdMatchEnsure                 0x08002ea1   Thumb Code    16  gasstove_service.o(i.Setting_SysIdMatchEnsure)
-    i.Setting_SysIdMatchStart                0x08002eb4   Section        0  gasstove_service.o(i.Setting_SysIdMatchStart)
-    Setting_SysIdMatchStart                  0x08002eb5   Thumb Code    58  gasstove_service.o(i.Setting_SysIdMatchStart)
-    i.SpiInOut                               0x08002efc   Section        0  sx1212.o(i.SpiInOut)
-    SpiInOut                                 0x08002efd   Thumb Code    70  sx1212.o(i.SpiInOut)
-    i.SysTick_FunReg                         0x08002f44   Section        0  stm32fxxx_misc.o(i.SysTick_FunReg)
-    i.SysTick_HandleInit                     0x08002f50   Section        0  stm32fxxx_misc.o(i.SysTick_HandleInit)
-    i.SysTick_Handler                        0x08002f94   Section        0  stm32fxxx_misc.o(i.SysTick_Handler)
-    i.SystemInit                             0x08002fb8   Section        0  system_stm32f0xx.o(i.SystemInit)
-    i.TIM_CtrlPWMOutputs                     0x08003034   Section        0  stm32f0xx_tim.o(i.TIM_CtrlPWMOutputs)
-    i.TIM_OC1Init                            0x08003058   Section        0  stm32f0xx_tim.o(i.TIM_OC1Init)
-    i.USART1_IRQHandler                      0x080030ec   Section        0  stm32fxxx_serial.o(i.USART1_IRQHandler)
-    i.USART2_IRQHandler                      0x080030f6   Section        0  stm32fxxx_serial.o(i.USART2_IRQHandler)
-    i.USART_ClearITPendingBit                0x08003100   Section        0  stm32f0xx_usart.o(i.USART_ClearITPendingBit)
-    i.USART_GetFlagStatus                    0x08003112   Section        0  stm32f0xx_usart.o(i.USART_GetFlagStatus)
-    i.USART_ReceiveData                      0x08003126   Section        0  stm32f0xx_usart.o(i.USART_ReceiveData)
-    i._SpiConfig                             0x08003130   Section        0  sx1212.o(i._SpiConfig)
-    i.__ARM_common_switch8                   0x08003170   Section        0  stm32fxxx_misc.o(i.__ARM_common_switch8)
-    i.__scatterload_copy                     0x0800318c   Section       14  handlers.o(i.__scatterload_copy)
-    i.__scatterload_null                     0x0800319a   Section        2  handlers.o(i.__scatterload_null)
-    i.__scatterload_zeroinit                 0x0800319c   Section       14  handlers.o(i.__scatterload_zeroinit)
-    i.cmp_buf                                0x080031aa   Section        0  utilities.o(i.cmp_buf)
-    i.crc16_ccitt_byte                       0x080031d0   Section        0  crc.o(i.crc16_ccitt_byte)
-    i.crc32_ethernet_block                   0x080031ec   Section        0  crc32ethernetstm32.o(i.crc32_ethernet_block)
-    i.get_rtc                                0x08003266   Section        0  rtc.o(i.get_rtc)
-    i.main                                   0x08003276   Section        0  app.o(i.main)
-    i.rtc_init                               0x080032ec   Section        0  rtc.o(i.rtc_init)
-    i.set_rtc                                0x080032f4   Section        0  rtc.o(i.set_rtc)
-    .constdata                               0x08003310   Section       12  gasstove_service.o(.constdata)
-    a_pfnGasStove_Service                    0x08003310   Data          12  gasstove_service.o(.constdata)
-    .constdata                               0x0800331c   Section       16  stm32fxxx_misc.o(.constdata)
-    STM32Fxxx_DelayCount                     0x0800331c   Data           6  stm32fxxx_misc.o(.constdata)
-    a_McuRstFlag                             0x08003322   Data           5  stm32fxxx_misc.o(.constdata)
-    a_eMCUResetType                          0x08003327   Data           5  stm32fxxx_misc.o(.constdata)
-    .constdata                               0x0800332c   Section       40  sx1212.o(.constdata)
-    RegistersCfg                             0x0800332c   Data          40  sx1212.o(.constdata)
-    .constdata                               0x08003354   Section     2472  chordtone.o(.constdata)
-    a_tChordTone_1_SingleSong                0x08003354   Data          24  chordtone.o(.constdata)
-    a_tChordTone_2_SingleSong                0x0800336c   Data          48  chordtone.o(.constdata)
-    a_tChordTone_3_SingleSong                0x0800339c   Data          72  chordtone.o(.constdata)
-    a_tChordTone_4_SingleSong                0x080033e4   Data          96  chordtone.o(.constdata)
-    a_tChordTone_5_SingleSong                0x08003444   Data         120  chordtone.o(.constdata)
-    a_tChordTone_6_SingleSong                0x080034bc   Data         144  chordtone.o(.constdata)
-    a_tChordTone_7_SingleSong                0x0800354c   Data         168  chordtone.o(.constdata)
-    a_tChordTone_8_SingleSong                0x080035f4   Data         192  chordtone.o(.constdata)
-    a_tChordTone_9_SingleSong                0x080036b4   Data         216  chordtone.o(.constdata)
-    a_tChordTone_10_SingleSong               0x0800378c   Data         240  chordtone.o(.constdata)
-    a_tChordTone_11_SingleSong               0x0800387c   Data         264  chordtone.o(.constdata)
-    a_tChordTone_LongSingleSong              0x08003984   Data         456  chordtone.o(.constdata)
-    a_tChordTone_PwrOnSong                   0x08003b4c   Data          48  chordtone.o(.constdata)
-    a_tChordTone_PwrOffSong                  0x08003b7c   Data          48  chordtone.o(.constdata)
-    a_tChordTone_Song2                       0x08003bac   Data          48  chordtone.o(.constdata)
-    a_tChordTone_Song1                       0x08003bdc   Data          48  chordtone.o(.constdata)
-    a_tChordTone_Song3                       0x08003c0c   Data          60  chordtone.o(.constdata)
-    a_tChordTone_TwoTigerSong                0x08003c48   Data         180  chordtone.o(.constdata)
-    .constdata                               0x08003cfc   Section       48  ht1621.o(.constdata)
-    a_ucHT1621_SEG1Code                      0x08003cfc   Data          12  ht1621.o(.constdata)
-    a_ucHT1621_SEG2Code                      0x08003d08   Data          12  ht1621.o(.constdata)
-    a_ucHT1621_SEG3Code                      0x08003d14   Data          12  ht1621.o(.constdata)
-    a_ucHT1621_SEG4Code                      0x08003d20   Data          12  ht1621.o(.constdata)
-    .constdata                               0x08003d2c   Section       56  platform_sx1212.o(.constdata)
-    a_tSX1212_UseGPIO                        0x08003d2c   Data          56  platform_sx1212.o(.constdata)
-    .constdata                               0x08003d64   Section      528  crc.o(.constdata)
-    NMEA_CheckArray                          0x08003d64   Data          16  crc.o(.constdata)
-    crc16_ccitt_table                        0x08003d74   Data         512  crc.o(.constdata)
+    i.ChordTone_Start                        0x08000448   Section        0  chordtone.o(i.ChordTone_Start)
+    i.CookerParse_Addr                       0x0800044c   Section        0  cooker_parse.o(i.CookerParse_Addr)
+    CookerParse_Addr                         0x0800044d   Thumb Code    40  cooker_parse.o(i.CookerParse_Addr)
+    i.CookerParse_Check                      0x08000480   Section        0  cooker_parse.o(i.CookerParse_Check)
+    CookerParse_Check                        0x08000481   Thumb Code    70  cooker_parse.o(i.CookerParse_Check)
+    i.CookerParse_Cmd                        0x080004d8   Section        0  cooker_parse.o(i.CookerParse_Cmd)
+    CookerParse_Cmd                          0x080004d9   Thumb Code    28  cooker_parse.o(i.CookerParse_Cmd)
+    i.CookerParse_Header                     0x080004fc   Section        0  cooker_parse.o(i.CookerParse_Header)
+    CookerParse_Header                       0x080004fd   Thumb Code    22  cooker_parse.o(i.CookerParse_Header)
+    i.CookerParse_Length                     0x08000518   Section        0  cooker_parse.o(i.CookerParse_Length)
+    CookerParse_Length                       0x08000519   Thumb Code    12  cooker_parse.o(i.CookerParse_Length)
+    i.CookerParse_Nop                        0x0800052c   Section        0  cooker_parse.o(i.CookerParse_Nop)
+    CookerParse_Nop                          0x0800052d   Thumb Code     2  cooker_parse.o(i.CookerParse_Nop)
+    i.CookerParse_Payload                    0x08000530   Section        0  cooker_parse.o(i.CookerParse_Payload)
+    CookerParse_Payload                      0x08000531   Thumb Code    52  cooker_parse.o(i.CookerParse_Payload)
+    i.Cooker_AFNChk                          0x08000570   Section        0  cooker_extafn.o(i.Cooker_AFNChk)
+    i.Cooker_ExtPinGPIOInit                  0x08000680   Section        0  platform_extpin.o(i.Cooker_ExtPinGPIOInit)
+    i.Cooker_GetId                           0x080006ba   Section        0  cooker_parse.o(i.Cooker_GetId)
+    i.Cooker_Load                            0x080006d0   Section        0  cooker_parse.o(i.Cooker_Load)
+    i.Cooker_Parse                           0x0800078c   Section        0  cooker_parse.o(i.Cooker_Parse)
+    i.Cooker_SysIdMatch                      0x08000824   Section        0  cooker_extafn.o(i.Cooker_SysIdMatch)
+    i.Cooker_SysIdMatchResult                0x08000844   Section        0  cooker_extafn.o(i.Cooker_SysIdMatchResult)
+    i.Cooker_WirelessSendLoad                0x08000850   Section        0  cooker_parse.o(i.Cooker_WirelessSendLoad)
+    i.FLASH_ClearFlag                        0x08000880   Section        0  stm32f0xx_flash.o(i.FLASH_ClearFlag)
+    i.FLASH_ErasePage                        0x0800088c   Section        0  stm32f0xx_flash.o(i.FLASH_ErasePage)
+    i.FLASH_GetStatus                        0x080008d8   Section        0  stm32f0xx_flash.o(i.FLASH_GetStatus)
+    i.FLASH_Lock                             0x08000914   Section        0  stm32f0xx_flash.o(i.FLASH_Lock)
+    i.FLASH_ProgramWord                      0x08000928   Section        0  stm32f0xx_flash.o(i.FLASH_ProgramWord)
+    i.FLASH_Unlock                           0x08000994   Section        0  stm32f0xx_flash.o(i.FLASH_Unlock)
+    i.FLASH_WaitForLastOperation             0x080009b8   Section        0  stm32f0xx_flash.o(i.FLASH_WaitForLastOperation)
+    i.FanRotation_Level                      0x080009e0   Section        0  platform_extpin.o(i.FanRotation_Level)
+    FanRotation_Level                        0x080009e1   Thumb Code    24  platform_extpin.o(i.FanRotation_Level)
+    i.FanRotation_Service                    0x080009f8   Section        0  platform_extpin.o(i.FanRotation_Service)
+    i.GPIO_Init                              0x08000a3c   Section        0  stm32f0xx_gpio.o(i.GPIO_Init)
+    i.GPIO_PinAFConfig                       0x08000acc   Section        0  stm32f0xx_gpio.o(i.GPIO_PinAFConfig)
+    i.GPIO_ReadInputDataBit                  0x08000b10   Section        0  stm32f0xx_gpio.o(i.GPIO_ReadInputDataBit)
+    i.GPIO_ResetBits                         0x08000b24   Section        0  stm32f0xx_gpio.o(i.GPIO_ResetBits)
+    i.GPIO_SetBits                           0x08000b28   Section        0  stm32f0xx_gpio.o(i.GPIO_SetBits)
+    i.GasStove_AlarmChk                      0x08000b2c   Section        0  gasstove_service.o(i.GasStove_AlarmChk)
+    GasStove_AlarmChk                        0x08000b2d   Thumb Code   382  gasstove_service.o(i.GasStove_AlarmChk)
+    i.GasStove_DisRTC                        0x08000ce8   Section        0  gasstove_service.o(i.GasStove_DisRTC)
+    GasStove_DisRTC                          0x08000ce9   Thumb Code   208  gasstove_service.o(i.GasStove_DisRTC)
+    i.GasStove_DisSet                        0x08000dd8   Section        0  gasstove_service.o(i.GasStove_DisSet)
+    GasStove_DisSet                          0x08000dd9   Thumb Code   102  gasstove_service.o(i.GasStove_DisSet)
+    i.GasStove_DisSetButton                  0x08000e58   Section        0  gasstove_service.o(i.GasStove_DisSetButton)
+    GasStove_DisSetButton                    0x08000e59   Thumb Code   338  gasstove_service.o(i.GasStove_DisSetButton)
+    i.GasStove_DisSettingEndTime             0x08000ff4   Section        0  gasstove_service.o(i.GasStove_DisSettingEndTime)
+    GasStove_DisSettingEndTime               0x08000ff5   Thumb Code    76  gasstove_service.o(i.GasStove_DisSettingEndTime)
+    i.GasStove_DisSettingRTC                 0x08001048   Section        0  gasstove_service.o(i.GasStove_DisSettingRTC)
+    GasStove_DisSettingRTC                   0x08001049   Thumb Code    16  gasstove_service.o(i.GasStove_DisSettingRTC)
+    i.GasStove_DisSettingStartTime           0x0800105c   Section        0  gasstove_service.o(i.GasStove_DisSettingStartTime)
+    GasStove_DisSettingStartTime             0x0800105d   Thumb Code    76  gasstove_service.o(i.GasStove_DisSettingStartTime)
+    i.GasStove_DisTiming                     0x080010b0   Section        0  gasstove_service.o(i.GasStove_DisTiming)
+    GasStove_DisTiming                       0x080010b1   Thumb Code   190  gasstove_service.o(i.GasStove_DisTiming)
+    i.GasStove_DisplayService                0x0800118c   Section        0  gasstove_service.o(i.GasStove_DisplayService)
+    i.GasStove_ExtEnsure                     0x08001234   Section        0  gasstove_service.o(i.GasStove_ExtEnsure)
+    GasStove_ExtEnsure                       0x08001235   Thumb Code   260  gasstove_service.o(i.GasStove_ExtEnsure)
+    i.GasStove_FanRotation                   0x08001370   Section        0  platform_extpin.o(i.GasStove_FanRotation)
+    i.GasStove_FireState                     0x0800137c   Section        0  cooker_extafn.o(i.GasStove_FireState)
+    i.GasStove_FireStateChkService           0x08001388   Section        0  cooker_extafn.o(i.GasStove_FireStateChkService)
+    i.GasStove_Flameout                      0x080013bc   Section        0  cooker_extafn.o(i.GasStove_Flameout)
+    i.GasStove_GasBatStateChkService         0x080013d8   Section        0  cooker_extafn.o(i.GasStove_GasBatStateChkService)
+    i.GasStove_GasSensor                     0x08001434   Section        0  platform_extpin.o(i.GasStove_GasSensor)
+    i.GasStove_GasSensorAlarmCancle          0x0800144c   Section        0  gasstove_service.o(i.GasStove_GasSensorAlarmCancle)
+    GasStove_GasSensorAlarmCancle            0x0800144d   Thumb Code    18  gasstove_service.o(i.GasStove_GasSensorAlarmCancle)
+    i.GasStove_GasSensorAlarmChk             0x08001464   Section        0  gasstove_service.o(i.GasStove_GasSensorAlarmChk)
+    GasStove_GasSensorAlarmChk               0x08001465   Thumb Code   136  gasstove_service.o(i.GasStove_GasSensorAlarmChk)
+    i.GasStove_Init                          0x080014fc   Section        0  gasstove_service.o(i.GasStove_Init)
+    i.GasStove_TimingIRQHandler              0x0800159c   Section        0  gasstove_service.o(i.GasStove_TimingIRQHandler)
+    GasStove_TimingIRQHandler                0x0800159d   Thumb Code    48  gasstove_service.o(i.GasStove_TimingIRQHandler)
+    i.HT1621_Delay                           0x080015d8   Section        0  platform_ht1621.o(i.HT1621_Delay)
+    HT1621_Delay                             0x080015d9   Thumb Code    18  platform_ht1621.o(i.HT1621_Delay)
+    i.HT1621_GPIOInit                        0x080015ec   Section        0  platform_ht1621.o(i.HT1621_GPIOInit)
+    HT1621_GPIOInit                          0x080015ed   Thumb Code    92  platform_ht1621.o(i.HT1621_GPIOInit)
+    i.HT1621_Init                            0x0800164c   Section        0  platform_ht1621.o(i.HT1621_Init)
+    i.HT1621_SignService                     0x0800169c   Section        0  ht1621.o(i.HT1621_SignService)
+    i.HT1621_WriteCmd                        0x08001718   Section        0  platform_ht1621.o(i.HT1621_WriteCmd)
+    i.HT1621_WriteData                       0x080017d2   Section        0  platform_ht1621.o(i.HT1621_WriteData)
+    i.InitSX1212                             0x08001904   Section        0  sx1212.o(i.InitSX1212)
+    i.KeyBoard_FunReg                        0x08001950   Section        0  keyboard.o(i.KeyBoard_FunReg)
+    i.KeyBoard_InState                       0x0800197c   Section        0  keyboard.o(i.KeyBoard_InState)
+    i.KeyBoard_Init                          0x080019dc   Section        0  keyboard.o(i.KeyBoard_Init)
+    i.KeyBoard_Service                       0x08001a54   Section        0  keyboard.o(i.KeyBoard_Service)
+    i.LED_SEGBlinkSet                        0x08001b78   Section        0  ht1621.o(i.LED_SEGBlinkSet)
+    i.LED_SEG_Service                        0x08001b9c   Section        0  ht1621.o(i.LED_SEG_Service)
+    LED_SEG_Service                          0x08001b9d   Thumb Code   258  ht1621.o(i.LED_SEG_Service)
+    i.LED_SEG_Update                         0x08001cc0   Section        0  ht1621.o(i.LED_SEG_Update)
+    i.LeapYear                               0x08001cd0   Section        0  utilities.o(i.LeapYear)
+    i.Led_Display                            0x08001d0c   Section        0  ht1621.o(i.Led_Display)
+    Led_Display                              0x08001d0d   Thumb Code   332  ht1621.o(i.Led_Display)
+    i.Led_DisplayOff                         0x08001e5c   Section        0  ht1621.o(i.Led_DisplayOff)
+    i.Led_DisplayOn                          0x08001e6c   Section        0  ht1621.o(i.Led_DisplayOn)
+    i.Led_DisplayService                     0x08001e7c   Section        0  ht1621.o(i.Led_DisplayService)
+    Led_DisplayService                       0x08001e7d   Thumb Code   542  ht1621.o(i.Led_DisplayService)
+    i.NVIC_SetPriority                       0x080020c0   Section        0  stm32fxxx_misc.o(i.NVIC_SetPriority)
+    NVIC_SetPriority                         0x080020c1   Thumb Code   110  stm32fxxx_misc.o(i.NVIC_SetPriority)
+    i.PWR_BackupAccessCmd                    0x08002138   Section        0  stm32f0xx_pwr.o(i.PWR_BackupAccessCmd)
+    i.RCC_AHBPeriphClockCmd                  0x08002160   Section        0  stm32f0xx_rcc.o(i.RCC_AHBPeriphClockCmd)
+    i.RCC_APB1PeriphClockCmd                 0x08002180   Section        0  stm32f0xx_rcc.o(i.RCC_APB1PeriphClockCmd)
+    i.RCC_GetFlagStatus                      0x080021a0   Section        0  stm32f0xx_rcc.o(i.RCC_GetFlagStatus)
+    i.RCC_LSEConfig                          0x080021e8   Section        0  stm32f0xx_rcc.o(i.RCC_LSEConfig)
+    i.RCC_RTCCLKCmd                          0x08002210   Section        0  stm32f0xx_rcc.o(i.RCC_RTCCLKCmd)
+    i.RCC_RTCCLKConfig                       0x08002238   Section        0  stm32f0xx_rcc.o(i.RCC_RTCCLKConfig)
+    i.RTC_Bcd2ToByte                         0x08002248   Section        0  stm32f0xx_rtc.o(i.RTC_Bcd2ToByte)
+    RTC_Bcd2ToByte                           0x08002249   Thumb Code    26  stm32f0xx_rtc.o(i.RTC_Bcd2ToByte)
+    i.RTC_ByteToBcd2                         0x08002262   Section        0  stm32f0xx_rtc.o(i.RTC_ByteToBcd2)
+    RTC_ByteToBcd2                           0x08002263   Thumb Code    28  stm32f0xx_rtc.o(i.RTC_ByteToBcd2)
+    i.RTC_ClearFlag                          0x08002280   Section        0  stm32f0xx_rtc.o(i.RTC_ClearFlag)
+    i.RTC_EnterInitMode                      0x080022a0   Section        0  stm32f0xx_rtc.o(i.RTC_EnterInitMode)
+    i.RTC_ExitInitMode                       0x080022f8   Section        0  stm32f0xx_rtc.o(i.RTC_ExitInitMode)
+    i.RTC_GetDate                            0x0800230c   Section        0  stm32f0xx_rtc.o(i.RTC_GetDate)
+    i.RTC_GetTime                            0x0800236c   Section        0  stm32f0xx_rtc.o(i.RTC_GetTime)
+    i.RTC_Init                               0x080023c8   Section        0  stm32f0xx_rtc.o(i.RTC_Init)
+    i.RTC_ReadBackupRegister                 0x08002420   Section        0  stm32f0xx_rtc.o(i.RTC_ReadBackupRegister)
+    i.RTC_SetDate                            0x08002440   Section        0  stm32f0xx_rtc.o(i.RTC_SetDate)
+    i.RTC_SetTime                            0x08002510   Section        0  stm32f0xx_rtc.o(i.RTC_SetTime)
+    i.RTC_WaitForSynchro                     0x080025e8   Section        0  stm32f0xx_rtc.o(i.RTC_WaitForSynchro)
+    i.RTC_WriteBackupRegister                0x08002654   Section        0  stm32f0xx_rtc.o(i.RTC_WriteBackupRegister)
+    i.ReceiveRfFrame                         0x08002670   Section        0  sx1212.o(i.ReceiveRfFrame)
+    i.STM32Fxx_FlashPageWrite                0x080026d8   Section        0  stm32fxx_flash.o(i.STM32Fxx_FlashPageWrite)
+    i.STM32Fxxx_CountDelayus                 0x08002748   Section        0  stm32fxxx_misc.o(i.STM32Fxxx_CountDelayus)
+    i.STM32Fxxx_FlashErase                   0x08002798   Section        0  stm32fxx_flash.o(i.STM32Fxxx_FlashErase)
+    i.STM32Fxxx_FlashRead                    0x080027da   Section        0  stm32fxx_flash.o(i.STM32Fxxx_FlashRead)
+    i.STM32Fxxx_FlashWrite                   0x0800280a   Section        0  stm32fxx_flash.o(i.STM32Fxxx_FlashWrite)
+    i.STM32Fxxx_GetEtag                      0x08002868   Section        0  stm32fxxx_misc.o(i.STM32Fxxx_GetEtag)
+    i.STM32Fxxx_RTCInit                      0x080028bc   Section        0  stm32fxxx_rtc.o(i.STM32Fxxx_RTCInit)
+    i.STM32Fxxx_Serail_EventISR_Handler      0x08002940   Section        0  stm32fxxx_serial.o(i.STM32Fxxx_Serail_EventISR_Handler)
+    STM32Fxxx_Serail_EventISR_Handler        0x08002941   Thumb Code    60  stm32fxxx_serial.o(i.STM32Fxxx_Serail_EventISR_Handler)
+    i.SX1212_DelayMs                         0x08002988   Section        0  platform_sx1212.o(i.SX1212_DelayMs)
+    i.SX1212_Delayus                         0x08002994   Section        0  platform_sx1212.o(i.SX1212_Delayus)
+    i.SX1212_DevInit                         0x080029a0   Section        0  platform_sx1212.o(i.SX1212_DevInit)
+    i.SX1212_IRQ0Get                         0x08002a0c   Section        0  platform_sx1212.o(i.SX1212_IRQ0Get)
+    i.SX1212_IRQ1Get                         0x08002a24   Section        0  platform_sx1212.o(i.SX1212_IRQ1Get)
+    i.SX1212_MISOGet                         0x08002a3c   Section        0  platform_sx1212.o(i.SX1212_MISOGet)
+    i.SX1212_MOSISet                         0x08002a58   Section        0  platform_sx1212.o(i.SX1212_MOSISet)
+    i.SX1212_NSSCfgSet                       0x08002a78   Section        0  platform_sx1212.o(i.SX1212_NSSCfgSet)
+    i.SX1212_NSSDataSet                      0x08002a98   Section        0  platform_sx1212.o(i.SX1212_NSSDataSet)
+    i.SX1212_SCKSet                          0x08002ab8   Section        0  platform_sx1212.o(i.SX1212_SCKSet)
+    i.SendRfFrame                            0x08002ad8   Section        0  sx1212.o(i.SendRfFrame)
+    i.SetRFMode                              0x08002b34   Section        0  sx1212.o(i.SetRFMode)
+    i.SetSysClock                            0x08002d18   Section        0  system_stm32f0xx.o(i.SetSysClock)
+    SetSysClock                              0x08002d19   Thumb Code   206  system_stm32f0xx.o(i.SetSysClock)
+    i.SettingEndTime_Ensure                  0x08002df0   Section        0  gasstove_service.o(i.SettingEndTime_Ensure)
+    SettingEndTime_Ensure                    0x08002df1   Thumb Code   106  gasstove_service.o(i.SettingEndTime_Ensure)
+    i.SettingRTC_AddHour                     0x08002e68   Section        0  gasstove_service.o(i.SettingRTC_AddHour)
+    SettingRTC_AddHour                       0x08002e69   Thumb Code    64  gasstove_service.o(i.SettingRTC_AddHour)
+    i.SettingRTC_AddMinute                   0x08002eac   Section        0  gasstove_service.o(i.SettingRTC_AddMinute)
+    SettingRTC_AddMinute                     0x08002ead   Thumb Code    30  gasstove_service.o(i.SettingRTC_AddMinute)
+    i.SettingRTC_AddTenMinute                0x08002ed0   Section        0  gasstove_service.o(i.SettingRTC_AddTenMinute)
+    SettingRTC_AddTenMinute                  0x08002ed1   Thumb Code    30  gasstove_service.o(i.SettingRTC_AddTenMinute)
+    i.SettingRTC_Ensure                      0x08002ef4   Section        0  gasstove_service.o(i.SettingRTC_Ensure)
+    SettingRTC_Ensure                        0x08002ef5   Thumb Code   124  gasstove_service.o(i.SettingRTC_Ensure)
+    i.SettingStartTime_Ensure                0x08002f74   Section        0  gasstove_service.o(i.SettingStartTime_Ensure)
+    SettingStartTime_Ensure                  0x08002f75   Thumb Code   106  gasstove_service.o(i.SettingStartTime_Ensure)
+    i.SettingStartTime_Hour                  0x08002fec   Section        0  gasstove_service.o(i.SettingStartTime_Hour)
+    SettingStartTime_Hour                    0x08002fed   Thumb Code    36  gasstove_service.o(i.SettingStartTime_Hour)
+    i.SettingStartTime_Minute                0x08003014   Section        0  gasstove_service.o(i.SettingStartTime_Minute)
+    SettingStartTime_Minute                  0x08003015   Thumb Code    36  gasstove_service.o(i.SettingStartTime_Minute)
+    i.SettingStartTime_TenMinute             0x0800303c   Section        0  gasstove_service.o(i.SettingStartTime_TenMinute)
+    SettingStartTime_TenMinute               0x0800303d   Thumb Code    36  gasstove_service.o(i.SettingStartTime_TenMinute)
+    i.SettingTiming_Cancle                   0x08003064   Section        0  gasstove_service.o(i.SettingTiming_Cancle)
+    SettingTiming_Cancle                     0x08003065   Thumb Code    44  gasstove_service.o(i.SettingTiming_Cancle)
+    i.SettingTiming_Ensure                   0x080030a4   Section        0  gasstove_service.o(i.SettingTiming_Ensure)
+    SettingTiming_Ensure                     0x080030a5   Thumb Code   106  gasstove_service.o(i.SettingTiming_Ensure)
+    i.SettingTiming_Hour                     0x08003130   Section        0  gasstove_service.o(i.SettingTiming_Hour)
+    SettingTiming_Hour                       0x08003131   Thumb Code    76  gasstove_service.o(i.SettingTiming_Hour)
+    i.SettingTiming_Minute                   0x08003194   Section        0  gasstove_service.o(i.SettingTiming_Minute)
+    SettingTiming_Minute                     0x08003195   Thumb Code    76  gasstove_service.o(i.SettingTiming_Minute)
+    i.SettingTiming_TenMinute                0x080031f8   Section        0  gasstove_service.o(i.SettingTiming_TenMinute)
+    SettingTiming_TenMinute                  0x080031f9   Thumb Code    76  gasstove_service.o(i.SettingTiming_TenMinute)
+    i.Setting_SysIdMatch                     0x0800325c   Section        0  gasstove_service.o(i.Setting_SysIdMatch)
+    Setting_SysIdMatch                       0x0800325d   Thumb Code    34  gasstove_service.o(i.Setting_SysIdMatch)
+    i.Setting_SysIdMatchEnsure               0x08003288   Section        0  gasstove_service.o(i.Setting_SysIdMatchEnsure)
+    Setting_SysIdMatchEnsure                 0x08003289   Thumb Code    16  gasstove_service.o(i.Setting_SysIdMatchEnsure)
+    i.Setting_SysIdMatchStart                0x0800329c   Section        0  gasstove_service.o(i.Setting_SysIdMatchStart)
+    Setting_SysIdMatchStart                  0x0800329d   Thumb Code    58  gasstove_service.o(i.Setting_SysIdMatchStart)
+    i.SpiInOut                               0x080032e4   Section        0  sx1212.o(i.SpiInOut)
+    SpiInOut                                 0x080032e5   Thumb Code    70  sx1212.o(i.SpiInOut)
+    i.SysTick_FunReg                         0x0800332c   Section        0  stm32fxxx_misc.o(i.SysTick_FunReg)
+    i.SysTick_HandleInit                     0x08003338   Section        0  stm32fxxx_misc.o(i.SysTick_HandleInit)
+    i.SysTick_Handler                        0x0800337c   Section        0  stm32fxxx_misc.o(i.SysTick_Handler)
+    i.SystemInit                             0x080033a0   Section        0  system_stm32f0xx.o(i.SystemInit)
+    i.USART1_IRQHandler                      0x0800341c   Section        0  stm32fxxx_serial.o(i.USART1_IRQHandler)
+    i.USART2_IRQHandler                      0x08003426   Section        0  stm32fxxx_serial.o(i.USART2_IRQHandler)
+    i.USART_ClearITPendingBit                0x08003430   Section        0  stm32f0xx_usart.o(i.USART_ClearITPendingBit)
+    i.USART_GetFlagStatus                    0x08003442   Section        0  stm32f0xx_usart.o(i.USART_GetFlagStatus)
+    i.USART_ReceiveData                      0x08003456   Section        0  stm32f0xx_usart.o(i.USART_ReceiveData)
+    i._SpiConfig                             0x08003460   Section        0  sx1212.o(i._SpiConfig)
+    i.__ARM_common_switch8                   0x080034a0   Section        0  stm32fxxx_misc.o(i.__ARM_common_switch8)
+    i.__scatterload_copy                     0x080034bc   Section       14  handlers.o(i.__scatterload_copy)
+    i.__scatterload_null                     0x080034ca   Section        2  handlers.o(i.__scatterload_null)
+    i.__scatterload_zeroinit                 0x080034cc   Section       14  handlers.o(i.__scatterload_zeroinit)
+    i.cmp_buf                                0x080034da   Section        0  utilities.o(i.cmp_buf)
+    i.crc16_ccitt_byte                       0x08003500   Section        0  crc.o(i.crc16_ccitt_byte)
+    i.crc32_ethernet_block                   0x0800351c   Section        0  crc32ethernetstm32.o(i.crc32_ethernet_block)
+    i.get_rtc                                0x08003596   Section        0  rtc.o(i.get_rtc)
+    i.main                                   0x080035a8   Section        0  app.o(i.main)
+    i.rtc_init                               0x0800369c   Section        0  rtc.o(i.rtc_init)
+    i.set_rtc                                0x080036a4   Section        0  rtc.o(i.set_rtc)
+    .constdata                               0x080036c0   Section       12  gasstove_service.o(.constdata)
+    a_pfnGasStove_Service                    0x080036c0   Data          12  gasstove_service.o(.constdata)
+    .constdata                               0x080036cc   Section       16  stm32fxxx_misc.o(.constdata)
+    STM32Fxxx_DelayCount                     0x080036cc   Data           6  stm32fxxx_misc.o(.constdata)
+    a_McuRstFlag                             0x080036d2   Data           5  stm32fxxx_misc.o(.constdata)
+    a_eMCUResetType                          0x080036d7   Data           5  stm32fxxx_misc.o(.constdata)
+    .constdata                               0x080036dc   Section       40  sx1212.o(.constdata)
+    RegistersCfg                             0x080036dc   Data          40  sx1212.o(.constdata)
+    .constdata                               0x08003704   Section        5  keyboard.o(.constdata)
+    a_ucKeyBoard_Code                        0x08003704   Data           5  keyboard.o(.constdata)
+    .constdata                               0x08003709   Section       48  ht1621.o(.constdata)
+    a_ucHT1621_SEG1Code                      0x08003709   Data          12  ht1621.o(.constdata)
+    a_ucHT1621_SEG2Code                      0x08003715   Data          12  ht1621.o(.constdata)
+    a_ucHT1621_SEG3Code                      0x08003721   Data          12  ht1621.o(.constdata)
+    a_ucHT1621_SEG4Code                      0x0800372d   Data          12  ht1621.o(.constdata)
+    .constdata                               0x0800373c   Section       28  cooker_parse.o(.constdata)
+    a_pfnCooker_Parse                        0x0800373c   Data          28  cooker_parse.o(.constdata)
+    .constdata                               0x08003758   Section       56  platform_sx1212.o(.constdata)
+    a_tSX1212_UseGPIO                        0x08003758   Data          56  platform_sx1212.o(.constdata)
+    .constdata                               0x08003790   Section      528  crc.o(.constdata)
+    NMEA_CheckArray                          0x08003790   Data          16  crc.o(.constdata)
+    crc16_ccitt_table                        0x080037a0   Data         512  crc.o(.constdata)
     .data                                    0x20000000   Section       20  system_stm32f0xx.o(.data)
-    .data                                    0x20000014   Section      100  gasstove_service.o(.data)
-    a_ucGasStove_LEDRTCBuffer                0x20000014   Data           4  gasstove_service.o(.data)
-    a_ucGasStove_LEDTimeBuffer               0x20000018   Data           4  gasstove_service.o(.data)
-    a_ucGasStove_LEDParaTimeBuffer           0x2000001c   Data           4  gasstove_service.o(.data)
-    a_ucGasStove_LEDIdMatchBuffer            0x20000020   Data           4  gasstove_service.o(.data)
-    ucGasStove_DisplayState                  0x20000024   Data           1  gasstove_service.o(.data)
-    uiGasStove_DisDly                        0x20000028   Data           4  gasstove_service.o(.data)
-    uiGasStove_Timing                        0x2000002c   Data           4  gasstove_service.o(.data)
-    uiTimingCnt                              0x20000030   Data           4  gasstove_service.o(.data)
-    bGasStove_TimingEnable                   0x20000034   Data           1  gasstove_service.o(.data)
-    bGasStove_GasSensorState                 0x20000035   Data           1  gasstove_service.o(.data)
-    uiGasStove_GasSensorDly                  0x20000038   Data           4  gasstove_service.o(.data)
-    tGasStove_Para                           0x2000003c   Data           8  gasstove_service.o(.data)
-    uiCooker_MatchIdWaitDly                  0x20000044   Data           4  gasstove_service.o(.data)
-    bSetting_SysIdMatchState                 0x20000048   Data           1  gasstove_service.o(.data)
-    ucPressCnt                               0x20000049   Data           1  gasstove_service.o(.data)
-    uiGasStove_TimingEnDly                   0x2000004c   Data           4  gasstove_service.o(.data)
-    bGasStove_TimingSetEn                    0x20000050   Data           1  gasstove_service.o(.data)
-    hour                                     0x20000051   Data           1  gasstove_service.o(.data)
-    minute                                   0x20000052   Data           1  gasstove_service.o(.data)
-    uiLastTiming                             0x20000054   Data           4  gasstove_service.o(.data)
-    bGasStove_FireStart                      0x20000058   Data           1  gasstove_service.o(.data)
-    uiGasStove_FireStartDly                  0x2000005c   Data           4  gasstove_service.o(.data)
-    uiGasStove_EveryMinuteDly                0x20000060   Data           4  gasstove_service.o(.data)
-    usGasStove_EndMinuteCnt                  0x20000064   Data           2  gasstove_service.o(.data)
-    usGasStove_LastMinuteCnt                 0x20000066   Data           2  gasstove_service.o(.data)
-    bGasAlarmingState                        0x20000068   Data           1  gasstove_service.o(.data)
-    usGasAlarmingDly                         0x2000006c   Data           4  gasstove_service.o(.data)
-    bTimingOutState                          0x20000070   Data           1  gasstove_service.o(.data)
-    usTimingOutDly                           0x20000074   Data           4  gasstove_service.o(.data)
-    .data                                    0x20000078   Section       16  stm32fxxx_serial.o(.data)
-    Serial_PERIPH_ID                         0x20000078   Data          16  stm32fxxx_serial.o(.data)
-    .data                                    0x20000088   Section        8  stm32fxxx_misc.o(.data)
-    SysTick_Timer                            0x20000088   Data           4  stm32fxxx_misc.o(.data)
-    pfnSysTick_Fun                           0x2000008c   Data           4  stm32fxxx_misc.o(.data)
-    .data                                    0x20000090   Section        2  stm32fxx_flash.o(.data)
-    FLASH_PAGE_SIZE                          0x20000090   Data           2  stm32fxx_flash.o(.data)
-    .data                                    0x20000092   Section        2  sx1212.o(.data)
-    pre_mode                                 0x20000092   Data           1  sx1212.o(.data)
-    counter                                  0x20000093   Data           1  sx1212.o(.data)
-    .data                                    0x20000094   Section       16  chordtone.o(.data)
-    ucBuzzerState                            0x20000094   Data           1  chordtone.o(.data)
-    p_tChordTone                             0x20000098   Data           4  chordtone.o(.data)
-    bChordTone_Running                       0x2000009c   Data           1  chordtone.o(.data)
-    uiChordTone_RunDly                       0x200000a0   Data           4  chordtone.o(.data)
-    .data                                    0x200000a4   Section       68  ht1621.o(.data)
-    aucSEG_PreServiceValue                   0x200000a4   Data           6  ht1621.o(.data)
-    aucSEG_CurServiceValue                   0x200000aa   Data           6  ht1621.o(.data)
-    ucLed_DisValue                           0x200000b0   Data           1  ht1621.o(.data)
-    uiLed_DisQuickBlinkDly                   0x200000b4   Data           4  ht1621.o(.data)
-    uiLed_DisSlowBlinkDly                    0x200000b8   Data           4  ht1621.o(.data)
-    p_ucLED_SEGValue                         0x200000bc   Data           4  ht1621.o(.data)
-    bLED_SEGBlinkOnOff                       0x200000c0   Data           1  ht1621.o(.data)
-    ucLED_SEGBlinkState                      0x200000c1   Data           1  ht1621.o(.data)
-    uiLED_SEGBlinkDly                        0x200000c4   Data           4  ht1621.o(.data)
-    ucLastValue                              0x200000c8   Data           1  ht1621.o(.data)
-    ucPreValue                               0x200000c9   Data           1  ht1621.o(.data)
-    bSlowBlinkState                          0x200000ca   Data           1  ht1621.o(.data)
-    bCurLEDState                             0x200000cb   Data           1  ht1621.o(.data)
-    uiFanDly                                 0x200000cc   Data           4  ht1621.o(.data)
-    bLED_DotBlinkState                       0x200000d0   Data           1  ht1621.o(.data)
-    a_ucLED_Value                            0x200000d1   Data           4  ht1621.o(.data)
-    a_pHT1621_CodeTab                        0x200000d8   Data          16  ht1621.o(.data)
-    .data                                    0x200000e8   Section        8  cooker_extafn.o(.data)
-    bGasStove_FireState                      0x200000e8   Data           1  cooker_extafn.o(.data)
-    bCooker_SysIdMatchState                  0x200000e9   Data           1  cooker_extafn.o(.data)
-    uiFireState_ChkDly                       0x200000ec   Data           4  cooker_extafn.o(.data)
-    .data                                    0x200000f0   Section        5  platform_chordtone.o(.data)
-    uiPWMTimerPeriod                         0x200000f0   Data           4  platform_chordtone.o(.data)
-    bChordTone_PWMDisable                    0x200000f4   Data           1  platform_chordtone.o(.data)
-    .data                                    0x200000f8   Section        9  platform_extpin.o(.data)
-    bFanRotation_RunState                    0x200000f8   Data           1  platform_extpin.o(.data)
-    uiFanRotation_RunDelay                   0x200000fc   Data           4  platform_extpin.o(.data)
-    bLastState                               0x20000100   Data           1  platform_extpin.o(.data)
-    .bss                                     0x20000104   Section       16  stm32fxxx_serial.o(.bss)
-    Serial_RxHandler                         0x20000104   Data          16  stm32fxxx_serial.o(.bss)
-    .bss                                     0x20000114   Section       43  sx1212.o(.bss)
-    .bss                                     0x20000140   Section       20  keyboard.o(.bss)
-    a_pfnKeyBoard_Fun                        0x20000140   Data          20  keyboard.o(.bss)
-    STACK                                    0x20000158   Section     1024  startup_stm32f051.o(STACK)
+    .data                                    0x20000014   Section        1  app.o(.data)
+    .data                                    0x20000018   Section      100  gasstove_service.o(.data)
+    a_ucGasStove_LEDRTCBuffer                0x20000018   Data           4  gasstove_service.o(.data)
+    a_ucGasStove_LEDTimeBuffer               0x2000001c   Data           4  gasstove_service.o(.data)
+    a_ucGasStove_LEDParaTimeBuffer           0x20000020   Data           4  gasstove_service.o(.data)
+    a_ucGasStove_LEDIdMatchBuffer            0x20000024   Data           4  gasstove_service.o(.data)
+    ucGasStove_DisplayState                  0x20000028   Data           1  gasstove_service.o(.data)
+    uiGasStove_DisDly                        0x2000002c   Data           4  gasstove_service.o(.data)
+    uiGasStove_Timing                        0x20000030   Data           4  gasstove_service.o(.data)
+    uiTimingCnt                              0x20000034   Data           4  gasstove_service.o(.data)
+    bGasStove_TimingEnable                   0x20000038   Data           1  gasstove_service.o(.data)
+    bGasStove_GasSensorState                 0x20000039   Data           1  gasstove_service.o(.data)
+    uiGasStove_GasSensorDly                  0x2000003c   Data           4  gasstove_service.o(.data)
+    tGasStove_Para                           0x20000040   Data           8  gasstove_service.o(.data)
+    uiCooker_MatchIdWaitDly                  0x20000048   Data           4  gasstove_service.o(.data)
+    bSetting_SysIdMatchState                 0x2000004c   Data           1  gasstove_service.o(.data)
+    ucPressCnt                               0x2000004d   Data           1  gasstove_service.o(.data)
+    uiGasStove_TimingEnDly                   0x20000050   Data           4  gasstove_service.o(.data)
+    bGasStove_TimingSetEn                    0x20000054   Data           1  gasstove_service.o(.data)
+    hour                                     0x20000055   Data           1  gasstove_service.o(.data)
+    minute                                   0x20000056   Data           1  gasstove_service.o(.data)
+    uiLastTiming                             0x20000058   Data           4  gasstove_service.o(.data)
+    bGasStove_FireStart                      0x2000005c   Data           1  gasstove_service.o(.data)
+    uiGasStove_FireStartDly                  0x20000060   Data           4  gasstove_service.o(.data)
+    uiGasStove_EveryMinuteDly                0x20000064   Data           4  gasstove_service.o(.data)
+    usGasStove_EndMinuteCnt                  0x20000068   Data           2  gasstove_service.o(.data)
+    usGasStove_LastMinuteCnt                 0x2000006a   Data           2  gasstove_service.o(.data)
+    bGasAlarmingState                        0x2000006c   Data           1  gasstove_service.o(.data)
+    usGasAlarmingDly                         0x20000070   Data           4  gasstove_service.o(.data)
+    bTimingOutState                          0x20000074   Data           1  gasstove_service.o(.data)
+    usTimingOutDly                           0x20000078   Data           4  gasstove_service.o(.data)
+    .data                                    0x2000007c   Section       16  stm32fxxx_serial.o(.data)
+    Serial_PERIPH_ID                         0x2000007c   Data          16  stm32fxxx_serial.o(.data)
+    .data                                    0x2000008c   Section        8  stm32fxxx_misc.o(.data)
+    SysTick_Timer                            0x2000008c   Data           4  stm32fxxx_misc.o(.data)
+    pfnSysTick_Fun                           0x20000090   Data           4  stm32fxxx_misc.o(.data)
+    .data                                    0x20000094   Section        2  stm32fxx_flash.o(.data)
+    FLASH_PAGE_SIZE                          0x20000094   Data           2  stm32fxx_flash.o(.data)
+    .data                                    0x20000096   Section        2  sx1212.o(.data)
+    pre_mode                                 0x20000096   Data           1  sx1212.o(.data)
+    counter                                  0x20000097   Data           1  sx1212.o(.data)
+    .data                                    0x20000098   Section        8  keyboard.o(.data)
+    ucKeyBoard_State                         0x20000098   Data           1  keyboard.o(.data)
+    ucKeyBoard_KeyValue                      0x20000099   Data           1  keyboard.o(.data)
+    uiKeyBoard_DebounceDly                   0x2000009c   Data           4  keyboard.o(.data)
+    .data                                    0x200000a0   Section       68  ht1621.o(.data)
+    aucSEG_PreServiceValue                   0x200000a0   Data           6  ht1621.o(.data)
+    aucSEG_CurServiceValue                   0x200000a6   Data           6  ht1621.o(.data)
+    ucLed_DisValue                           0x200000ac   Data           1  ht1621.o(.data)
+    uiLed_DisQuickBlinkDly                   0x200000b0   Data           4  ht1621.o(.data)
+    uiLed_DisSlowBlinkDly                    0x200000b4   Data           4  ht1621.o(.data)
+    p_ucLED_SEGValue                         0x200000b8   Data           4  ht1621.o(.data)
+    bLED_SEGBlinkOnOff                       0x200000bc   Data           1  ht1621.o(.data)
+    ucLED_SEGBlinkState                      0x200000bd   Data           1  ht1621.o(.data)
+    uiLED_SEGBlinkDly                        0x200000c0   Data           4  ht1621.o(.data)
+    ucLastValue                              0x200000c4   Data           1  ht1621.o(.data)
+    ucPreValue                               0x200000c5   Data           1  ht1621.o(.data)
+    bSlowBlinkState                          0x200000c6   Data           1  ht1621.o(.data)
+    bCurLEDState                             0x200000c7   Data           1  ht1621.o(.data)
+    uiFanDly                                 0x200000c8   Data           4  ht1621.o(.data)
+    bLED_DotBlinkState                       0x200000cc   Data           1  ht1621.o(.data)
+    a_ucLED_Value                            0x200000cd   Data           4  ht1621.o(.data)
+    a_pHT1621_CodeTab                        0x200000d4   Data          16  ht1621.o(.data)
+    .data                                    0x200000e4   Section       16  cooker_extafn.o(.data)
+    bGasStove_FireState                      0x200000e4   Data           1  cooker_extafn.o(.data)
+    bCooker_SysIdMatchState                  0x200000e5   Data           1  cooker_extafn.o(.data)
+    bGasStove_BatState                       0x200000e6   Data           1  cooker_extafn.o(.data)
+    bGasStove_GasCtrlState                   0x200000e7   Data           1  cooker_extafn.o(.data)
+    uiFireState_ChkDly                       0x200000e8   Data           4  cooker_extafn.o(.data)
+    uiBatState_ChkDly                        0x200000ec   Data           4  cooker_extafn.o(.data)
+    uiGasCtrlState_ChkDly                    0x200000f0   Data           4  cooker_extafn.o(.data)
+    .data                                    0x200000f4   Section       16  cooker_parse.o(.data)
+    eCooker_State                            0x200000f4   Data           1  cooker_parse.o(.data)
+    usCooker_ParseLength                     0x200000f8   Data           4  cooker_parse.o(.data)
+    usCooker_ParseCheck                      0x200000fc   Data           4  cooker_parse.o(.data)
+    delay                                    0x20000100   Data           4  cooker_parse.o(.data)
+    .data                                    0x20000104   Section        9  platform_extpin.o(.data)
+    bFanRotation_RunState                    0x20000104   Data           1  platform_extpin.o(.data)
+    uiFanRotation_RunDelay                   0x20000108   Data           4  platform_extpin.o(.data)
+    bLastState                               0x2000010c   Data           1  platform_extpin.o(.data)
+    .bss                                     0x20000110   Section       16  stm32fxxx_serial.o(.bss)
+    Serial_RxHandler                         0x20000110   Data          16  stm32fxxx_serial.o(.bss)
+    .bss                                     0x20000120   Section       43  sx1212.o(.bss)
+    .bss                                     0x2000014c   Section       20  keyboard.o(.bss)
+    a_pfnKeyBoard_Fun                        0x2000014c   Data          20  keyboard.o(.bss)
+    .bss                                     0x20000160   Section       44  cooker_parse.o(.bss)
+    tCooker_Entity                           0x20000160   Data          44  cooker_parse.o(.bss)
+    STACK                                    0x20000190   Section     1024  startup_stm32f051.o(STACK)
 
     Global Symbols
 
@@ -1489,112 +1490,119 @@ Image Symbol Table
     CRC_CalcCRC                              0x0800032d   Thumb Code    10  stm32f0xx_crc.o(i.CRC_CalcCRC)
     CRC_ResetDR                              0x0800033d   Thumb Code    14  stm32f0xx_crc.o(i.CRC_ResetDR)
     CheckRTCRight                            0x08000351   Thumb Code   170  utilities.o(i.CheckRTCRight)
-    ChordTone_Init                           0x080003fb   Thumb Code    16  chordtone.o(i.ChordTone_Init)
+    ChordTone_CtrlService                    0x080003fb   Thumb Code     2  chordtone.o(i.ChordTone_CtrlService)
+    ChordTone_Init                           0x080003fd   Thumb Code    16  chordtone.o(i.ChordTone_Init)
     ChordTone_PWMDevInit                     0x0800040d   Thumb Code    54  platform_chordtone.o(i.ChordTone_PWMDevInit)
-    ChordTone_PWMDisable                     0x08000449   Thumb Code    66  platform_chordtone.o(i.ChordTone_PWMDisable)
-    ChordTone_Start                          0x08000495   Thumb Code   254  chordtone.o(i.ChordTone_Start)
-    Cooker_ExtPinGPIOInit                    0x080005e9   Thumb Code    58  platform_extpin.o(i.Cooker_ExtPinGPIOInit)
-    Cooker_GetId                             0x08000623   Thumb Code    22  cooker_parse.o(i.Cooker_GetId)
-    Cooker_Load                              0x08000639   Thumb Code   184  cooker_parse.o(i.Cooker_Load)
-    Cooker_SysIdMatch                        0x080006f5   Thumb Code    28  cooker_extafn.o(i.Cooker_SysIdMatch)
-    Cooker_SysIdMatchResult                  0x08000715   Thumb Code     6  cooker_extafn.o(i.Cooker_SysIdMatchResult)
-    Cooker_WirelessSendLoad                  0x08000721   Thumb Code    44  cooker_parse.o(i.Cooker_WirelessSendLoad)
-    FLASH_ClearFlag                          0x08000751   Thumb Code     6  stm32f0xx_flash.o(i.FLASH_ClearFlag)
-    FLASH_ErasePage                          0x0800075d   Thumb Code    72  stm32f0xx_flash.o(i.FLASH_ErasePage)
-    FLASH_GetStatus                          0x080007a9   Thumb Code    54  stm32f0xx_flash.o(i.FLASH_GetStatus)
-    FLASH_Lock                               0x080007e5   Thumb Code    14  stm32f0xx_flash.o(i.FLASH_Lock)
-    FLASH_ProgramWord                        0x080007f9   Thumb Code   104  stm32f0xx_flash.o(i.FLASH_ProgramWord)
-    FLASH_Unlock                             0x08000865   Thumb Code    24  stm32f0xx_flash.o(i.FLASH_Unlock)
-    FLASH_WaitForLastOperation               0x08000889   Thumb Code    40  stm32f0xx_flash.o(i.FLASH_WaitForLastOperation)
-    FanRotation_Service                      0x080008c9   Thumb Code    54  platform_extpin.o(i.FanRotation_Service)
-    GPIO_Init                                0x0800090d   Thumb Code   144  stm32f0xx_gpio.o(i.GPIO_Init)
-    GPIO_PinAFConfig                         0x0800099d   Thumb Code    68  stm32f0xx_gpio.o(i.GPIO_PinAFConfig)
-    GPIO_ReadInputDataBit                    0x080009e1   Thumb Code    20  stm32f0xx_gpio.o(i.GPIO_ReadInputDataBit)
-    GPIO_ResetBits                           0x080009f5   Thumb Code     4  stm32f0xx_gpio.o(i.GPIO_ResetBits)
-    GPIO_SetBits                             0x080009f9   Thumb Code     4  stm32f0xx_gpio.o(i.GPIO_SetBits)
-    GasStove_DisplayService                  0x0800105d   Thumb Code   140  gasstove_service.o(i.GasStove_DisplayService)
-    GasStove_FanRotation                     0x08001241   Thumb Code     6  platform_extpin.o(i.GasStove_FanRotation)
-    GasStove_FireState                       0x0800124d   Thumb Code     6  cooker_extafn.o(i.GasStove_FireState)
-    GasStove_Flameout                        0x08001259   Thumb Code    26  cooker_extafn.o(i.GasStove_Flameout)
-    GasStove_GasSensor                       0x08001273   Thumb Code    24  platform_extpin.o(i.GasStove_GasSensor)
-    GasStove_Init                            0x0800133d   Thumb Code   118  gasstove_service.o(i.GasStove_Init)
-    HT1621_Init                              0x0800148d   Thumb Code    80  platform_ht1621.o(i.HT1621_Init)
-    HT1621_SignService                       0x080014dd   Thumb Code   116  ht1621.o(i.HT1621_SignService)
-    HT1621_WriteCmd                          0x08001559   Thumb Code   186  platform_ht1621.o(i.HT1621_WriteCmd)
-    HT1621_WriteData                         0x08001613   Thumb Code   306  platform_ht1621.o(i.HT1621_WriteData)
-    InitSX1212                               0x08001745   Thumb Code    70  sx1212.o(i.InitSX1212)
-    KeyBoard_FunReg                          0x08001791   Thumb Code    30  keyboard.o(i.KeyBoard_FunReg)
-    KeyBoard_Init                            0x080017bd   Thumb Code   110  keyboard.o(i.KeyBoard_Init)
-    LED_SEGBlinkSet                          0x08001835   Thumb Code    24  ht1621.o(i.LED_SEGBlinkSet)
-    LED_SEG_Update                           0x0800197d   Thumb Code    10  ht1621.o(i.LED_SEG_Update)
-    LeapYear                                 0x0800198d   Thumb Code    60  utilities.o(i.LeapYear)
-    Led_DisplayOff                           0x08001af5   Thumb Code    12  ht1621.o(i.Led_DisplayOff)
-    Led_DisplayOn                            0x08001b05   Thumb Code    12  ht1621.o(i.Led_DisplayOn)
-    PWR_BackupAccessCmd                      0x08001dd1   Thumb Code    36  stm32f0xx_pwr.o(i.PWR_BackupAccessCmd)
-    RCC_AHBPeriphClockCmd                    0x08001df9   Thumb Code    28  stm32f0xx_rcc.o(i.RCC_AHBPeriphClockCmd)
-    RCC_APB1PeriphClockCmd                   0x08001e19   Thumb Code    28  stm32f0xx_rcc.o(i.RCC_APB1PeriphClockCmd)
-    RCC_GetFlagStatus                        0x08001e39   Thumb Code    68  stm32f0xx_rcc.o(i.RCC_GetFlagStatus)
-    RCC_LSEConfig                            0x08001e81   Thumb Code    34  stm32f0xx_rcc.o(i.RCC_LSEConfig)
-    RCC_RTCCLKCmd                            0x08001ea9   Thumb Code    36  stm32f0xx_rcc.o(i.RCC_RTCCLKCmd)
-    RCC_RTCCLKConfig                         0x08001ed1   Thumb Code    12  stm32f0xx_rcc.o(i.RCC_RTCCLKConfig)
-    RTC_ClearFlag                            0x08001f19   Thumb Code    26  stm32f0xx_rtc.o(i.RTC_ClearFlag)
-    RTC_EnterInitMode                        0x08001f39   Thumb Code    82  stm32f0xx_rtc.o(i.RTC_EnterInitMode)
-    RTC_ExitInitMode                         0x08001f91   Thumb Code    14  stm32f0xx_rtc.o(i.RTC_ExitInitMode)
-    RTC_GetDate                              0x08001fa5   Thumb Code    88  stm32f0xx_rtc.o(i.RTC_GetDate)
-    RTC_GetTime                              0x08002005   Thumb Code    84  stm32f0xx_rtc.o(i.RTC_GetTime)
-    RTC_Init                                 0x08002061   Thumb Code    84  stm32f0xx_rtc.o(i.RTC_Init)
-    RTC_ReadBackupRegister                   0x080020b9   Thumb Code    26  stm32f0xx_rtc.o(i.RTC_ReadBackupRegister)
-    RTC_SetDate                              0x080020d9   Thumb Code   198  stm32f0xx_rtc.o(i.RTC_SetDate)
-    RTC_SetTime                              0x080021a9   Thumb Code   208  stm32f0xx_rtc.o(i.RTC_SetTime)
-    RTC_WaitForSynchro                       0x08002281   Thumb Code   104  stm32f0xx_rtc.o(i.RTC_WaitForSynchro)
-    RTC_WriteBackupRegister                  0x080022ed   Thumb Code    24  stm32f0xx_rtc.o(i.RTC_WriteBackupRegister)
-    STM32Fxx_FlashPageWrite                  0x08002309   Thumb Code   108  stm32fxx_flash.o(i.STM32Fxx_FlashPageWrite)
-    STM32Fxxx_CountDelayus                   0x08002379   Thumb Code    74  stm32fxxx_misc.o(i.STM32Fxxx_CountDelayus)
-    STM32Fxxx_FlashErase                     0x080023c9   Thumb Code    66  stm32fxx_flash.o(i.STM32Fxxx_FlashErase)
-    STM32Fxxx_FlashRead                      0x0800240b   Thumb Code    48  stm32fxx_flash.o(i.STM32Fxxx_FlashRead)
-    STM32Fxxx_FlashWrite                     0x0800243b   Thumb Code    94  stm32fxx_flash.o(i.STM32Fxxx_FlashWrite)
-    STM32Fxxx_GetEtag                        0x08002499   Thumb Code    80  stm32fxxx_misc.o(i.STM32Fxxx_GetEtag)
-    STM32Fxxx_RTCInit                        0x080024ed   Thumb Code   128  stm32fxxx_rtc.o(i.STM32Fxxx_RTCInit)
-    SX1212_DelayMs                           0x080025b9   Thumb Code    12  platform_sx1212.o(i.SX1212_DelayMs)
-    SX1212_Delayus                           0x080025c5   Thumb Code    12  platform_sx1212.o(i.SX1212_Delayus)
-    SX1212_DevInit                           0x080025d1   Thumb Code   104  platform_sx1212.o(i.SX1212_DevInit)
-    SX1212_IRQ1Get                           0x0800263d   Thumb Code    24  platform_sx1212.o(i.SX1212_IRQ1Get)
-    SX1212_MISOGet                           0x08002655   Thumb Code    24  platform_sx1212.o(i.SX1212_MISOGet)
-    SX1212_MOSISet                           0x08002671   Thumb Code    28  platform_sx1212.o(i.SX1212_MOSISet)
-    SX1212_NSSCfgSet                         0x08002691   Thumb Code    32  platform_sx1212.o(i.SX1212_NSSCfgSet)
-    SX1212_NSSDataSet                        0x080026b1   Thumb Code    28  platform_sx1212.o(i.SX1212_NSSDataSet)
-    SX1212_SCKSet                            0x080026d1   Thumb Code    28  platform_sx1212.o(i.SX1212_SCKSet)
-    SendRfFrame                              0x080026f1   Thumb Code    90  sx1212.o(i.SendRfFrame)
-    SetRFMode                                0x0800274d   Thumb Code   480  sx1212.o(i.SetRFMode)
-    SysTick_FunReg                           0x08002f45   Thumb Code     6  stm32fxxx_misc.o(i.SysTick_FunReg)
-    SysTick_HandleInit                       0x08002f51   Thumb Code    54  stm32fxxx_misc.o(i.SysTick_HandleInit)
-    SysTick_Handler                          0x08002f95   Thumb Code    28  stm32fxxx_misc.o(i.SysTick_Handler)
-    SystemInit                               0x08002fb9   Thumb Code   110  system_stm32f0xx.o(i.SystemInit)
-    TIM_CtrlPWMOutputs                       0x08003035   Thumb Code    34  stm32f0xx_tim.o(i.TIM_CtrlPWMOutputs)
-    TIM_OC1Init                              0x08003059   Thumb Code   122  stm32f0xx_tim.o(i.TIM_OC1Init)
-    USART1_IRQHandler                        0x080030ed   Thumb Code    10  stm32fxxx_serial.o(i.USART1_IRQHandler)
-    USART2_IRQHandler                        0x080030f7   Thumb Code    10  stm32fxxx_serial.o(i.USART2_IRQHandler)
-    USART_ClearITPendingBit                  0x08003101   Thumb Code    18  stm32f0xx_usart.o(i.USART_ClearITPendingBit)
-    USART_GetFlagStatus                      0x08003113   Thumb Code    20  stm32f0xx_usart.o(i.USART_GetFlagStatus)
-    USART_ReceiveData                        0x08003127   Thumb Code    10  stm32f0xx_usart.o(i.USART_ReceiveData)
-    _SpiConfig                               0x08003131   Thumb Code    64  sx1212.o(i._SpiConfig)
-    __ARM_common_switch8                     0x08003171   Thumb Code    28  stm32fxxx_misc.o(i.__ARM_common_switch8)
-    __scatterload_copy                       0x0800318d   Thumb Code    14  handlers.o(i.__scatterload_copy)
-    __scatterload_null                       0x0800319b   Thumb Code     2  handlers.o(i.__scatterload_null)
-    __scatterload_zeroinit                   0x0800319d   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
-    cmp_buf                                  0x080031ab   Thumb Code    36  utilities.o(i.cmp_buf)
-    crc16_ccitt_byte                         0x080031d1   Thumb Code    22  crc.o(i.crc16_ccitt_byte)
-    crc32_ethernet_block                     0x080031ed   Thumb Code   122  crc32ethernetstm32.o(i.crc32_ethernet_block)
-    get_rtc                                  0x08003267   Thumb Code    16  rtc.o(i.get_rtc)
-    main                                     0x08003277   Thumb Code   118  app.o(i.main)
-    rtc_init                                 0x080032ed   Thumb Code     8  rtc.o(i.rtc_init)
-    set_rtc                                  0x080032f5   Thumb Code    28  rtc.o(i.set_rtc)
-    Region$$Table$$Base                      0x08003f74   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x08003f94   Number         0  anon$$obj.o(Region$$Table)
+    ChordTone_Start                          0x08000449   Thumb Code     2  chordtone.o(i.ChordTone_Start)
+    Cooker_AFNChk                            0x08000571   Thumb Code   244  cooker_extafn.o(i.Cooker_AFNChk)
+    Cooker_ExtPinGPIOInit                    0x08000681   Thumb Code    58  platform_extpin.o(i.Cooker_ExtPinGPIOInit)
+    Cooker_GetId                             0x080006bb   Thumb Code    22  cooker_parse.o(i.Cooker_GetId)
+    Cooker_Load                              0x080006d1   Thumb Code   184  cooker_parse.o(i.Cooker_Load)
+    Cooker_Parse                             0x0800078d   Thumb Code   124  cooker_parse.o(i.Cooker_Parse)
+    Cooker_SysIdMatch                        0x08000825   Thumb Code    28  cooker_extafn.o(i.Cooker_SysIdMatch)
+    Cooker_SysIdMatchResult                  0x08000845   Thumb Code     6  cooker_extafn.o(i.Cooker_SysIdMatchResult)
+    Cooker_WirelessSendLoad                  0x08000851   Thumb Code    44  cooker_parse.o(i.Cooker_WirelessSendLoad)
+    FLASH_ClearFlag                          0x08000881   Thumb Code     6  stm32f0xx_flash.o(i.FLASH_ClearFlag)
+    FLASH_ErasePage                          0x0800088d   Thumb Code    72  stm32f0xx_flash.o(i.FLASH_ErasePage)
+    FLASH_GetStatus                          0x080008d9   Thumb Code    54  stm32f0xx_flash.o(i.FLASH_GetStatus)
+    FLASH_Lock                               0x08000915   Thumb Code    14  stm32f0xx_flash.o(i.FLASH_Lock)
+    FLASH_ProgramWord                        0x08000929   Thumb Code   104  stm32f0xx_flash.o(i.FLASH_ProgramWord)
+    FLASH_Unlock                             0x08000995   Thumb Code    24  stm32f0xx_flash.o(i.FLASH_Unlock)
+    FLASH_WaitForLastOperation               0x080009b9   Thumb Code    40  stm32f0xx_flash.o(i.FLASH_WaitForLastOperation)
+    FanRotation_Service                      0x080009f9   Thumb Code    54  platform_extpin.o(i.FanRotation_Service)
+    GPIO_Init                                0x08000a3d   Thumb Code   144  stm32f0xx_gpio.o(i.GPIO_Init)
+    GPIO_PinAFConfig                         0x08000acd   Thumb Code    68  stm32f0xx_gpio.o(i.GPIO_PinAFConfig)
+    GPIO_ReadInputDataBit                    0x08000b11   Thumb Code    20  stm32f0xx_gpio.o(i.GPIO_ReadInputDataBit)
+    GPIO_ResetBits                           0x08000b25   Thumb Code     4  stm32f0xx_gpio.o(i.GPIO_ResetBits)
+    GPIO_SetBits                             0x08000b29   Thumb Code     4  stm32f0xx_gpio.o(i.GPIO_SetBits)
+    GasStove_DisplayService                  0x0800118d   Thumb Code   140  gasstove_service.o(i.GasStove_DisplayService)
+    GasStove_FanRotation                     0x08001371   Thumb Code     6  platform_extpin.o(i.GasStove_FanRotation)
+    GasStove_FireState                       0x0800137d   Thumb Code     6  cooker_extafn.o(i.GasStove_FireState)
+    GasStove_FireStateChkService             0x08001389   Thumb Code    38  cooker_extafn.o(i.GasStove_FireStateChkService)
+    GasStove_Flameout                        0x080013bd   Thumb Code    26  cooker_extafn.o(i.GasStove_Flameout)
+    GasStove_GasBatStateChkService           0x080013d9   Thumb Code    72  cooker_extafn.o(i.GasStove_GasBatStateChkService)
+    GasStove_GasSensor                       0x08001435   Thumb Code    24  platform_extpin.o(i.GasStove_GasSensor)
+    GasStove_Init                            0x080014fd   Thumb Code   118  gasstove_service.o(i.GasStove_Init)
+    HT1621_Init                              0x0800164d   Thumb Code    80  platform_ht1621.o(i.HT1621_Init)
+    HT1621_SignService                       0x0800169d   Thumb Code   116  ht1621.o(i.HT1621_SignService)
+    HT1621_WriteCmd                          0x08001719   Thumb Code   186  platform_ht1621.o(i.HT1621_WriteCmd)
+    HT1621_WriteData                         0x080017d3   Thumb Code   306  platform_ht1621.o(i.HT1621_WriteData)
+    InitSX1212                               0x08001905   Thumb Code    70  sx1212.o(i.InitSX1212)
+    KeyBoard_FunReg                          0x08001951   Thumb Code    30  keyboard.o(i.KeyBoard_FunReg)
+    KeyBoard_InState                         0x0800197d   Thumb Code    90  keyboard.o(i.KeyBoard_InState)
+    KeyBoard_Init                            0x080019dd   Thumb Code   110  keyboard.o(i.KeyBoard_Init)
+    KeyBoard_Service                         0x08001a55   Thumb Code   262  keyboard.o(i.KeyBoard_Service)
+    LED_SEGBlinkSet                          0x08001b79   Thumb Code    24  ht1621.o(i.LED_SEGBlinkSet)
+    LED_SEG_Update                           0x08001cc1   Thumb Code    10  ht1621.o(i.LED_SEG_Update)
+    LeapYear                                 0x08001cd1   Thumb Code    60  utilities.o(i.LeapYear)
+    Led_DisplayOff                           0x08001e5d   Thumb Code    12  ht1621.o(i.Led_DisplayOff)
+    Led_DisplayOn                            0x08001e6d   Thumb Code    12  ht1621.o(i.Led_DisplayOn)
+    PWR_BackupAccessCmd                      0x08002139   Thumb Code    36  stm32f0xx_pwr.o(i.PWR_BackupAccessCmd)
+    RCC_AHBPeriphClockCmd                    0x08002161   Thumb Code    28  stm32f0xx_rcc.o(i.RCC_AHBPeriphClockCmd)
+    RCC_APB1PeriphClockCmd                   0x08002181   Thumb Code    28  stm32f0xx_rcc.o(i.RCC_APB1PeriphClockCmd)
+    RCC_GetFlagStatus                        0x080021a1   Thumb Code    68  stm32f0xx_rcc.o(i.RCC_GetFlagStatus)
+    RCC_LSEConfig                            0x080021e9   Thumb Code    34  stm32f0xx_rcc.o(i.RCC_LSEConfig)
+    RCC_RTCCLKCmd                            0x08002211   Thumb Code    36  stm32f0xx_rcc.o(i.RCC_RTCCLKCmd)
+    RCC_RTCCLKConfig                         0x08002239   Thumb Code    12  stm32f0xx_rcc.o(i.RCC_RTCCLKConfig)
+    RTC_ClearFlag                            0x08002281   Thumb Code    26  stm32f0xx_rtc.o(i.RTC_ClearFlag)
+    RTC_EnterInitMode                        0x080022a1   Thumb Code    82  stm32f0xx_rtc.o(i.RTC_EnterInitMode)
+    RTC_ExitInitMode                         0x080022f9   Thumb Code    14  stm32f0xx_rtc.o(i.RTC_ExitInitMode)
+    RTC_GetDate                              0x0800230d   Thumb Code    88  stm32f0xx_rtc.o(i.RTC_GetDate)
+    RTC_GetTime                              0x0800236d   Thumb Code    84  stm32f0xx_rtc.o(i.RTC_GetTime)
+    RTC_Init                                 0x080023c9   Thumb Code    84  stm32f0xx_rtc.o(i.RTC_Init)
+    RTC_ReadBackupRegister                   0x08002421   Thumb Code    26  stm32f0xx_rtc.o(i.RTC_ReadBackupRegister)
+    RTC_SetDate                              0x08002441   Thumb Code   198  stm32f0xx_rtc.o(i.RTC_SetDate)
+    RTC_SetTime                              0x08002511   Thumb Code   208  stm32f0xx_rtc.o(i.RTC_SetTime)
+    RTC_WaitForSynchro                       0x080025e9   Thumb Code   104  stm32f0xx_rtc.o(i.RTC_WaitForSynchro)
+    RTC_WriteBackupRegister                  0x08002655   Thumb Code    24  stm32f0xx_rtc.o(i.RTC_WriteBackupRegister)
+    ReceiveRfFrame                           0x08002671   Thumb Code   104  sx1212.o(i.ReceiveRfFrame)
+    STM32Fxx_FlashPageWrite                  0x080026d9   Thumb Code   108  stm32fxx_flash.o(i.STM32Fxx_FlashPageWrite)
+    STM32Fxxx_CountDelayus                   0x08002749   Thumb Code    74  stm32fxxx_misc.o(i.STM32Fxxx_CountDelayus)
+    STM32Fxxx_FlashErase                     0x08002799   Thumb Code    66  stm32fxx_flash.o(i.STM32Fxxx_FlashErase)
+    STM32Fxxx_FlashRead                      0x080027db   Thumb Code    48  stm32fxx_flash.o(i.STM32Fxxx_FlashRead)
+    STM32Fxxx_FlashWrite                     0x0800280b   Thumb Code    94  stm32fxx_flash.o(i.STM32Fxxx_FlashWrite)
+    STM32Fxxx_GetEtag                        0x08002869   Thumb Code    80  stm32fxxx_misc.o(i.STM32Fxxx_GetEtag)
+    STM32Fxxx_RTCInit                        0x080028bd   Thumb Code   128  stm32fxxx_rtc.o(i.STM32Fxxx_RTCInit)
+    SX1212_DelayMs                           0x08002989   Thumb Code    12  platform_sx1212.o(i.SX1212_DelayMs)
+    SX1212_Delayus                           0x08002995   Thumb Code    12  platform_sx1212.o(i.SX1212_Delayus)
+    SX1212_DevInit                           0x080029a1   Thumb Code   104  platform_sx1212.o(i.SX1212_DevInit)
+    SX1212_IRQ0Get                           0x08002a0d   Thumb Code    24  platform_sx1212.o(i.SX1212_IRQ0Get)
+    SX1212_IRQ1Get                           0x08002a25   Thumb Code    24  platform_sx1212.o(i.SX1212_IRQ1Get)
+    SX1212_MISOGet                           0x08002a3d   Thumb Code    24  platform_sx1212.o(i.SX1212_MISOGet)
+    SX1212_MOSISet                           0x08002a59   Thumb Code    28  platform_sx1212.o(i.SX1212_MOSISet)
+    SX1212_NSSCfgSet                         0x08002a79   Thumb Code    32  platform_sx1212.o(i.SX1212_NSSCfgSet)
+    SX1212_NSSDataSet                        0x08002a99   Thumb Code    28  platform_sx1212.o(i.SX1212_NSSDataSet)
+    SX1212_SCKSet                            0x08002ab9   Thumb Code    28  platform_sx1212.o(i.SX1212_SCKSet)
+    SendRfFrame                              0x08002ad9   Thumb Code    90  sx1212.o(i.SendRfFrame)
+    SetRFMode                                0x08002b35   Thumb Code   480  sx1212.o(i.SetRFMode)
+    SysTick_FunReg                           0x0800332d   Thumb Code     6  stm32fxxx_misc.o(i.SysTick_FunReg)
+    SysTick_HandleInit                       0x08003339   Thumb Code    54  stm32fxxx_misc.o(i.SysTick_HandleInit)
+    SysTick_Handler                          0x0800337d   Thumb Code    28  stm32fxxx_misc.o(i.SysTick_Handler)
+    SystemInit                               0x080033a1   Thumb Code   110  system_stm32f0xx.o(i.SystemInit)
+    USART1_IRQHandler                        0x0800341d   Thumb Code    10  stm32fxxx_serial.o(i.USART1_IRQHandler)
+    USART2_IRQHandler                        0x08003427   Thumb Code    10  stm32fxxx_serial.o(i.USART2_IRQHandler)
+    USART_ClearITPendingBit                  0x08003431   Thumb Code    18  stm32f0xx_usart.o(i.USART_ClearITPendingBit)
+    USART_GetFlagStatus                      0x08003443   Thumb Code    20  stm32f0xx_usart.o(i.USART_GetFlagStatus)
+    USART_ReceiveData                        0x08003457   Thumb Code    10  stm32f0xx_usart.o(i.USART_ReceiveData)
+    _SpiConfig                               0x08003461   Thumb Code    64  sx1212.o(i._SpiConfig)
+    __ARM_common_switch8                     0x080034a1   Thumb Code    28  stm32fxxx_misc.o(i.__ARM_common_switch8)
+    __scatterload_copy                       0x080034bd   Thumb Code    14  handlers.o(i.__scatterload_copy)
+    __scatterload_null                       0x080034cb   Thumb Code     2  handlers.o(i.__scatterload_null)
+    __scatterload_zeroinit                   0x080034cd   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
+    cmp_buf                                  0x080034db   Thumb Code    36  utilities.o(i.cmp_buf)
+    crc16_ccitt_byte                         0x08003501   Thumb Code    22  crc.o(i.crc16_ccitt_byte)
+    crc32_ethernet_block                     0x0800351d   Thumb Code   122  crc32ethernetstm32.o(i.crc32_ethernet_block)
+    get_rtc                                  0x08003597   Thumb Code    16  rtc.o(i.get_rtc)
+    main                                     0x080035a9   Thumb Code   234  app.o(i.main)
+    rtc_init                                 0x0800369d   Thumb Code     8  rtc.o(i.rtc_init)
+    set_rtc                                  0x080036a5   Thumb Code    28  rtc.o(i.set_rtc)
+    Region$$Table$$Base                      0x080039a0   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x080039c0   Number         0  anon$$obj.o(Region$$Table)
     SystemCoreClock                          0x20000000   Data           4  system_stm32f0xx.o(.data)
     AHBPrescTable                            0x20000004   Data          16  system_stm32f0xx.o(.data)
-    RF_Pkt                                   0x20000114   Data          43  sx1212.o(.bss)
-    __initial_sp                             0x20000558   Data           0  startup_stm32f051.o(STACK)
+    i                                        0x20000014   Data           1  app.o(.data)
+    RF_Pkt                                   0x20000120   Data          43  sx1212.o(.bss)
+    __initial_sp                             0x20000590   Data           0  startup_stm32f051.o(STACK)
 
 
 
@@ -1604,223 +1612,241 @@ Memory Map of the image
 
   Image Entry point : 0x080000c1
 
-  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x00004098, Max: 0x00010000, ABSOLUTE)
+  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x00003ad0, Max: 0x00010000, ABSOLUTE)
 
-    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x00003f94, Max: 0x00010000, ABSOLUTE)
+    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x000039c0, Max: 0x00010000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
     0x08000000   0x08000000   0x000000c0   Data   RO            3    RESET               startup_stm32f051.o
-    0x080000c0   0x080000c0   0x00000000   Code   RO         3421  * .ARM.Collect$$$$00000000  mc_p.l(entry.o)
-    0x080000c0   0x080000c0   0x00000004   Code   RO         3434    .ARM.Collect$$$$00000001  mc_p.l(entry2.o)
-    0x080000c4   0x080000c4   0x00000004   Code   RO         3437    .ARM.Collect$$$$00000004  mc_p.l(entry5.o)
-    0x080000c8   0x080000c8   0x00000000   Code   RO         3439    .ARM.Collect$$$$00000008  mc_p.l(entry7b.o)
-    0x080000c8   0x080000c8   0x00000000   Code   RO         3441    .ARM.Collect$$$$0000000A  mc_p.l(entry8b.o)
-    0x080000c8   0x080000c8   0x00000008   Code   RO         3442    .ARM.Collect$$$$0000000B  mc_p.l(entry9a.o)
-    0x080000d0   0x080000d0   0x00000000   Code   RO         3444    .ARM.Collect$$$$0000000D  mc_p.l(entry10a.o)
-    0x080000d0   0x080000d0   0x00000000   Code   RO         3446    .ARM.Collect$$$$0000000F  mc_p.l(entry11a.o)
-    0x080000d0   0x080000d0   0x00000004   Code   RO         3435    .ARM.Collect$$$$00002712  mc_p.l(entry2.o)
+    0x080000c0   0x080000c0   0x00000000   Code   RO         3439  * .ARM.Collect$$$$00000000  mc_p.l(entry.o)
+    0x080000c0   0x080000c0   0x00000004   Code   RO         3452    .ARM.Collect$$$$00000001  mc_p.l(entry2.o)
+    0x080000c4   0x080000c4   0x00000004   Code   RO         3455    .ARM.Collect$$$$00000004  mc_p.l(entry5.o)
+    0x080000c8   0x080000c8   0x00000000   Code   RO         3457    .ARM.Collect$$$$00000008  mc_p.l(entry7b.o)
+    0x080000c8   0x080000c8   0x00000000   Code   RO         3459    .ARM.Collect$$$$0000000A  mc_p.l(entry8b.o)
+    0x080000c8   0x080000c8   0x00000008   Code   RO         3460    .ARM.Collect$$$$0000000B  mc_p.l(entry9a.o)
+    0x080000d0   0x080000d0   0x00000000   Code   RO         3462    .ARM.Collect$$$$0000000D  mc_p.l(entry10a.o)
+    0x080000d0   0x080000d0   0x00000000   Code   RO         3464    .ARM.Collect$$$$0000000F  mc_p.l(entry11a.o)
+    0x080000d0   0x080000d0   0x00000004   Code   RO         3453    .ARM.Collect$$$$00002712  mc_p.l(entry2.o)
     0x080000d4   0x080000d4   0x0000001c   Code   RO            4    .text               startup_stm32f051.o
-    0x080000f0   0x080000f0   0x0000002c   Code   RO         3424    .text               mc_p.l(uidiv.o)
-    0x0800011c   0x0800011c   0x00000028   Code   RO         3426    .text               mc_p.l(idiv.o)
-    0x08000144   0x08000144   0x00000024   Code   RO         3428    .text               mc_p.l(memcpya.o)
-    0x08000168   0x08000168   0x00000024   Code   RO         3430    .text               mc_p.l(memseta.o)
-    0x0800018c   0x0800018c   0x00000024   Code   RO         3448    .text               mc_p.l(init.o)
-    0x080001b0   0x080001b0   0x00000018   Code   RO          487    i.BSP_OS_TimeDlyMs  stm32fxxx_misc.o
-    0x080001c8   0x080001c8   0x00000010   Code   RO          488    i.BSP_OS_TimeGet    stm32fxxx_misc.o
-    0x080001d8   0x080001d8   0x0000001c   Code   RO          489    i.BSP_OS_Timeout    stm32fxxx_misc.o
-    0x080001f4   0x080001f4   0x0000003c   Code   RO          583    i.BSP_RTCGet        stm32fxxx_rtc.o
-    0x08000230   0x08000230   0x00000046   Code   RO          584    i.BSP_RTCSet        stm32fxxx_rtc.o
+    0x080000f0   0x080000f0   0x0000002c   Code   RO         3442    .text               mc_p.l(uidiv.o)
+    0x0800011c   0x0800011c   0x00000028   Code   RO         3444    .text               mc_p.l(idiv.o)
+    0x08000144   0x08000144   0x00000024   Code   RO         3446    .text               mc_p.l(memcpya.o)
+    0x08000168   0x08000168   0x00000024   Code   RO         3448    .text               mc_p.l(memseta.o)
+    0x0800018c   0x0800018c   0x00000024   Code   RO         3466    .text               mc_p.l(init.o)
+    0x080001b0   0x080001b0   0x00000018   Code   RO          488    i.BSP_OS_TimeDlyMs  stm32fxxx_misc.o
+    0x080001c8   0x080001c8   0x00000010   Code   RO          489    i.BSP_OS_TimeGet    stm32fxxx_misc.o
+    0x080001d8   0x080001d8   0x0000001c   Code   RO          490    i.BSP_OS_Timeout    stm32fxxx_misc.o
+    0x080001f4   0x080001f4   0x0000003c   Code   RO          584    i.BSP_RTCGet        stm32fxxx_rtc.o
+    0x08000230   0x08000230   0x00000046   Code   RO          585    i.BSP_RTCSet        stm32fxxx_rtc.o
     0x08000276   0x08000276   0x00000002   PAD
-    0x08000278   0x08000278   0x0000004c   Code   RO         2682    i.BuildPacket       sx1212.o
-    0x080002c4   0x080002c4   0x00000030   Code   RO         3082    i.Buzzer_GPIOInit   platform_chordtone.o
-    0x080002f4   0x080002f4   0x00000014   Code   RO         3083    i.Buzzer_PwrOff     platform_chordtone.o
-    0x08000308   0x08000308   0x00000024   Code   RO          664    i.CRC_CalcBlockCRC  stm32f0xx_crc.o
-    0x0800032c   0x0800032c   0x00000010   Code   RO          665    i.CRC_CalcCRC       stm32f0xx_crc.o
-    0x0800033c   0x0800033c   0x00000014   Code   RO          672    i.CRC_ResetDR       stm32f0xx_crc.o
-    0x08000350   0x08000350   0x000000aa   Code   RO         3220    i.CheckRTCRight     utilities.o
-    0x080003fa   0x080003fa   0x00000010   Code   RO         2738    i.ChordTone_Init    chordtone.o
-    0x0800040a   0x0800040a   0x00000002   PAD
-    0x0800040c   0x0800040c   0x0000003c   Code   RO         3085    i.ChordTone_PWMDevInit  platform_chordtone.o
-    0x08000448   0x08000448   0x0000004c   Code   RO         3086    i.ChordTone_PWMDisable  platform_chordtone.o
-    0x08000494   0x08000494   0x00000154   Code   RO         2739    i.ChordTone_Start   chordtone.o
-    0x080005e8   0x080005e8   0x0000003a   Code   RO         3134    i.Cooker_ExtPinGPIOInit  platform_extpin.o
-    0x08000622   0x08000622   0x00000016   Code   RO         2937    i.Cooker_GetId      cooker_parse.o
-    0x08000638   0x08000638   0x000000bc   Code   RO         2938    i.Cooker_Load       cooker_parse.o
-    0x080006f4   0x080006f4   0x00000020   Code   RO         2886    i.Cooker_SysIdMatch  cooker_extafn.o
-    0x08000714   0x08000714   0x0000000c   Code   RO         2887    i.Cooker_SysIdMatchResult  cooker_extafn.o
-    0x08000720   0x08000720   0x00000030   Code   RO         2940    i.Cooker_WirelessSendLoad  cooker_parse.o
-    0x08000750   0x08000750   0x0000000c   Code   RO          762    i.FLASH_ClearFlag   stm32f0xx_flash.o
-    0x0800075c   0x0800075c   0x0000004c   Code   RO          764    i.FLASH_ErasePage   stm32f0xx_flash.o
-    0x080007a8   0x080007a8   0x0000003c   Code   RO          767    i.FLASH_GetStatus   stm32f0xx_flash.o
-    0x080007e4   0x080007e4   0x00000014   Code   RO          769    i.FLASH_Lock        stm32f0xx_flash.o
-    0x080007f8   0x080007f8   0x0000006c   Code   RO          789    i.FLASH_ProgramWord  stm32f0xx_flash.o
-    0x08000864   0x08000864   0x00000024   Code   RO          791    i.FLASH_Unlock      stm32f0xx_flash.o
-    0x08000888   0x08000888   0x00000028   Code   RO          792    i.FLASH_WaitForLastOperation  stm32f0xx_flash.o
-    0x080008b0   0x080008b0   0x00000018   Code   RO         3135    i.FanRotation_Level  platform_extpin.o
-    0x080008c8   0x080008c8   0x00000044   Code   RO         3136    i.FanRotation_Service  platform_extpin.o
-    0x0800090c   0x0800090c   0x00000090   Code   RO          963    i.GPIO_Init         stm32f0xx_gpio.o
-    0x0800099c   0x0800099c   0x00000044   Code   RO          964    i.GPIO_PinAFConfig  stm32f0xx_gpio.o
-    0x080009e0   0x080009e0   0x00000014   Code   RO          967    i.GPIO_ReadInputDataBit  stm32f0xx_gpio.o
-    0x080009f4   0x080009f4   0x00000004   Code   RO          970    i.GPIO_ResetBits    stm32f0xx_gpio.o
-    0x080009f8   0x080009f8   0x00000004   Code   RO          971    i.GPIO_SetBits      stm32f0xx_gpio.o
-    0x080009fc   0x080009fc   0x000001bc   Code   RO          178    i.GasStove_AlarmChk  gasstove_service.o
-    0x08000bb8   0x08000bb8   0x000000f0   Code   RO          179    i.GasStove_DisRTC   gasstove_service.o
-    0x08000ca8   0x08000ca8   0x00000080   Code   RO          180    i.GasStove_DisSet   gasstove_service.o
-    0x08000d28   0x08000d28   0x0000019c   Code   RO          181    i.GasStove_DisSetButton  gasstove_service.o
-    0x08000ec4   0x08000ec4   0x00000054   Code   RO          182    i.GasStove_DisSettingEndTime  gasstove_service.o
-    0x08000f18   0x08000f18   0x00000014   Code   RO          183    i.GasStove_DisSettingRTC  gasstove_service.o
-    0x08000f2c   0x08000f2c   0x00000054   Code   RO          184    i.GasStove_DisSettingStartTime  gasstove_service.o
-    0x08000f80   0x08000f80   0x000000dc   Code   RO          185    i.GasStove_DisTiming  gasstove_service.o
-    0x0800105c   0x0800105c   0x000000a8   Code   RO          186    i.GasStove_DisplayService  gasstove_service.o
-    0x08001104   0x08001104   0x0000013c   Code   RO          187    i.GasStove_ExtEnsure  gasstove_service.o
-    0x08001240   0x08001240   0x0000000c   Code   RO         3137    i.GasStove_FanRotation  platform_extpin.o
-    0x0800124c   0x0800124c   0x0000000c   Code   RO         2888    i.GasStove_FireState  cooker_extafn.o
-    0x08001258   0x08001258   0x0000001a   Code   RO         2890    i.GasStove_Flameout  cooker_extafn.o
-    0x08001272   0x08001272   0x00000018   Code   RO         3138    i.GasStove_GasSensor  platform_extpin.o
-    0x0800128a   0x0800128a   0x00000002   PAD
-    0x0800128c   0x0800128c   0x00000018   Code   RO          192    i.GasStove_GasSensorAlarmCancle  gasstove_service.o
-    0x080012a4   0x080012a4   0x00000098   Code   RO          193    i.GasStove_GasSensorAlarmChk  gasstove_service.o
-    0x0800133c   0x0800133c   0x000000a0   Code   RO          194    i.GasStove_Init     gasstove_service.o
-    0x080013dc   0x080013dc   0x0000003c   Code   RO          195    i.GasStove_TimingIRQHandler  gasstove_service.o
-    0x08001418   0x08001418   0x00000012   Code   RO         3179    i.HT1621_Delay      platform_ht1621.o
-    0x0800142a   0x0800142a   0x00000002   PAD
-    0x0800142c   0x0800142c   0x00000060   Code   RO         3180    i.HT1621_GPIOInit   platform_ht1621.o
-    0x0800148c   0x0800148c   0x00000050   Code   RO         3181    i.HT1621_Init       platform_ht1621.o
-    0x080014dc   0x080014dc   0x0000007c   Code   RO         2807    i.HT1621_SignService  ht1621.o
-    0x08001558   0x08001558   0x000000ba   Code   RO         3182    i.HT1621_WriteCmd   platform_ht1621.o
-    0x08001612   0x08001612   0x00000132   Code   RO         3183    i.HT1621_WriteData  platform_ht1621.o
-    0x08001744   0x08001744   0x0000004c   Code   RO         2683    i.InitSX1212        sx1212.o
-    0x08001790   0x08001790   0x0000002c   Code   RO         2767    i.KeyBoard_FunReg   keyboard.o
-    0x080017bc   0x080017bc   0x00000078   Code   RO         2769    i.KeyBoard_Init     keyboard.o
-    0x08001834   0x08001834   0x00000024   Code   RO         2808    i.LED_SEGBlinkSet   ht1621.o
-    0x08001858   0x08001858   0x00000124   Code   RO         2809    i.LED_SEG_Service   ht1621.o
-    0x0800197c   0x0800197c   0x00000010   Code   RO         2810    i.LED_SEG_Update    ht1621.o
-    0x0800198c   0x0800198c   0x0000003c   Code   RO         3224    i.LeapYear          utilities.o
-    0x080019c8   0x080019c8   0x0000012c   Code   RO         2811    i.Led_Display       ht1621.o
-    0x08001af4   0x08001af4   0x00000010   Code   RO         2812    i.Led_DisplayOff    ht1621.o
-    0x08001b04   0x08001b04   0x00000010   Code   RO         2813    i.Led_DisplayOn     ht1621.o
-    0x08001b14   0x08001b14   0x00000244   Code   RO         2814    i.Led_DisplayService  ht1621.o
-    0x08001d58   0x08001d58   0x00000078   Code   RO          490    i.NVIC_SetPriority  stm32fxxx_misc.o
-    0x08001dd0   0x08001dd0   0x00000028   Code   RO         1142    i.PWR_BackupAccessCmd  stm32f0xx_pwr.o
-    0x08001df8   0x08001df8   0x00000020   Code   RO         1217    i.RCC_AHBPeriphClockCmd  stm32f0xx_rcc.o
-    0x08001e18   0x08001e18   0x00000020   Code   RO         1219    i.RCC_APB1PeriphClockCmd  stm32f0xx_rcc.o
-    0x08001e38   0x08001e38   0x00000048   Code   RO         1232    i.RCC_GetFlagStatus  stm32f0xx_rcc.o
-    0x08001e80   0x08001e80   0x00000028   Code   RO         1243    i.RCC_LSEConfig     stm32f0xx_rcc.o
-    0x08001ea8   0x08001ea8   0x00000028   Code   RO         1251    i.RCC_RTCCLKCmd     stm32f0xx_rcc.o
-    0x08001ed0   0x08001ed0   0x00000010   Code   RO         1252    i.RCC_RTCCLKConfig  stm32f0xx_rcc.o
-    0x08001ee0   0x08001ee0   0x0000001a   Code   RO         1481    i.RTC_Bcd2ToByte    stm32f0xx_rtc.o
-    0x08001efa   0x08001efa   0x0000001c   Code   RO         1483    i.RTC_ByteToBcd2    stm32f0xx_rtc.o
-    0x08001f16   0x08001f16   0x00000002   PAD
-    0x08001f18   0x08001f18   0x00000020   Code   RO         1486    i.RTC_ClearFlag     stm32f0xx_rtc.o
-    0x08001f38   0x08001f38   0x00000058   Code   RO         1491    i.RTC_EnterInitMode  stm32f0xx_rtc.o
-    0x08001f90   0x08001f90   0x00000014   Code   RO         1492    i.RTC_ExitInitMode  stm32f0xx_rtc.o
-    0x08001fa4   0x08001fa4   0x00000060   Code   RO         1495    i.RTC_GetDate       stm32f0xx_rtc.o
-    0x08002004   0x08002004   0x0000005c   Code   RO         1500    i.RTC_GetTime       stm32f0xx_rtc.o
-    0x08002060   0x08002060   0x00000058   Code   RO         1505    i.RTC_Init          stm32f0xx_rtc.o
-    0x080020b8   0x080020b8   0x00000020   Code   RO         1508    i.RTC_ReadBackupRegister  stm32f0xx_rtc.o
-    0x080020d8   0x080020d8   0x000000d0   Code   RO         1511    i.RTC_SetDate       stm32f0xx_rtc.o
-    0x080021a8   0x080021a8   0x000000d8   Code   RO         1512    i.RTC_SetTime       stm32f0xx_rtc.o
-    0x08002280   0x08002280   0x0000006c   Code   RO         1526    i.RTC_WaitForSynchro  stm32f0xx_rtc.o
-    0x080022ec   0x080022ec   0x0000001c   Code   RO         1529    i.RTC_WriteBackupRegister  stm32f0xx_rtc.o
-    0x08002308   0x08002308   0x00000070   Code   RO          618    i.STM32Fxx_FlashPageWrite  stm32fxx_flash.o
-    0x08002378   0x08002378   0x00000050   Code   RO          491    i.STM32Fxxx_CountDelayus  stm32fxxx_misc.o
-    0x080023c8   0x080023c8   0x00000042   Code   RO          619    i.STM32Fxxx_FlashErase  stm32fxx_flash.o
-    0x0800240a   0x0800240a   0x00000030   Code   RO          621    i.STM32Fxxx_FlashRead  stm32fxx_flash.o
-    0x0800243a   0x0800243a   0x0000005e   Code   RO          622    i.STM32Fxxx_FlashWrite  stm32fxx_flash.o
-    0x08002498   0x08002498   0x00000054   Code   RO          492    i.STM32Fxxx_GetEtag  stm32fxxx_misc.o
-    0x080024ec   0x080024ec   0x00000084   Code   RO          585    i.STM32Fxxx_RTCInit  stm32fxxx_rtc.o
-    0x08002570   0x08002570   0x00000048   Code   RO          379    i.STM32Fxxx_Serail_EventISR_Handler  stm32fxxx_serial.o
-    0x080025b8   0x080025b8   0x0000000c   Code   RO         3006    i.SX1212_DelayMs    platform_sx1212.o
-    0x080025c4   0x080025c4   0x0000000c   Code   RO         3007    i.SX1212_Delayus    platform_sx1212.o
-    0x080025d0   0x080025d0   0x0000006c   Code   RO         3008    i.SX1212_DevInit    platform_sx1212.o
-    0x0800263c   0x0800263c   0x00000018   Code   RO         3010    i.SX1212_IRQ1Get    platform_sx1212.o
-    0x08002654   0x08002654   0x0000001c   Code   RO         3011    i.SX1212_MISOGet    platform_sx1212.o
-    0x08002670   0x08002670   0x00000020   Code   RO         3012    i.SX1212_MOSISet    platform_sx1212.o
-    0x08002690   0x08002690   0x00000020   Code   RO         3013    i.SX1212_NSSCfgSet  platform_sx1212.o
-    0x080026b0   0x080026b0   0x00000020   Code   RO         3014    i.SX1212_NSSDataSet  platform_sx1212.o
-    0x080026d0   0x080026d0   0x00000020   Code   RO         3015    i.SX1212_SCKSet     platform_sx1212.o
-    0x080026f0   0x080026f0   0x0000005a   Code   RO         2685    i.SendRfFrame       sx1212.o
-    0x0800274a   0x0800274a   0x00000002   PAD
-    0x0800274c   0x0800274c   0x000001e4   Code   RO         2686    i.SetRFMode         sx1212.o
-    0x08002930   0x08002930   0x000000d8   Code   RO           12    i.SetSysClock       system_stm32f0xx.o
-    0x08002a08   0x08002a08   0x00000078   Code   RO          196    i.SettingEndTime_Ensure  gasstove_service.o
-    0x08002a80   0x08002a80   0x00000044   Code   RO          197    i.SettingRTC_AddHour  gasstove_service.o
-    0x08002ac4   0x08002ac4   0x00000024   Code   RO          198    i.SettingRTC_AddMinute  gasstove_service.o
-    0x08002ae8   0x08002ae8   0x00000024   Code   RO          199    i.SettingRTC_AddTenMinute  gasstove_service.o
-    0x08002b0c   0x08002b0c   0x00000080   Code   RO          200    i.SettingRTC_Ensure  gasstove_service.o
-    0x08002b8c   0x08002b8c   0x00000078   Code   RO          201    i.SettingStartTime_Ensure  gasstove_service.o
-    0x08002c04   0x08002c04   0x00000028   Code   RO          202    i.SettingStartTime_Hour  gasstove_service.o
-    0x08002c2c   0x08002c2c   0x00000028   Code   RO          203    i.SettingStartTime_Minute  gasstove_service.o
-    0x08002c54   0x08002c54   0x00000028   Code   RO          204    i.SettingStartTime_TenMinute  gasstove_service.o
-    0x08002c7c   0x08002c7c   0x00000040   Code   RO          205    i.SettingTiming_Cancle  gasstove_service.o
-    0x08002cbc   0x08002cbc   0x0000008c   Code   RO          206    i.SettingTiming_Ensure  gasstove_service.o
-    0x08002d48   0x08002d48   0x00000064   Code   RO          207    i.SettingTiming_Hour  gasstove_service.o
-    0x08002dac   0x08002dac   0x00000064   Code   RO          208    i.SettingTiming_Minute  gasstove_service.o
-    0x08002e10   0x08002e10   0x00000064   Code   RO          209    i.SettingTiming_TenMinute  gasstove_service.o
-    0x08002e74   0x08002e74   0x0000002c   Code   RO          210    i.Setting_SysIdMatch  gasstove_service.o
-    0x08002ea0   0x08002ea0   0x00000014   Code   RO          211    i.Setting_SysIdMatchEnsure  gasstove_service.o
-    0x08002eb4   0x08002eb4   0x00000048   Code   RO          212    i.Setting_SysIdMatchStart  gasstove_service.o
-    0x08002efc   0x08002efc   0x00000046   Code   RO         2687    i.SpiInOut          sx1212.o
-    0x08002f42   0x08002f42   0x00000002   PAD
-    0x08002f44   0x08002f44   0x0000000c   Code   RO          496    i.SysTick_FunReg    stm32fxxx_misc.o
-    0x08002f50   0x08002f50   0x00000044   Code   RO          497    i.SysTick_HandleInit  stm32fxxx_misc.o
-    0x08002f94   0x08002f94   0x00000024   Code   RO          498    i.SysTick_Handler   stm32fxxx_misc.o
-    0x08002fb8   0x08002fb8   0x0000007c   Code   RO           14    i.SystemInit        system_stm32f0xx.o
-    0x08003034   0x08003034   0x00000022   Code   RO         1826    i.TIM_CtrlPWMOutputs  stm32f0xx_tim.o
-    0x08003056   0x08003056   0x00000002   PAD
-    0x08003058   0x08003058   0x00000094   Code   RO         1853    i.TIM_OC1Init       stm32f0xx_tim.o
-    0x080030ec   0x080030ec   0x0000000a   Code   RO          385    i.USART1_IRQHandler  stm32fxxx_serial.o
-    0x080030f6   0x080030f6   0x0000000a   Code   RO          386    i.USART2_IRQHandler  stm32fxxx_serial.o
-    0x08003100   0x08003100   0x00000012   Code   RO         2380    i.USART_ClearITPendingBit  stm32f0xx_usart.o
-    0x08003112   0x08003112   0x00000014   Code   RO         2391    i.USART_GetFlagStatus  stm32f0xx_usart.o
-    0x08003126   0x08003126   0x0000000a   Code   RO         2407    i.USART_ReceiveData  stm32f0xx_usart.o
-    0x08003130   0x08003130   0x00000040   Code   RO         2688    i._SpiConfig        sx1212.o
-    0x08003170   0x08003170   0x0000001c   Code   RO          570    i.__ARM_common_switch8  stm32fxxx_misc.o
-    0x0800318c   0x0800318c   0x0000000e   Code   RO         3452    i.__scatterload_copy  mc_p.l(handlers.o)
-    0x0800319a   0x0800319a   0x00000002   Code   RO         3453    i.__scatterload_null  mc_p.l(handlers.o)
-    0x0800319c   0x0800319c   0x0000000e   Code   RO         3454    i.__scatterload_zeroinit  mc_p.l(handlers.o)
-    0x080031aa   0x080031aa   0x00000024   Code   RO         3228    i.cmp_buf           utilities.o
-    0x080031ce   0x080031ce   0x00000002   PAD
-    0x080031d0   0x080031d0   0x0000001c   Code   RO         3366    i.crc16_ccitt_byte  crc.o
-    0x080031ec   0x080031ec   0x0000007a   Code   RO         3289    i.crc32_ethernet_block  crc32ethernetstm32.o
-    0x08003266   0x08003266   0x00000010   Code   RO         2861    i.get_rtc           rtc.o
-    0x08003276   0x08003276   0x00000076   Code   RO          103    i.main              app.o
-    0x080032ec   0x080032ec   0x00000008   Code   RO         2862    i.rtc_init          rtc.o
-    0x080032f4   0x080032f4   0x0000001c   Code   RO         2863    i.set_rtc           rtc.o
-    0x08003310   0x08003310   0x0000000c   Data   RO          213    .constdata          gasstove_service.o
-    0x0800331c   0x0800331c   0x00000010   Data   RO          499    .constdata          stm32fxxx_misc.o
-    0x0800332c   0x0800332c   0x00000028   Data   RO         2690    .constdata          sx1212.o
-    0x08003354   0x08003354   0x000009a8   Data   RO         2741    .constdata          chordtone.o
-    0x08003cfc   0x08003cfc   0x00000030   Data   RO         2815    .constdata          ht1621.o
-    0x08003d2c   0x08003d2c   0x00000038   Data   RO         3016    .constdata          platform_sx1212.o
-    0x08003d64   0x08003d64   0x00000210   Data   RO         3368    .constdata          crc.o
-    0x08003f74   0x08003f74   0x00000020   Data   RO         3450    Region$$Table       anon$$obj.o
+    0x08000278   0x08000278   0x0000004c   Code   RO         2683    i.BuildPacket       sx1212.o
+    0x080002c4   0x080002c4   0x00000030   Code   RO         3100    i.Buzzer_GPIOInit   platform_chordtone.o
+    0x080002f4   0x080002f4   0x00000014   Code   RO         3101    i.Buzzer_PwrOff     platform_chordtone.o
+    0x08000308   0x08000308   0x00000024   Code   RO          665    i.CRC_CalcBlockCRC  stm32f0xx_crc.o
+    0x0800032c   0x0800032c   0x00000010   Code   RO          666    i.CRC_CalcCRC       stm32f0xx_crc.o
+    0x0800033c   0x0800033c   0x00000014   Code   RO          673    i.CRC_ResetDR       stm32f0xx_crc.o
+    0x08000350   0x08000350   0x000000aa   Code   RO         3238    i.CheckRTCRight     utilities.o
+    0x080003fa   0x080003fa   0x00000002   Code   RO         2750    i.ChordTone_CtrlService  chordtone.o
+    0x080003fc   0x080003fc   0x00000010   Code   RO         2751    i.ChordTone_Init    chordtone.o
+    0x0800040c   0x0800040c   0x0000003c   Code   RO         3103    i.ChordTone_PWMDevInit  platform_chordtone.o
+    0x08000448   0x08000448   0x00000002   Code   RO         2752    i.ChordTone_Start   chordtone.o
+    0x0800044a   0x0800044a   0x00000002   PAD
+    0x0800044c   0x0800044c   0x00000034   Code   RO         2947    i.CookerParse_Addr  cooker_parse.o
+    0x08000480   0x08000480   0x00000058   Code   RO         2948    i.CookerParse_Check  cooker_parse.o
+    0x080004d8   0x080004d8   0x00000024   Code   RO         2949    i.CookerParse_Cmd   cooker_parse.o
+    0x080004fc   0x080004fc   0x0000001c   Code   RO         2950    i.CookerParse_Header  cooker_parse.o
+    0x08000518   0x08000518   0x00000014   Code   RO         2951    i.CookerParse_Length  cooker_parse.o
+    0x0800052c   0x0800052c   0x00000002   Code   RO         2952    i.CookerParse_Nop   cooker_parse.o
+    0x0800052e   0x0800052e   0x00000002   PAD
+    0x08000530   0x08000530   0x00000040   Code   RO         2953    i.CookerParse_Payload  cooker_parse.o
+    0x08000570   0x08000570   0x00000110   Code   RO         2897    i.Cooker_AFNChk     cooker_extafn.o
+    0x08000680   0x08000680   0x0000003a   Code   RO         3152    i.Cooker_ExtPinGPIOInit  platform_extpin.o
+    0x080006ba   0x080006ba   0x00000016   Code   RO         2955    i.Cooker_GetId      cooker_parse.o
+    0x080006d0   0x080006d0   0x000000bc   Code   RO         2956    i.Cooker_Load       cooker_parse.o
+    0x0800078c   0x0800078c   0x00000098   Code   RO         2957    i.Cooker_Parse      cooker_parse.o
+    0x08000824   0x08000824   0x00000020   Code   RO         2898    i.Cooker_SysIdMatch  cooker_extafn.o
+    0x08000844   0x08000844   0x0000000c   Code   RO         2899    i.Cooker_SysIdMatchResult  cooker_extafn.o
+    0x08000850   0x08000850   0x00000030   Code   RO         2958    i.Cooker_WirelessSendLoad  cooker_parse.o
+    0x08000880   0x08000880   0x0000000c   Code   RO          763    i.FLASH_ClearFlag   stm32f0xx_flash.o
+    0x0800088c   0x0800088c   0x0000004c   Code   RO          765    i.FLASH_ErasePage   stm32f0xx_flash.o
+    0x080008d8   0x080008d8   0x0000003c   Code   RO          768    i.FLASH_GetStatus   stm32f0xx_flash.o
+    0x08000914   0x08000914   0x00000014   Code   RO          770    i.FLASH_Lock        stm32f0xx_flash.o
+    0x08000928   0x08000928   0x0000006c   Code   RO          790    i.FLASH_ProgramWord  stm32f0xx_flash.o
+    0x08000994   0x08000994   0x00000024   Code   RO          792    i.FLASH_Unlock      stm32f0xx_flash.o
+    0x080009b8   0x080009b8   0x00000028   Code   RO          793    i.FLASH_WaitForLastOperation  stm32f0xx_flash.o
+    0x080009e0   0x080009e0   0x00000018   Code   RO         3153    i.FanRotation_Level  platform_extpin.o
+    0x080009f8   0x080009f8   0x00000044   Code   RO         3154    i.FanRotation_Service  platform_extpin.o
+    0x08000a3c   0x08000a3c   0x00000090   Code   RO          964    i.GPIO_Init         stm32f0xx_gpio.o
+    0x08000acc   0x08000acc   0x00000044   Code   RO          965    i.GPIO_PinAFConfig  stm32f0xx_gpio.o
+    0x08000b10   0x08000b10   0x00000014   Code   RO          968    i.GPIO_ReadInputDataBit  stm32f0xx_gpio.o
+    0x08000b24   0x08000b24   0x00000004   Code   RO          971    i.GPIO_ResetBits    stm32f0xx_gpio.o
+    0x08000b28   0x08000b28   0x00000004   Code   RO          972    i.GPIO_SetBits      stm32f0xx_gpio.o
+    0x08000b2c   0x08000b2c   0x000001bc   Code   RO          179    i.GasStove_AlarmChk  gasstove_service.o
+    0x08000ce8   0x08000ce8   0x000000f0   Code   RO          180    i.GasStove_DisRTC   gasstove_service.o
+    0x08000dd8   0x08000dd8   0x00000080   Code   RO          181    i.GasStove_DisSet   gasstove_service.o
+    0x08000e58   0x08000e58   0x0000019c   Code   RO          182    i.GasStove_DisSetButton  gasstove_service.o
+    0x08000ff4   0x08000ff4   0x00000054   Code   RO          183    i.GasStove_DisSettingEndTime  gasstove_service.o
+    0x08001048   0x08001048   0x00000014   Code   RO          184    i.GasStove_DisSettingRTC  gasstove_service.o
+    0x0800105c   0x0800105c   0x00000054   Code   RO          185    i.GasStove_DisSettingStartTime  gasstove_service.o
+    0x080010b0   0x080010b0   0x000000dc   Code   RO          186    i.GasStove_DisTiming  gasstove_service.o
+    0x0800118c   0x0800118c   0x000000a8   Code   RO          187    i.GasStove_DisplayService  gasstove_service.o
+    0x08001234   0x08001234   0x0000013c   Code   RO          188    i.GasStove_ExtEnsure  gasstove_service.o
+    0x08001370   0x08001370   0x0000000c   Code   RO         3155    i.GasStove_FanRotation  platform_extpin.o
+    0x0800137c   0x0800137c   0x0000000c   Code   RO         2900    i.GasStove_FireState  cooker_extafn.o
+    0x08001388   0x08001388   0x00000034   Code   RO         2901    i.GasStove_FireStateChkService  cooker_extafn.o
+    0x080013bc   0x080013bc   0x0000001a   Code   RO         2902    i.GasStove_Flameout  cooker_extafn.o
+    0x080013d6   0x080013d6   0x00000002   PAD
+    0x080013d8   0x080013d8   0x0000005c   Code   RO         2903    i.GasStove_GasBatStateChkService  cooker_extafn.o
+    0x08001434   0x08001434   0x00000018   Code   RO         3156    i.GasStove_GasSensor  platform_extpin.o
+    0x0800144c   0x0800144c   0x00000018   Code   RO          193    i.GasStove_GasSensorAlarmCancle  gasstove_service.o
+    0x08001464   0x08001464   0x00000098   Code   RO          194    i.GasStove_GasSensorAlarmChk  gasstove_service.o
+    0x080014fc   0x080014fc   0x000000a0   Code   RO          195    i.GasStove_Init     gasstove_service.o
+    0x0800159c   0x0800159c   0x0000003c   Code   RO          196    i.GasStove_TimingIRQHandler  gasstove_service.o
+    0x080015d8   0x080015d8   0x00000012   Code   RO         3197    i.HT1621_Delay      platform_ht1621.o
+    0x080015ea   0x080015ea   0x00000002   PAD
+    0x080015ec   0x080015ec   0x00000060   Code   RO         3198    i.HT1621_GPIOInit   platform_ht1621.o
+    0x0800164c   0x0800164c   0x00000050   Code   RO         3199    i.HT1621_Init       platform_ht1621.o
+    0x0800169c   0x0800169c   0x0000007c   Code   RO         2819    i.HT1621_SignService  ht1621.o
+    0x08001718   0x08001718   0x000000ba   Code   RO         3200    i.HT1621_WriteCmd   platform_ht1621.o
+    0x080017d2   0x080017d2   0x00000132   Code   RO         3201    i.HT1621_WriteData  platform_ht1621.o
+    0x08001904   0x08001904   0x0000004c   Code   RO         2684    i.InitSX1212        sx1212.o
+    0x08001950   0x08001950   0x0000002c   Code   RO         2779    i.KeyBoard_FunReg   keyboard.o
+    0x0800197c   0x0800197c   0x00000060   Code   RO         2780    i.KeyBoard_InState  keyboard.o
+    0x080019dc   0x080019dc   0x00000078   Code   RO         2781    i.KeyBoard_Init     keyboard.o
+    0x08001a54   0x08001a54   0x00000124   Code   RO         2782    i.KeyBoard_Service  keyboard.o
+    0x08001b78   0x08001b78   0x00000024   Code   RO         2820    i.LED_SEGBlinkSet   ht1621.o
+    0x08001b9c   0x08001b9c   0x00000124   Code   RO         2821    i.LED_SEG_Service   ht1621.o
+    0x08001cc0   0x08001cc0   0x00000010   Code   RO         2822    i.LED_SEG_Update    ht1621.o
+    0x08001cd0   0x08001cd0   0x0000003c   Code   RO         3242    i.LeapYear          utilities.o
+    0x08001d0c   0x08001d0c   0x00000150   Code   RO         2823    i.Led_Display       ht1621.o
+    0x08001e5c   0x08001e5c   0x00000010   Code   RO         2824    i.Led_DisplayOff    ht1621.o
+    0x08001e6c   0x08001e6c   0x00000010   Code   RO         2825    i.Led_DisplayOn     ht1621.o
+    0x08001e7c   0x08001e7c   0x00000244   Code   RO         2826    i.Led_DisplayService  ht1621.o
+    0x080020c0   0x080020c0   0x00000078   Code   RO          491    i.NVIC_SetPriority  stm32fxxx_misc.o
+    0x08002138   0x08002138   0x00000028   Code   RO         1143    i.PWR_BackupAccessCmd  stm32f0xx_pwr.o
+    0x08002160   0x08002160   0x00000020   Code   RO         1218    i.RCC_AHBPeriphClockCmd  stm32f0xx_rcc.o
+    0x08002180   0x08002180   0x00000020   Code   RO         1220    i.RCC_APB1PeriphClockCmd  stm32f0xx_rcc.o
+    0x080021a0   0x080021a0   0x00000048   Code   RO         1233    i.RCC_GetFlagStatus  stm32f0xx_rcc.o
+    0x080021e8   0x080021e8   0x00000028   Code   RO         1244    i.RCC_LSEConfig     stm32f0xx_rcc.o
+    0x08002210   0x08002210   0x00000028   Code   RO         1252    i.RCC_RTCCLKCmd     stm32f0xx_rcc.o
+    0x08002238   0x08002238   0x00000010   Code   RO         1253    i.RCC_RTCCLKConfig  stm32f0xx_rcc.o
+    0x08002248   0x08002248   0x0000001a   Code   RO         1482    i.RTC_Bcd2ToByte    stm32f0xx_rtc.o
+    0x08002262   0x08002262   0x0000001c   Code   RO         1484    i.RTC_ByteToBcd2    stm32f0xx_rtc.o
+    0x0800227e   0x0800227e   0x00000002   PAD
+    0x08002280   0x08002280   0x00000020   Code   RO         1487    i.RTC_ClearFlag     stm32f0xx_rtc.o
+    0x080022a0   0x080022a0   0x00000058   Code   RO         1492    i.RTC_EnterInitMode  stm32f0xx_rtc.o
+    0x080022f8   0x080022f8   0x00000014   Code   RO         1493    i.RTC_ExitInitMode  stm32f0xx_rtc.o
+    0x0800230c   0x0800230c   0x00000060   Code   RO         1496    i.RTC_GetDate       stm32f0xx_rtc.o
+    0x0800236c   0x0800236c   0x0000005c   Code   RO         1501    i.RTC_GetTime       stm32f0xx_rtc.o
+    0x080023c8   0x080023c8   0x00000058   Code   RO         1506    i.RTC_Init          stm32f0xx_rtc.o
+    0x08002420   0x08002420   0x00000020   Code   RO         1509    i.RTC_ReadBackupRegister  stm32f0xx_rtc.o
+    0x08002440   0x08002440   0x000000d0   Code   RO         1512    i.RTC_SetDate       stm32f0xx_rtc.o
+    0x08002510   0x08002510   0x000000d8   Code   RO         1513    i.RTC_SetTime       stm32f0xx_rtc.o
+    0x080025e8   0x080025e8   0x0000006c   Code   RO         1527    i.RTC_WaitForSynchro  stm32f0xx_rtc.o
+    0x08002654   0x08002654   0x0000001c   Code   RO         1530    i.RTC_WriteBackupRegister  stm32f0xx_rtc.o
+    0x08002670   0x08002670   0x00000068   Code   RO         2685    i.ReceiveRfFrame    sx1212.o
+    0x080026d8   0x080026d8   0x00000070   Code   RO          619    i.STM32Fxx_FlashPageWrite  stm32fxx_flash.o
+    0x08002748   0x08002748   0x00000050   Code   RO          492    i.STM32Fxxx_CountDelayus  stm32fxxx_misc.o
+    0x08002798   0x08002798   0x00000042   Code   RO          620    i.STM32Fxxx_FlashErase  stm32fxx_flash.o
+    0x080027da   0x080027da   0x00000030   Code   RO          622    i.STM32Fxxx_FlashRead  stm32fxx_flash.o
+    0x0800280a   0x0800280a   0x0000005e   Code   RO          623    i.STM32Fxxx_FlashWrite  stm32fxx_flash.o
+    0x08002868   0x08002868   0x00000054   Code   RO          493    i.STM32Fxxx_GetEtag  stm32fxxx_misc.o
+    0x080028bc   0x080028bc   0x00000084   Code   RO          586    i.STM32Fxxx_RTCInit  stm32fxxx_rtc.o
+    0x08002940   0x08002940   0x00000048   Code   RO          380    i.STM32Fxxx_Serail_EventISR_Handler  stm32fxxx_serial.o
+    0x08002988   0x08002988   0x0000000c   Code   RO         3024    i.SX1212_DelayMs    platform_sx1212.o
+    0x08002994   0x08002994   0x0000000c   Code   RO         3025    i.SX1212_Delayus    platform_sx1212.o
+    0x080029a0   0x080029a0   0x0000006c   Code   RO         3026    i.SX1212_DevInit    platform_sx1212.o
+    0x08002a0c   0x08002a0c   0x00000018   Code   RO         3027    i.SX1212_IRQ0Get    platform_sx1212.o
+    0x08002a24   0x08002a24   0x00000018   Code   RO         3028    i.SX1212_IRQ1Get    platform_sx1212.o
+    0x08002a3c   0x08002a3c   0x0000001c   Code   RO         3029    i.SX1212_MISOGet    platform_sx1212.o
+    0x08002a58   0x08002a58   0x00000020   Code   RO         3030    i.SX1212_MOSISet    platform_sx1212.o
+    0x08002a78   0x08002a78   0x00000020   Code   RO         3031    i.SX1212_NSSCfgSet  platform_sx1212.o
+    0x08002a98   0x08002a98   0x00000020   Code   RO         3032    i.SX1212_NSSDataSet  platform_sx1212.o
+    0x08002ab8   0x08002ab8   0x00000020   Code   RO         3033    i.SX1212_SCKSet     platform_sx1212.o
+    0x08002ad8   0x08002ad8   0x0000005a   Code   RO         2686    i.SendRfFrame       sx1212.o
+    0x08002b32   0x08002b32   0x00000002   PAD
+    0x08002b34   0x08002b34   0x000001e4   Code   RO         2687    i.SetRFMode         sx1212.o
+    0x08002d18   0x08002d18   0x000000d8   Code   RO           12    i.SetSysClock       system_stm32f0xx.o
+    0x08002df0   0x08002df0   0x00000078   Code   RO          197    i.SettingEndTime_Ensure  gasstove_service.o
+    0x08002e68   0x08002e68   0x00000044   Code   RO          198    i.SettingRTC_AddHour  gasstove_service.o
+    0x08002eac   0x08002eac   0x00000024   Code   RO          199    i.SettingRTC_AddMinute  gasstove_service.o
+    0x08002ed0   0x08002ed0   0x00000024   Code   RO          200    i.SettingRTC_AddTenMinute  gasstove_service.o
+    0x08002ef4   0x08002ef4   0x00000080   Code   RO          201    i.SettingRTC_Ensure  gasstove_service.o
+    0x08002f74   0x08002f74   0x00000078   Code   RO          202    i.SettingStartTime_Ensure  gasstove_service.o
+    0x08002fec   0x08002fec   0x00000028   Code   RO          203    i.SettingStartTime_Hour  gasstove_service.o
+    0x08003014   0x08003014   0x00000028   Code   RO          204    i.SettingStartTime_Minute  gasstove_service.o
+    0x0800303c   0x0800303c   0x00000028   Code   RO          205    i.SettingStartTime_TenMinute  gasstove_service.o
+    0x08003064   0x08003064   0x00000040   Code   RO          206    i.SettingTiming_Cancle  gasstove_service.o
+    0x080030a4   0x080030a4   0x0000008c   Code   RO          207    i.SettingTiming_Ensure  gasstove_service.o
+    0x08003130   0x08003130   0x00000064   Code   RO          208    i.SettingTiming_Hour  gasstove_service.o
+    0x08003194   0x08003194   0x00000064   Code   RO          209    i.SettingTiming_Minute  gasstove_service.o
+    0x080031f8   0x080031f8   0x00000064   Code   RO          210    i.SettingTiming_TenMinute  gasstove_service.o
+    0x0800325c   0x0800325c   0x0000002c   Code   RO          211    i.Setting_SysIdMatch  gasstove_service.o
+    0x08003288   0x08003288   0x00000014   Code   RO          212    i.Setting_SysIdMatchEnsure  gasstove_service.o
+    0x0800329c   0x0800329c   0x00000048   Code   RO          213    i.Setting_SysIdMatchStart  gasstove_service.o
+    0x080032e4   0x080032e4   0x00000046   Code   RO         2688    i.SpiInOut          sx1212.o
+    0x0800332a   0x0800332a   0x00000002   PAD
+    0x0800332c   0x0800332c   0x0000000c   Code   RO          497    i.SysTick_FunReg    stm32fxxx_misc.o
+    0x08003338   0x08003338   0x00000044   Code   RO          498    i.SysTick_HandleInit  stm32fxxx_misc.o
+    0x0800337c   0x0800337c   0x00000024   Code   RO          499    i.SysTick_Handler   stm32fxxx_misc.o
+    0x080033a0   0x080033a0   0x0000007c   Code   RO           14    i.SystemInit        system_stm32f0xx.o
+    0x0800341c   0x0800341c   0x0000000a   Code   RO          386    i.USART1_IRQHandler  stm32fxxx_serial.o
+    0x08003426   0x08003426   0x0000000a   Code   RO          387    i.USART2_IRQHandler  stm32fxxx_serial.o
+    0x08003430   0x08003430   0x00000012   Code   RO         2381    i.USART_ClearITPendingBit  stm32f0xx_usart.o
+    0x08003442   0x08003442   0x00000014   Code   RO         2392    i.USART_GetFlagStatus  stm32f0xx_usart.o
+    0x08003456   0x08003456   0x0000000a   Code   RO         2408    i.USART_ReceiveData  stm32f0xx_usart.o
+    0x08003460   0x08003460   0x00000040   Code   RO         2691    i._SpiConfig        sx1212.o
+    0x080034a0   0x080034a0   0x0000001c   Code   RO          571    i.__ARM_common_switch8  stm32fxxx_misc.o
+    0x080034bc   0x080034bc   0x0000000e   Code   RO         3470    i.__scatterload_copy  mc_p.l(handlers.o)
+    0x080034ca   0x080034ca   0x00000002   Code   RO         3471    i.__scatterload_null  mc_p.l(handlers.o)
+    0x080034cc   0x080034cc   0x0000000e   Code   RO         3472    i.__scatterload_zeroinit  mc_p.l(handlers.o)
+    0x080034da   0x080034da   0x00000024   Code   RO         3246    i.cmp_buf           utilities.o
+    0x080034fe   0x080034fe   0x00000002   PAD
+    0x08003500   0x08003500   0x0000001c   Code   RO         3384    i.crc16_ccitt_byte  crc.o
+    0x0800351c   0x0800351c   0x0000007a   Code   RO         3307    i.crc32_ethernet_block  crc32ethernetstm32.o
+    0x08003596   0x08003596   0x00000010   Code   RO         2873    i.get_rtc           rtc.o
+    0x080035a6   0x080035a6   0x00000002   PAD
+    0x080035a8   0x080035a8   0x000000f4   Code   RO          103    i.main              app.o
+    0x0800369c   0x0800369c   0x00000008   Code   RO         2874    i.rtc_init          rtc.o
+    0x080036a4   0x080036a4   0x0000001c   Code   RO         2875    i.set_rtc           rtc.o
+    0x080036c0   0x080036c0   0x0000000c   Data   RO          214    .constdata          gasstove_service.o
+    0x080036cc   0x080036cc   0x00000010   Data   RO          500    .constdata          stm32fxxx_misc.o
+    0x080036dc   0x080036dc   0x00000028   Data   RO         2693    .constdata          sx1212.o
+    0x08003704   0x08003704   0x00000005   Data   RO         2784    .constdata          keyboard.o
+    0x08003709   0x08003709   0x00000030   Data   RO         2827    .constdata          ht1621.o
+    0x08003739   0x08003739   0x00000003   PAD
+    0x0800373c   0x0800373c   0x0000001c   Data   RO         2960    .constdata          cooker_parse.o
+    0x08003758   0x08003758   0x00000038   Data   RO         3034    .constdata          platform_sx1212.o
+    0x08003790   0x08003790   0x00000210   Data   RO         3386    .constdata          crc.o
+    0x080039a0   0x080039a0   0x00000020   Data   RO         3468    Region$$Table       anon$$obj.o
 
 
-    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x08003f94, Size: 0x00000558, Max: 0x00002000, ABSOLUTE)
+    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x080039c0, Size: 0x00000590, Max: 0x00002000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x20000000   0x08003f94   0x00000014   Data   RW           15    .data               system_stm32f0xx.o
-    0x20000014   0x08003fa8   0x00000064   Data   RW          214    .data               gasstove_service.o
-    0x20000078   0x0800400c   0x00000010   Data   RW          390    .data               stm32fxxx_serial.o
-    0x20000088   0x0800401c   0x00000008   Data   RW          500    .data               stm32fxxx_misc.o
-    0x20000090   0x08004024   0x00000002   Data   RW          623    .data               stm32fxx_flash.o
-    0x20000092   0x08004026   0x00000002   Data   RW         2691    .data               sx1212.o
-    0x20000094   0x08004028   0x00000010   Data   RW         2742    .data               chordtone.o
-    0x200000a4   0x08004038   0x00000044   Data   RW         2816    .data               ht1621.o
-    0x200000e8   0x0800407c   0x00000008   Data   RW         2891    .data               cooker_extafn.o
-    0x200000f0   0x08004084   0x00000005   Data   RW         3088    .data               platform_chordtone.o
-    0x200000f5   0x08004089   0x00000003   PAD
-    0x200000f8   0x0800408c   0x00000009   Data   RW         3139    .data               platform_extpin.o
-    0x20000101   0x08004095   0x00000003   PAD
-    0x20000104        -       0x00000010   Zero   RW          388    .bss                stm32fxxx_serial.o
-    0x20000114        -       0x0000002b   Zero   RW         2689    .bss                sx1212.o
-    0x2000013f   0x08004095   0x00000001   PAD
-    0x20000140        -       0x00000014   Zero   RW         2771    .bss                keyboard.o
-    0x20000154   0x08004095   0x00000004   PAD
-    0x20000158        -       0x00000400   Zero   RW            1    STACK               startup_stm32f051.o
+    0x20000000   0x080039c0   0x00000014   Data   RW           15    .data               system_stm32f0xx.o
+    0x20000014   0x080039d4   0x00000001   Data   RW          105    .data               app.o
+    0x20000015   0x080039d5   0x00000003   PAD
+    0x20000018   0x080039d8   0x00000064   Data   RW          215    .data               gasstove_service.o
+    0x2000007c   0x08003a3c   0x00000010   Data   RW          391    .data               stm32fxxx_serial.o
+    0x2000008c   0x08003a4c   0x00000008   Data   RW          501    .data               stm32fxxx_misc.o
+    0x20000094   0x08003a54   0x00000002   Data   RW          624    .data               stm32fxx_flash.o
+    0x20000096   0x08003a56   0x00000002   Data   RW         2694    .data               sx1212.o
+    0x20000098   0x08003a58   0x00000008   Data   RW         2785    .data               keyboard.o
+    0x200000a0   0x08003a60   0x00000044   Data   RW         2828    .data               ht1621.o
+    0x200000e4   0x08003aa4   0x00000010   Data   RW         2904    .data               cooker_extafn.o
+    0x200000f4   0x08003ab4   0x00000010   Data   RW         2961    .data               cooker_parse.o
+    0x20000104   0x08003ac4   0x00000009   Data   RW         3157    .data               platform_extpin.o
+    0x2000010d   0x08003acd   0x00000003   PAD
+    0x20000110        -       0x00000010   Zero   RW          389    .bss                stm32fxxx_serial.o
+    0x20000120        -       0x0000002b   Zero   RW         2692    .bss                sx1212.o
+    0x2000014b   0x08003acd   0x00000001   PAD
+    0x2000014c        -       0x00000014   Zero   RW         2783    .bss                keyboard.o
+    0x20000160        -       0x0000002c   Zero   RW         2959    .bss                cooker_parse.o
+    0x2000018c   0x08003acd   0x00000004   PAD
+    0x20000190        -       0x00000400   Zero   RW            1    STACK               startup_stm32f051.o
 
 
 ==============================================================================
@@ -1830,19 +1856,19 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
-       118          0          0          0          0       5799   app.o
-       356        108       2472         16          0       4035   chordtone.o
-        82         16          0          8          0       2391   cooker_extafn.o
-       258          8          0          0          0       2999   cooker_parse.o
+       244         10          0          1          0       6286   app.o
+        20          0          0          0          0       1431   chordtone.o
+       498         86          0         16          0       4815   cooker_extafn.o
+       700        100         28         16         44       7462   cooker_parse.o
         28          6        528          0          0       1207   crc.o
        122          0          0          0          0       1303   crc32ethernetstm32.o
-      3780        618         12        100          0      17998   gasstove_service.o
-      1380        110         48         68          0       6421   ht1621.o
-       164         24          0          0         20       2118   keyboard.o
-       204         26          0          5          0       2296   platform_chordtone.o
+      3780        618         12        100          0      17958   gasstove_service.o
+      1416        110         48         68          0       6437   ht1621.o
+       552         60          5          8         20       3632   keyboard.o
+       128         16          0          0          0       1489   platform_chordtone.o
        186         20          0          9          0       2754   platform_extpin.o
        686          4          0          0          0       4455   platform_ht1621.o
-       312         20         56          0          0       5369   platform_sx1212.o
+       336         20         56          0          0       5886   platform_sx1212.o
         52          0          0          0          0       1951   rtc.o
         28          8        192          0       1024        772   startup_stm32f051.o
         72         16          0          0          0       2259   stm32f0xx_crc.o
@@ -1851,20 +1877,19 @@ Image component sizes
         40          4          0          0          0        578   stm32f0xx_pwr.o
        232         26          0          0          0       3692   stm32f0xx_rcc.o
       1062         70          0          0          0       9782   stm32f0xx_rtc.o
-       182         26          0          0          0       2011   stm32f0xx_tim.o
         48          0          0          0          0       2748   stm32f0xx_usart.o
        320          4          0          2          0       3998   stm32fxx_flash.o
        496         72         16          8          0      11698   stm32fxxx_misc.o
        262          4          0          0          0       2274   stm32fxxx_rtc.o
         92         12          0         16         16       4416   stm32fxxx_serial.o
-       860         18         40          2         43      11515   sx1212.o
-       340         24          0         20          0     202953   system_stm32f0xx.o
+       964         18         40          2         43      12260   sx1212.o
+       340         24          0         20          0     182845   system_stm32f0xx.o
        266         16          0          0          0       2673   utilities.o
 
     ----------------------------------------------------------------------
-     12638       1298       3396        260       1108     331107   Object Totals
+     13582       1362        960        272       1152     315703   Object Totals
          0          0         32          0          0          0   (incl. Generated)
-        18          0          0          6          5          0   (incl. Padding)
+        20          0          3          6          5          0   (incl. Padding)
 
     ----------------------------------------------------------------------
 
@@ -1905,15 +1930,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-     12880       1314       3396        260       1108     325075   Grand Totals
-     12880       1314       3396        260       1108     325075   ELF Image Totals
-     12880       1314       3396        260          0          0   ROM Totals
+     13824       1378        960        272       1152     309143   Grand Totals
+     13824       1378        960        272       1152     309143   ELF Image Totals
+     13824       1378        960        272          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                16276 (  15.89kB)
-    Total RW  Size (RW Data + ZI Data)              1368 (   1.34kB)
-    Total ROM Size (Code + RO Data + RW Data)      16536 (  16.15kB)
+    Total RO  Size (Code + RO Data)                14784 (  14.44kB)
+    Total RW  Size (RW Data + ZI Data)              1424 (   1.39kB)
+    Total ROM Size (Code + RO Data + RW Data)      15056 (  14.70kB)
 
 ==============================================================================
 

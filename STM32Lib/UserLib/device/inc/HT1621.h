@@ -39,7 +39,7 @@
 #define LED_DIS_GAS_FIRE                        0x20    //0x02
 #define LED_DIS_FAN_ROTATION                    0x40    //0x04
 #define LED_DIS_BATTERY                         0x80    //0x08
-//#define LED_DIS_GASCHECK                        (!LED_DIS_GAS_FIRE) //
+#define LED_DIS_GASCHECK                        0x0100 //
 
 #define LED_DIS_SET_RTC                         0x01    //0x10
 #define LED_DIS_SET_START_TIME                  0x02    //0x20
@@ -66,8 +66,8 @@ void HT1621_SignService(void);
 void LED_SEG_Update(uint8 *pVaulue);
 void LED_SEGBlinkSet(uint8 value);
 
-void Led_DisplayOn(uint8 value);
-void Led_DisplayOff(uint8 value);
+void Led_DisplayOn(uint16 value);
+void Led_DisplayOff(uint16 value);
 
 #ifdef __cplusplus
 }

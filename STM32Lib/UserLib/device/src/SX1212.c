@@ -98,8 +98,8 @@ static const _SX1212_REG RegistersCfg[] = { // !!! user can reconfigure register
 
     {REG_FDEV, RF_FDEV_50},
 
-    {REG_BITRATE_MSB, RF_BIRATE_19200_MSB},
-    {REG_BITRATE_LSB, RF_BIRATE_19200_LSB},
+    {REG_BITRATE_MSB, RF_BIRATE_4800_MSB},
+    {REG_BITRATE_LSB, RF_BIRATE_4800_LSB},
 
     {REG_R1, RX_CENTER_FREQ_433MHZ_R},
     {REG_P1, RX_CENTER_FREQ_433MHZ_P},
@@ -383,7 +383,7 @@ SendRfFrame((unsigned char *)(&RF_Pkt), sizeof(RF_Pkt));
 #if DATA_MODE == PACKET_MODE
 void SendRfFrame (unsigned char *buffer, unsigned char len) {
     SetRFMode(RF_STANDBY);
-    SpiWriteCfg(REG_PKTPARAM4, RF_PKT4_FIFO_STANDBY_WRITE);  // allow write FIFO in standby mode
+    SpiWriteCfg(REG_PKTPARAM4, RF_PKT4_FIFO_STANDBY_WRITE);  // allow write FIFO in standby mode		zzzz	zz
     SpiWriteCfg(REG_IRQPARAM1, RF_IRQ1_TX_TXDONE);  // IRQ1 = Tx done
     clearFIFO();
 
@@ -447,7 +447,7 @@ void SendRfFrame (unsigned char *buffer, unsigned char len) {
 #endif
 
 
-/*=====================================================
+/*=====================================================			qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
 ReceiveRfFrame
 
 input
@@ -617,6 +617,32 @@ for write:
 - data: data to write to SX1212
 - return: don't care
 =====================================================*/
+//唤醒情况下 修改同步字以及发送速率
+void Updata_Awaken_Config(void)
+{
+//	#define SYNC_WORD1          0x63
+//#define SYNC_WORD2          0x64
+//#define SYNC_WORD3          0x65
+//#define SYNC_WORD4          0x66
+//	#define REG_SYNCBYTE1                    0x16      //22
+//#define REG_SYNCBYTE2                    0x17      //23
+//#define REG_SYNCBYTE3                    0x18      //24
+//#define REG_SYNCBYTE4                    0x19      //25
+	SpiWriteCfg(REG_SYNCBYTE1, 0xAA);
+	SpiWriteCfg(REG_SYNCBYTE2, 0XAA);
+	SpiWriteCfg(REG_SYNCBYTE3,0XAA);
+	SpiWriteCfg(REG_SYNCBYTE4, 0XAA);
+
+}
+
+void Updata_Normal_Config(void)
+{
+	SpiWriteCfg(REG_SYNCBYTE1, 0x63);
+	SpiWriteCfg(REG_SYNCBYTE2, 0x64);
+	SpiWriteCfg(REG_SYNCBYTE3,0x65);
+	SpiWriteCfg(REG_SYNCBYTE4, 0x66);
+}
+
 unsigned char _SpiConfig (unsigned char addr, unsigned char val) {
     unsigned char rc;
 

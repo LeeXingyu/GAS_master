@@ -54,8 +54,9 @@ typedef enum _Cooker_Cmd_e
 {
 	eCOOKER_SET_SYS_ID = 0,
 	eCOOKER_FIRE_STATE = 1,
-	eCOOKER_CTRL_FIRE  = 2,
-
+	eCOOKER_CTRL_Gas  = 2,
+	eCOOKER_STATE_Gas = 3,
+	eCOOKER_STATE_Bat = 4,
 	//eCOOKER_RSP = 0xEE,
 }Cooker_Cmd_e;
 
