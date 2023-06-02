@@ -98,8 +98,8 @@ static const _SX1212_REG RegistersCfg[] = { // !!! user can reconfigure register
 
     {REG_FDEV, RF_FDEV_50},
 
-    {REG_BITRATE_MSB, RF_BIRATE_4800_MSB},
-    {REG_BITRATE_LSB, RF_BIRATE_4800_LSB},
+    {REG_BITRATE_MSB, RF_BIRATE_19200_MSB},
+    {REG_BITRATE_LSB, RF_BIRATE_19200_LSB},
 
     {REG_R1, RX_CENTER_FREQ_433MHZ_R},
     {REG_P1, RX_CENTER_FREQ_433MHZ_P},
@@ -123,6 +123,10 @@ static const _SX1212_REG RegistersCfg[] = { // !!! user can reconfigure register
     {REG_SYNCBYTE2, SYNC_WORD2},
     {REG_SYNCBYTE3, SYNC_WORD3},
     {REG_SYNCBYTE4, SYNC_WORD4},
+//    {REG_SYNCBYTE1, 0xAA},
+//    {REG_SYNCBYTE2, 0xAA},
+//    {REG_SYNCBYTE3, 0xAA},
+//    {REG_SYNCBYTE4, 0xAA},
 
     {REG_TXPARAM, RF_TX_FC_200|RF_TX_POWER},
 
@@ -620,27 +624,38 @@ for write:
 //唤醒情况下 修改同步字以及发送速率
 void Updata_Awaken_Config(void)
 {
-//	#define SYNC_WORD1          0x63
+//#define SYNC_WORD1          0x63
 //#define SYNC_WORD2          0x64
 //#define SYNC_WORD3          0x65
 //#define SYNC_WORD4          0x66
-//	#define REG_SYNCBYTE1                    0x16      //22
+//#define REG_SYNCBYTE1                    0x16      //22
 //#define REG_SYNCBYTE2                    0x17      //23
 //#define REG_SYNCBYTE3                    0x18      //24
 //#define REG_SYNCBYTE4                    0x19      //25
-	SpiWriteCfg(REG_SYNCBYTE1, 0xAA);
-	SpiWriteCfg(REG_SYNCBYTE2, 0XAA);
-	SpiWriteCfg(REG_SYNCBYTE3,0XAA);
-	SpiWriteCfg(REG_SYNCBYTE4, 0XAA);
+//  {REG_BITRATE_MSB, RF_BIRATE_4800_MSB},
+//  {REG_BITRATE_LSB, RF_BIRATE_4800_LSB},
+
+	SpiWriteCfg(REG_SYNCBYTE1,0xAA);
+	SpiWriteCfg(REG_SYNCBYTE2,0xAA);
+	SpiWriteCfg(REG_SYNCBYTE3,0xAA);
+	SpiWriteCfg(REG_SYNCBYTE4,0xAA);
+
+//	SpiWriteCfg(REG_BITRATE_MSB,RF_BIRATE_200_MSB);
+//	SpiWriteCfg(REG_BITRATE_LSB,RF_BIRATE_200_LSB);
 
 }
 
 void Updata_Normal_Config(void)
 {
-	SpiWriteCfg(REG_SYNCBYTE1, 0x63);
-	SpiWriteCfg(REG_SYNCBYTE2, 0x64);
-	SpiWriteCfg(REG_SYNCBYTE3,0x65);
-	SpiWriteCfg(REG_SYNCBYTE4, 0x66);
+	//SX1212_DelayMs(200);
+	SpiWriteCfg(REG_SYNCBYTE1,SYNC_WORD1);
+	SpiWriteCfg(REG_SYNCBYTE2,SYNC_WORD2);
+	SpiWriteCfg(REG_SYNCBYTE3,SYNC_WORD3);
+	SpiWriteCfg(REG_SYNCBYTE4,SYNC_WORD4);
+
+//	SpiWriteCfg(REG_BITRATE_MSB,RF_BIRATE_19200_MSB);
+//	SpiWriteCfg(REG_BITRATE_LSB, RF_BIRATE_19200_LSB);
+	//SX1212_DelayMs(200);
 }
 
 unsigned char _SpiConfig (unsigned char addr, unsigned char val) {

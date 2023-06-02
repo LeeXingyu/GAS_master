@@ -21,14 +21,17 @@
 //#include "Led.h"
 #include "HT1621.h"
 #include "STM32Fxxx_Misc.h"
-
+#include "string.h"
 /* 宏定义 -----------------------------------------------------------------------------*/
 #define GSA_STOVE_OFF_FIRE_TIME             31000
 
 /* 结构类型定义 -----------------------------------------------------------------------*/
 
 /* 原型声明部分 -----------------------------------------------------------------------*/
-
+extern void Cooker_WirelessSendLoad(char *load, unsigned int len);
+extern void SendRfFrame (unsigned char *buffer, unsigned char len);
+extern void Updata_Awaken_Config(void);
+extern void Updata_Normal_Config(void);
 /* 全局变量声明 -----------------------------------------------------------------------*/
 static BOOL	bGasStove_FireState = FALSE;
 static BOOL bCooker_SysIdMatchState = FALSE;
@@ -38,7 +41,7 @@ static uint32 uiFireState_ChkDly = 0;
 static uint32 uiBatState_ChkDly = 0;
 static uint32 uiGasCtrlState_ChkDly = 0;
 /* 静态变量定义 -----------------------------------------------------------------------*/
-
+static char Awaken_data[30] = {0xAA};
 /****************************************************************************************
 * 函数名称：GasStove_FireStateChkService()
 * 功能描述: 
@@ -79,8 +82,20 @@ BOOL GasStove_FireState(void)
 ****************************************************************************************/
 void GasStove_Flameout(void)
 {
+	char i = 0;
 	Cooker_Parse_t entity;
+	
+	Updata_Awaken_Config();
+	memset(Awaken_data,0xAA,30);
+	//19200bitrate 52ms从机接收一次
+	//循环发送 唤醒
+	for(i = 0;i<55;i++)
+	{	
+			Cooker_WirelessSendLoad(Awaken_data,30);
+	}
+	Updata_Normal_Config();
 
+	
 	entity.cmd			= eCOOKER_CTRL_Gas;
 	entity.payload[0]	= COOKER_PARSE_FALSE;
 	entity.length		= 1;
@@ -231,7 +246,7 @@ void GasStove_GasBatStateChkService(void)
 	} 
 	if((!bGasStove_GasCtrlState) && (BSP_OS_Timeout(uiGasCtrlState_ChkDly, GSA_STOVE_OFF_FIRE_TIME)))
 	{
-		Led_DisplayOff(LED_DIS_BATTERY);
+		Led_DisplayOff(LED_DIS_GASCHECK);
 		bGasStove_BatState = FALSE;
 	} 	
 }

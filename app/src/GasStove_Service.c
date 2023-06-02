@@ -1227,7 +1227,6 @@ void GasStove_DisplayService(void)
     {
         if (!uiGasStove_Timing)
         {
-            //??????,?????
 
             //???20S
             ChordTone_Start(eCHORD_TONE_MUSIC_LONG_SINGLE);
@@ -1249,11 +1248,13 @@ void GasStove_DisplayService(void)
             bTimingOutState = FALSE;
             GasStove_Flameout();
         }
-        else
-        {
-            if (GasStove_FanRotation())
-                bTimingOutState = FALSE;
-        }
+//        else
+//        {
+//            if (GasStove_FanRotation())
+//						{
+//                bTimingOutState = FALSE;
+//						}
+//        }
     }
 		
 

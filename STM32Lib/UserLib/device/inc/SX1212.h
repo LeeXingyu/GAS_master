@@ -38,7 +38,7 @@ V1.0
 // ======== a packet format demo  for user reference ======== //
 // !!! user can redefine RF packet format
 #define TEST_ID     0xBB          // a test ID
-#define FILLS       40            // fill some contents in RF packet for test
+#define FILLS       30            // fill some contents in RF packet for test
 
 #if LEN_TYPE == FIXED_LEN
     typedef struct {
@@ -100,7 +100,7 @@ extern void ReceiveRfFrame (unsigned char *buffer, unsigned char len, unsigned c
     #define RF_RX_RUNNING        0x01
     #define ERROR                0x02
     #define OK                   0x04
-
+extern void SendRfFrame (unsigned char *buffer, unsigned char len);
 #define ReadRssi()  SpiReadCfg(REG_RSSIVALUE)
 
             // ======== global vars ======== //
@@ -235,8 +235,14 @@ void Updata_Normal_Config(void);
 #define RF_BIRATE_19200_MSB                0x02
 #define RF_BIRATE_19200_LSB                0x6E
 
-#define RF_BIRATE_200_MSB                0xFA
-#define RF_BIRATE_200_LSB                0xFE
+#define RF_BIRATE_200_MSB                0x7F
+#define RF_BIRATE_200_LSB                0xF9
+
+#define RF_BIRATE_150_MSB                0xA7
+#define RF_BIRATE_150_LSB                0xFA
+
+#define RF_BIRATE_100_MSB                0xFA
+#define RF_BIRATE_100_LSB                0xFE
 
 //// REG_MCPARAM6
 // PA_RAMP OOK

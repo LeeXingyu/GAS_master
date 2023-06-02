@@ -126,7 +126,7 @@ int main(void)
 
 		FanRotation_Service();
 		HT1621_SignService();
-		for(i = 0; i<30; i++)	
+		for(i = 0; i<50; i++)	
 		{
 			unsigned char rc = ERROR;
 

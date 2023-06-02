@@ -296,19 +296,19 @@ __weak void Cooker_AFNChk(Cooker_Parse_t *entity)
 
 }
 
-__weak void Cooker_WirelessSendLoad(char *load, unsigned int len)
+void Cooker_WirelessSendLoad(char *load, unsigned int len)
 {
 	if (BuildPacket((unsigned char *)load, len))
 		SendRfFrame((unsigned char *)(&RF_Pkt), sizeof(RF_Pkt));
     
-    {
-        unsigned int count;
-        
-        APP_TRACE("??????????");
-        for (count = 0; count < RF_Pkt.key; count++)
-            APP_TRACE("%02X ", (unsigned int)RF_Pkt.fill[count]);
-        APP_TRACE("\r\n");
-    }
+//    {
+//        unsigned int count;
+//        
+//        APP_TRACE("??????????");
+//        for (count = 0; count < RF_Pkt.key; count++)
+//            APP_TRACE("%02X ", (unsigned int)RF_Pkt.fill[count]);
+//        APP_TRACE("\r\n");
+//    }
 }
 
 
