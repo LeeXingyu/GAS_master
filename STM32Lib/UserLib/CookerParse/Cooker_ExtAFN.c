@@ -82,14 +82,15 @@ BOOL GasStove_FireState(void)
 ****************************************************************************************/
 void GasStove_Flameout(void)
 {
-	char i = 0;
+	unsigned int i = 0;
 	Cooker_Parse_t entity;
 	
 	Updata_Awaken_Config();
 	memset(Awaken_data,0xAA,30);
 	//19200bitrate 52ms从机接收一次
 	//循环发送 唤醒
-	for(i = 0;i<55;i++)
+	//220次  5.3s    440次 10.6s  单次24ms
+	for(i = 0;i<416;i++)
 	{	
 			Cooker_WirelessSendLoad(Awaken_data,30);
 	}

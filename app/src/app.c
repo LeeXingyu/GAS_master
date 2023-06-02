@@ -123,7 +123,7 @@ int main(void)
 #if (defined(CODE_DEBUG))
         CLI_SerialAppTask();
 #endif  //#if (defined(CODE_DEBUG))
-
+//GasStove_Flameout();
 		FanRotation_Service();
 		HT1621_SignService();
 		for(i = 0; i<50; i++)	
