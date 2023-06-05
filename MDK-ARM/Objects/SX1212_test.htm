@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\Objects\SX1212_test.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\SX1212_test.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Mon Jun 05 09:54:46 2023
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Mon Jun 05 11:34:30 2023
 <BR><P>
 <H3>Maximum Stack Usage =       1132 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -1353,7 +1353,7 @@ Global Symbols
 <LI><a href="#[39]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GasStove_DisRTC
 </UL>
 
-<P><STRONG><a name="[23]"></a>main</STRONG> (Thumb, 234 bytes, Stack size 8 bytes, app.o(i.main))
+<P><STRONG><a name="[23]"></a>main</STRONG> (Thumb, 232 bytes, Stack size 8 bytes, app.o(i.main))
 <BR><BR>[Stack]<UL><LI>Max Depth = 272<LI>Call Chain = main &rArr; GasStove_DisplayService &rArr; GasStove_AlarmChk &rArr; GasStove_Flameout &rArr; Cooker_Load &rArr; Cooker_WirelessSendLoad &rArr; SendRfFrame &rArr; SetRFMode &rArr; _SpiConfig &rArr; SpiInOut &rArr; SX1212_SCKSet
 </UL>
 <BR>[Calls]<UL><LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rtc_init
@@ -1772,7 +1772,7 @@ Local Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Led_DisplayService
 </UL>
 
-<P><STRONG><a name="[94]"></a>Led_DisplayService</STRONG> (Thumb, 632 bytes, Stack size 8 bytes, ht1621.o(i.Led_DisplayService))
+<P><STRONG><a name="[94]"></a>Led_DisplayService</STRONG> (Thumb, 654 bytes, Stack size 8 bytes, ht1621.o(i.Led_DisplayService))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = Led_DisplayService
 </UL>
 <BR>[Calls]<UL><LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_OS_Timeout
@@ -1787,7 +1787,7 @@ Local Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> cooker_parse.o(.constdata)
 </UL>
-<P><STRONG><a name="[42]"></a>CookerParse_Check</STRONG> (Thumb, 70 bytes, Stack size 24 bytes, cooker_parse.o(i.CookerParse_Check))
+<P><STRONG><a name="[42]"></a>CookerParse_Check</STRONG> (Thumb, 62 bytes, Stack size 24 bytes, cooker_parse.o(i.CookerParse_Check))
 <BR><BR>[Stack]<UL><LI>Max Depth = 208<LI>Call Chain = CookerParse_Check &rArr; Cooker_AFNChk &rArr; Cooker_Load &rArr; Cooker_WirelessSendLoad &rArr; SendRfFrame &rArr; SetRFMode &rArr; _SpiConfig &rArr; SpiInOut &rArr; SX1212_SCKSet
 </UL>
 <BR>[Calls]<UL><LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Cooker_GetId

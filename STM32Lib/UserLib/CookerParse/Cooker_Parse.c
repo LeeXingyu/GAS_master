@@ -195,7 +195,7 @@ static void CookerParse_Check(int c)
 
 			if (cmp_buf((char *)id, (char *)tCooker_Entity.addr, COOKER_PARSE_ADDR_LEN))
 				Cooker_AFNChk(&tCooker_Entity);
-			else Cooker_AFNChk(&tCooker_Entity);
+			//else Cooker_AFNChk(&tCooker_Entity);
 		}
 	}
 }

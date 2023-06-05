@@ -150,7 +150,7 @@ int main(void)
 				{
 					Cooker_Parse(RF_Pkt.fill[count++]);  
 				}
-				break;
+				//break;
 			}
 
 		} 

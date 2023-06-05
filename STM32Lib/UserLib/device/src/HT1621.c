@@ -124,6 +124,7 @@ static uint8  ucLed_DisValue = 0;
 #if (defined(HT1621_LED_EN_BLINK))
 static uint32 uiLed_DisQuickBlinkDly;
 static uint32 uiLed_DisSlowBlinkDly;
+static uint32 uiLed_DisBatSlowBlinkDly;
 #endif  //#if (defined(HT1621_LED_EN_BLINK))
 /***********************************LED参数*************************************/
 
@@ -253,6 +254,7 @@ static void Led_DisplayService(void)
 	static uint8 	ucLastValue = 0;
 	static uint8	ucPreValue  = 0xFF;
 	static BOOL		bSlowBlinkState = FALSE;
+	static BOOL		Bat_bSlowBlinkState = FALSE;
   //T5 燃气泄露状态标识 
 	if (ucLed_DisValue & LED_DIS_GAS_LEAK)
 	{
@@ -355,13 +357,13 @@ static void Led_DisplayService(void)
 //	
 	if (ucLed_DisValue & LED_DIS_BATTERY)
 	{
-		if (bSlowBlinkState)
+		if (Bat_bSlowBlinkState)
 		{
-			if (BSP_OS_Timeout(uiLed_DisSlowBlinkDly, 2000))
+			if (BSP_OS_Timeout(uiLed_DisBatSlowBlinkDly, 2000))
 			{
-				bSlowBlinkState = FALSE;
+				Bat_bSlowBlinkState = FALSE;
 
-				uiLed_DisSlowBlinkDly = BSP_OS_TimeGet();
+				uiLed_DisBatSlowBlinkDly = BSP_OS_TimeGet();
 
 				if (ucLed_DisValue & LED_DIS_BATTERY)
 					ucLastValue &= (~LED_DIS_BATTERY);
@@ -369,18 +371,21 @@ static void Led_DisplayService(void)
 		}
 		else
 		{
-			if (BSP_OS_Timeout(uiLed_DisSlowBlinkDly, 1000))
+			if (BSP_OS_Timeout(uiLed_DisBatSlowBlinkDly, 1000))
 			{
-				bSlowBlinkState = TRUE;
+				Bat_bSlowBlinkState = TRUE;
 
-				uiLed_DisSlowBlinkDly = BSP_OS_TimeGet();
+				uiLed_DisBatSlowBlinkDly = BSP_OS_TimeGet();
 
 				if (ucLed_DisValue & LED_DIS_BATTERY)
 					ucLastValue |= LED_DIS_BATTERY;
 			}
 		}
 	}
-
+	if (!(ucLed_DisValue & LED_DIS_BATTERY))
+		ucLastValue &= ~LED_DIS_BATTERY;
+	
+	
    // T1
 	if (ucLed_DisValue & LED_DIS_SET_RTC)
 		ucLastValue |= LED_DIS_SET_RTC;

@@ -248,7 +248,7 @@ void GasStove_GasBatStateChkService(void)
 	if((bGasStove_GasCtrlState) && (BSP_OS_Timeout(uiGasCtrlState_ChkDly, GSA_STOVE_OFF_FIRE_TIME)))
 	{
 		Led_DisplayOff(LED_DIS_GASCHECK);
-		bGasStove_BatState = FALSE;
+		bGasStove_GasCtrlState = FALSE;
 	} 	
 }
 
