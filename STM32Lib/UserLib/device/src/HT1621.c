@@ -348,10 +348,39 @@ static void Led_DisplayService(void)
 		}
 	}
    // T8 µÁ≥ÿ±Í ∂
+//	if (ucLed_DisValue & LED_DIS_BATTERY)
+//		ucLastValue |= LED_DIS_BATTERY;
+//	else
+//		ucLastValue &= ~LED_DIS_BATTERY;
+//	
 	if (ucLed_DisValue & LED_DIS_BATTERY)
-		ucLastValue |= LED_DIS_BATTERY;
-	else
-		ucLastValue &= ~LED_DIS_BATTERY;
+	{
+		if (bSlowBlinkState)
+		{
+			if (BSP_OS_Timeout(uiLed_DisSlowBlinkDly, 2000))
+			{
+				bSlowBlinkState = FALSE;
+
+				uiLed_DisSlowBlinkDly = BSP_OS_TimeGet();
+
+				if (ucLed_DisValue & LED_DIS_BATTERY)
+					ucLastValue &= (~LED_DIS_BATTERY);
+			}
+		}
+		else
+		{
+			if (BSP_OS_Timeout(uiLed_DisSlowBlinkDly, 1000))
+			{
+				bSlowBlinkState = TRUE;
+
+				uiLed_DisSlowBlinkDly = BSP_OS_TimeGet();
+
+				if (ucLed_DisValue & LED_DIS_BATTERY)
+					ucLastValue |= LED_DIS_BATTERY;
+			}
+		}
+	}
+
    // T1
 	if (ucLed_DisValue & LED_DIS_SET_RTC)
 		ucLastValue |= LED_DIS_SET_RTC;

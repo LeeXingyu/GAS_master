@@ -240,12 +240,12 @@ void Cooker_AFNChk(Cooker_Parse_t *entity)
 
 void GasStove_GasBatStateChkService(void)
 {
-	if((!bGasStove_BatState) && (BSP_OS_Timeout(uiBatState_ChkDly, GSA_STOVE_OFF_FIRE_TIME)))
+	if((bGasStove_BatState) && (BSP_OS_Timeout(uiBatState_ChkDly, GSA_STOVE_OFF_FIRE_TIME)))
 	{
 		Led_DisplayOff(LED_DIS_BATTERY);
 		bGasStove_BatState = FALSE;
 	} 
-	if((!bGasStove_GasCtrlState) && (BSP_OS_Timeout(uiGasCtrlState_ChkDly, GSA_STOVE_OFF_FIRE_TIME)))
+	if((bGasStove_GasCtrlState) && (BSP_OS_Timeout(uiGasCtrlState_ChkDly, GSA_STOVE_OFF_FIRE_TIME)))
 	{
 		Led_DisplayOff(LED_DIS_GASCHECK);
 		bGasStove_BatState = FALSE;
