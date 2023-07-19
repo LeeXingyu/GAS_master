@@ -1,0 +1,501 @@
+{
+  "name": "Project",
+  "type": "ARM",
+  "dependenceList": [],
+  "srcDirs": [],
+  "virtualFolder": {
+    "name": "<virtual_root>",
+    "files": [],
+    "folders": [
+      {
+        "name": "Startup",
+        "files": [
+          {
+            "path": "../STM32Lib/STM32_Device_Lib/CMSIS/CM0/Device/ST/STM32F0xx/Source/Templates/arm/startup_stm32f0xx.s"
+          },
+          {
+            "path": "../STM32Lib/STM32_Device_Lib/CMSIS/CM0/Device/ST/STM32F0xx/Source/Templates/arm/startup_stm32f0xx_ld.s"
+          },
+          {
+            "path": "../STM32Lib/STM32_Device_Lib/CMSIS/CM0/Device/ST/STM32F0xx/Source/Templates/arm/startup_stm32f030.s"
+          },
+          {
+            "path": "../STM32Lib/STM32_Device_Lib/CMSIS/CM0/Device/ST/STM32F0xx/Source/Templates/arm/startup_stm32f031.s"
+          },
+          {
+            "path": "../STM32Lib/STM32_Device_Lib/CMSIS/CM0/Device/ST/STM32F0xx/Source/Templates/arm/startup_stm32f042.s"
+          },
+          {
+            "path": "../STM32Lib/STM32_Device_Lib/CMSIS/CM0/Device/ST/STM32F0xx/Source/Templates/arm/startup_stm32f051.s"
+          },
+          {
+            "path": "../STM32Lib/STM32_Device_Lib/CMSIS/CM0/Device/ST/STM32F0xx/Source/Templates/arm/startup_stm32f072.s"
+          }
+        ],
+        "folders": []
+      },
+      {
+        "name": "CMSIS",
+        "files": [
+          {
+            "path": "../STM32Lib/STM32_Device_Lib/CMSIS/CM0/Device/ST/STM32F0xx/Source/Templates/system_stm32f0xx.c"
+          }
+        ],
+        "folders": []
+      },
+      {
+        "name": "App",
+        "files": [
+          {
+            "path": "../app/src/app.c"
+          },
+          {
+            "path": "../app/inc/Package_SX1212.h"
+          },
+          {
+            "path": "../app/src/GasStove_Service.c"
+          }
+        ],
+        "folders": []
+      },
+      {
+        "name": "CPU",
+        "files": [
+          {
+            "path": "../STM32Lib/UserLib/cpu/src/STM32Fxxx_Serial.c"
+          },
+          {
+            "path": "../STM32Lib/UserLib/cpu/src/STM32Fxxx_Misc.c"
+          },
+          {
+            "path": "../STM32Lib/UserLib/cpu/src/STM32Fxxx_RTC.c"
+          },
+          {
+            "path": "../STM32Lib/UserLib/cpu/inc/STM32Fxxx_RTC.h"
+          },
+          {
+            "path": "../STM32Lib/UserLib/cpu/src/STM32Fxx_Flash.c"
+          }
+        ],
+        "folders": []
+      },
+      {
+        "name": "FWLib",
+        "files": [
+          {
+            "path": "../STM32Lib/STM32_Device_Lib/STM32F0xx_StdPeriph_Driver/src/stm32f0xx_adc.c"
+          },
+          {
+            "path": "../STM32Lib/STM32_Device_Lib/STM32F0xx_StdPeriph_Driver/src/stm32f0xx_can.c"
+          },
+          {
+            "path": "../STM32Lib/STM32_Device_Lib/STM32F0xx_StdPeriph_Driver/src/stm32f0xx_cec.c"
+          },
+          {
+            "path": "../STM32Lib/STM32_Device_Lib/STM32F0xx_StdPeriph_Driver/src/stm32f0xx_comp.c"
+          },
+          {
+            "path": "../STM32Lib/STM32_Device_Lib/STM32F0xx_StdPeriph_Driver/src/stm32f0xx_crc.c"
+          },
+          {
+            "path": "../STM32Lib/STM32_Device_Lib/STM32F0xx_StdPeriph_Driver/src/stm32f0xx_crs.c"
+          },
+          {
+            "path": "../STM32Lib/STM32_Device_Lib/STM32F0xx_StdPeriph_Driver/src/stm32f0xx_dac.c"
+          },
+          {
+            "path": "../STM32Lib/STM32_Device_Lib/STM32F0xx_StdPeriph_Driver/src/stm32f0xx_dbgmcu.c"
+          },
+          {
+            "path": "../STM32Lib/STM32_Device_Lib/STM32F0xx_StdPeriph_Driver/src/stm32f0xx_dma.c"
+          },
+          {
+            "path": "../STM32Lib/STM32_Device_Lib/STM32F0xx_StdPeriph_Driver/src/stm32f0xx_exti.c"
+          },
+          {
+            "path": "../STM32Lib/STM32_Device_Lib/STM32F0xx_StdPeriph_Driver/src/stm32f0xx_flash.c"
+          },
+          {
+            "path": "../STM32Lib/STM32_Device_Lib/STM32F0xx_StdPeriph_Driver/src/stm32f0xx_gpio.c"
+          },
+          {
+            "path": "../STM32Lib/STM32_Device_Lib/STM32F0xx_StdPeriph_Driver/src/stm32f0xx_i2c.c"
+          },
+          {
+            "path": "../STM32Lib/STM32_Device_Lib/STM32F0xx_StdPeriph_Driver/src/stm32f0xx_iwdg.c"
+          },
+          {
+            "path": "../STM32Lib/STM32_Device_Lib/STM32F0xx_StdPeriph_Driver/src/stm32f0xx_misc.c"
+          },
+          {
+            "path": "../STM32Lib/STM32_Device_Lib/STM32F0xx_StdPeriph_Driver/src/stm32f0xx_pwr.c"
+          },
+          {
+            "path": "../STM32Lib/STM32_Device_Lib/STM32F0xx_StdPeriph_Driver/src/stm32f0xx_rcc.c"
+          },
+          {
+            "path": "../STM32Lib/STM32_Device_Lib/STM32F0xx_StdPeriph_Driver/src/stm32f0xx_rtc.c"
+          },
+          {
+            "path": "../STM32Lib/STM32_Device_Lib/STM32F0xx_StdPeriph_Driver/src/stm32f0xx_spi.c"
+          },
+          {
+            "path": "../STM32Lib/STM32_Device_Lib/STM32F0xx_StdPeriph_Driver/src/stm32f0xx_syscfg.c"
+          },
+          {
+            "path": "../STM32Lib/STM32_Device_Lib/STM32F0xx_StdPeriph_Driver/src/stm32f0xx_tim.c"
+          },
+          {
+            "path": "../STM32Lib/STM32_Device_Lib/STM32F0xx_StdPeriph_Driver/src/stm32f0xx_usart.c"
+          },
+          {
+            "path": "../STM32Lib/STM32_Device_Lib/STM32F0xx_StdPeriph_Driver/src/stm32f0xx_wwdg.c"
+          },
+          {
+            "path": "../STM32Lib/STM32_Device_Lib/STM32F0xx_StdPeriph_Driver/inc/stm32f0xx_adc.h"
+          },
+          {
+            "path": "../STM32Lib/STM32_Device_Lib/STM32F0xx_StdPeriph_Driver/inc/stm32f0xx_can.h"
+          },
+          {
+            "path": "../STM32Lib/STM32_Device_Lib/STM32F0xx_StdPeriph_Driver/inc/stm32f0xx_cec.h"
+          },
+          {
+            "path": "../STM32Lib/STM32_Device_Lib/STM32F0xx_StdPeriph_Driver/inc/stm32f0xx_comp.h"
+          },
+          {
+            "path": "../STM32Lib/STM32_Device_Lib/STM32F0xx_StdPeriph_Driver/inc/stm32f0xx_crc.h"
+          },
+          {
+            "path": "../STM32Lib/STM32_Device_Lib/STM32F0xx_StdPeriph_Driver/inc/stm32f0xx_crs.h"
+          },
+          {
+            "path": "../STM32Lib/STM32_Device_Lib/STM32F0xx_StdPeriph_Driver/inc/stm32f0xx_dac.h"
+          },
+          {
+            "path": "../STM32Lib/STM32_Device_Lib/STM32F0xx_StdPeriph_Driver/inc/stm32f0xx_dbgmcu.h"
+          },
+          {
+            "path": "../STM32Lib/STM32_Device_Lib/STM32F0xx_StdPeriph_Driver/inc/stm32f0xx_dma.h"
+          },
+          {
+            "path": "../STM32Lib/STM32_Device_Lib/STM32F0xx_StdPeriph_Driver/inc/stm32f0xx_exti.h"
+          },
+          {
+            "path": "../STM32Lib/STM32_Device_Lib/STM32F0xx_StdPeriph_Driver/inc/stm32f0xx_flash.h"
+          },
+          {
+            "path": "../STM32Lib/STM32_Device_Lib/STM32F0xx_StdPeriph_Driver/inc/stm32f0xx_gpio.h"
+          },
+          {
+            "path": "../STM32Lib/STM32_Device_Lib/STM32F0xx_StdPeriph_Driver/inc/stm32f0xx_i2c.h"
+          },
+          {
+            "path": "../STM32Lib/STM32_Device_Lib/STM32F0xx_StdPeriph_Driver/inc/stm32f0xx_iwdg.h"
+          },
+          {
+            "path": "../STM32Lib/STM32_Device_Lib/STM32F0xx_StdPeriph_Driver/inc/stm32f0xx_misc.h"
+          },
+          {
+            "path": "../STM32Lib/STM32_Device_Lib/STM32F0xx_StdPeriph_Driver/inc/stm32f0xx_pwr.h"
+          },
+          {
+            "path": "../STM32Lib/STM32_Device_Lib/STM32F0xx_StdPeriph_Driver/inc/stm32f0xx_rcc.h"
+          },
+          {
+            "path": "../STM32Lib/STM32_Device_Lib/STM32F0xx_StdPeriph_Driver/inc/stm32f0xx_rtc.h"
+          },
+          {
+            "path": "../STM32Lib/STM32_Device_Lib/STM32F0xx_StdPeriph_Driver/inc/stm32f0xx_spi.h"
+          },
+          {
+            "path": "../STM32Lib/STM32_Device_Lib/STM32F0xx_StdPeriph_Driver/inc/stm32f0xx_syscfg.h"
+          },
+          {
+            "path": "../STM32Lib/STM32_Device_Lib/STM32F0xx_StdPeriph_Driver/inc/stm32f0xx_tim.h"
+          },
+          {
+            "path": "../STM32Lib/STM32_Device_Lib/STM32F0xx_StdPeriph_Driver/inc/stm32f0xx_usart.h"
+          },
+          {
+            "path": "../STM32Lib/STM32_Device_Lib/STM32F0xx_StdPeriph_Driver/inc/stm32f0xx_wwdg.h"
+          }
+        ],
+        "folders": []
+      },
+      {
+        "name": "Device",
+        "files": [
+          {
+            "path": "../STM32Lib/UserLib/device/src/SX1212.c"
+          },
+          {
+            "path": "../STM32Lib/UserLib/device/inc/SX1212.h"
+          },
+          {
+            "path": "../STM32Lib/UserLib/device/src/ChordTone.c"
+          },
+          {
+            "path": "../STM32Lib/UserLib/device/inc/ChordTone.h"
+          },
+          {
+            "path": "../STM32Lib/UserLib/device/src/KeyBoard.c"
+          },
+          {
+            "path": "../STM32Lib/UserLib/device/inc/KeyBoard.h"
+          },
+          {
+            "path": "../STM32Lib/UserLib/device/src/HT1621.c"
+          }
+        ],
+        "folders": []
+      },
+      {
+        "name": "Driver",
+        "files": [
+          {
+            "path": "../STM32Lib/UserLib/device/src/rtc.c"
+          }
+        ],
+        "folders": []
+      },
+      {
+        "name": "Cooker_Parse",
+        "files": [
+          {
+            "path": "../STM32Lib/UserLib/CookerParse/Cooker_ExtAFN.c"
+          },
+          {
+            "path": "../STM32Lib/UserLib/CookerParse/Cooker_Parse.c"
+          },
+          {
+            "path": "../STM32Lib/UserLib/CookerParse/Cooker_Parse.h"
+          }
+        ],
+        "folders": []
+      },
+      {
+        "name": "platform",
+        "files": [
+          {
+            "path": "../platform/platform_SX1212.c"
+          },
+          {
+            "path": "../platform/platform_ChordTone.c"
+          },
+          {
+            "path": "../platform/platform_ExtPin.c"
+          },
+          {
+            "path": "../platform/platform_HT1621.c"
+          }
+        ],
+        "folders": []
+      },
+      {
+        "name": "utilities",
+        "files": [
+          {
+            "path": "../STM32Lib/UserLib/utilities/src/utilities.c"
+          },
+          {
+            "path": "../STM32Lib/UserLib/utilities/src/Crc32EthernetSTM32.c"
+          },
+          {
+            "path": "../STM32Lib/UserLib/utilities/src/StringOperate.c"
+          },
+          {
+            "path": "../STM32Lib/UserLib/utilities/src/crc.c"
+          }
+        ],
+        "folders": []
+      }
+    ]
+  },
+  "outDir": "build",
+  "deviceName": null,
+  "packDir": null,
+  "miscInfo": {},
+  "targets": {
+    "SX1212": {
+      "excludeList": [
+        "<virtual_root>/Startup/startup_stm32f0xx.s",
+        "<virtual_root>/Startup/startup_stm32f0xx_ld.s",
+        "<virtual_root>/Startup/startup_stm32f030.s",
+        "<virtual_root>/Startup/startup_stm32f031.s",
+        "<virtual_root>/Startup/startup_stm32f042.s",
+        "<virtual_root>/Startup/startup_stm32f072.s",
+        "<virtual_root>/FWLib/stm32f0xx_adc.c",
+        "<virtual_root>/FWLib/stm32f0xx_can.c",
+        "<virtual_root>/FWLib/stm32f0xx_cec.c",
+        "<virtual_root>/FWLib/stm32f0xx_comp.c",
+        "<virtual_root>/FWLib/stm32f0xx_crs.c",
+        "<virtual_root>/FWLib/stm32f0xx_dac.c",
+        "<virtual_root>/FWLib/stm32f0xx_dbgmcu.c",
+        "<virtual_root>/FWLib/stm32f0xx_dma.c",
+        "<virtual_root>/FWLib/stm32f0xx_exti.c",
+        "<virtual_root>/FWLib/stm32f0xx_i2c.c",
+        "<virtual_root>/FWLib/stm32f0xx_spi.c",
+        "<virtual_root>/FWLib/stm32f0xx_syscfg.c",
+        "<virtual_root>/FWLib/stm32f0xx_wwdg.c"
+      ],
+      "toolchain": "AC5",
+      "compileConfig": {
+        "cpuType": "Cortex-M0",
+        "floatingPointHardware": "none",
+        "scatterFilePath": "",
+        "useCustomScatterFile": false,
+        "storageLayout": {
+          "RAM": [
+            {
+              "tag": "RAM",
+              "id": 1,
+              "mem": {
+                "startAddr": "0x0",
+                "size": "0x0"
+              },
+              "isChecked": false,
+              "noInit": false
+            },
+            {
+              "tag": "RAM",
+              "id": 2,
+              "mem": {
+                "startAddr": "0x0",
+                "size": "0x0"
+              },
+              "isChecked": false,
+              "noInit": false
+            },
+            {
+              "tag": "RAM",
+              "id": 3,
+              "mem": {
+                "startAddr": "0x0",
+                "size": "0x0"
+              },
+              "isChecked": false,
+              "noInit": false
+            },
+            {
+              "tag": "IRAM",
+              "id": 1,
+              "mem": {
+                "startAddr": "0x20000000",
+                "size": "0x2000"
+              },
+              "isChecked": true,
+              "noInit": false
+            },
+            {
+              "tag": "IRAM",
+              "id": 2,
+              "mem": {
+                "startAddr": "0x0",
+                "size": "0x0"
+              },
+              "isChecked": false,
+              "noInit": false
+            }
+          ],
+          "ROM": [
+            {
+              "tag": "ROM",
+              "id": 1,
+              "mem": {
+                "startAddr": "0x0",
+                "size": "0x0"
+              },
+              "isChecked": false,
+              "isStartup": false
+            },
+            {
+              "tag": "ROM",
+              "id": 2,
+              "mem": {
+                "startAddr": "0x0",
+                "size": "0x0"
+              },
+              "isChecked": false,
+              "isStartup": false
+            },
+            {
+              "tag": "ROM",
+              "id": 3,
+              "mem": {
+                "startAddr": "0x0",
+                "size": "0x0"
+              },
+              "isChecked": false,
+              "isStartup": false
+            },
+            {
+              "tag": "IROM",
+              "id": 1,
+              "mem": {
+                "startAddr": "0x8000000",
+                "size": "0x10000"
+              },
+              "isChecked": true,
+              "isStartup": true
+            },
+            {
+              "tag": "IROM",
+              "id": 2,
+              "mem": {
+                "startAddr": "0x0",
+                "size": "0x0"
+              },
+              "isChecked": false,
+              "isStartup": false
+            }
+          ]
+        },
+        "options": "null"
+      },
+      "uploader": "JLink",
+      "uploadConfig": {
+        "bin": "",
+        "baseAddr": "",
+        "cpuInfo": {
+          "vendor": "null",
+          "cpuName": "null"
+        },
+        "proType": 1,
+        "speed": 8000,
+        "otherCmds": ""
+      },
+      "uploadConfigMap": {},
+      "custom_dep": {
+        "name": "default",
+        "sourceDirList": [],
+        "libList": [],
+        "incList": [
+          "../STM32Lib/STM32_Device_Lib/STM32F0xx_StdPeriph_Driver/inc",
+          "../STM32Lib/STM32_Device_Lib/CMSIS/CM0/Include",
+          "../STM32Lib/STM32_Device_Lib/CMSIS/CM0/Device/ST/STM32F0xx/Include",
+          "../STM32Lib/UserLib/CLI/inc",
+          "../STM32Lib/UserLib/cpu/inc",
+          "../STM32Lib/UserLib/device/inc",
+          "../STM32Lib/UserLib/Protocol/inc",
+          "../STM32Lib/UserLib/serial_lib/inc",
+          "../STM32Lib/UserLib/user/inc",
+          "../STM32Lib/UserLib/utilities/inc",
+          "../STM32Lib/UserLib/debug/inc",
+          "../STM32Lib/UserLib/Queue/inc",
+          "../app/inc",
+          "../STM32Lib/UserLib/CookerParse",
+          ".cmsis/include",
+          "RTE/_SX1212"
+        ],
+        "defineList": [
+          "USE_STDPERIPH_DRIVER",
+          "STM32F051",
+          "STM32F0XX",
+          "CODE_RELEASE"
+        ]
+      }
+    }
+  },
+  "version": "3.3"
+}

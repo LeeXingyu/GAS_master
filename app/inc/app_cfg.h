@@ -554,7 +554,7 @@ extern int App_SerialPrintf(const char *format, ...);
 #define KEY_BOARD_4PIN_PORT						GPIOB
 #define KEY_BOARD_4PIN							GPIO_Pin_15
 
-#define KEYBOARD_MAX_CNT					    (5u)
+#define KEYBOARD_MAX_CNT					    (6u)
 
 
 /*

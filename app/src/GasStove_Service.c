@@ -1248,13 +1248,13 @@ void GasStove_DisplayService(void)
             bTimingOutState = FALSE;
             GasStove_Flameout();
         }
-//        else
-//        {
-//            if (GasStove_FanRotation())
-//						{
-//                bTimingOutState = FALSE;
-//						}
-//        }
+        else
+        {
+            if (GasStove_FanRotation())
+						{
+                bTimingOutState = FALSE;
+						}
+        }
     }
 		
 
@@ -1281,7 +1281,8 @@ void GasStove_Init(void)
     KeyBoard_FunReg(3, SettingTiming_Cancle);
 
     KeyBoard_FunReg(4, GasStove_DisSetButton);
-
+  	KeyBoard_FunReg(5, GasStove_Flameout);
+	
     if (STM32Fxxx_FlashRead((uint8 *)&tGasStove_Para, GAS_STOVE_STORAGE_PARA_ADDR, sizeof(GasStove_Para_t)))
     {
         if (tGasStove_Para.check == crc32_ethernet_block((uint8 *)&tGasStove_Para, sizeof(GasStove_Para_t) - 4))

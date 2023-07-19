@@ -70,6 +70,7 @@ static const uint8 a_ucKeyBoard_Code[] =
     0x04,			//按键K3
     0x08,			//按键K4
     0x05,			//按键K1,K4
+	  0x0C,     //按键K1,K2(TH2&TH1)
 };
 
 /****************************************************************************************
@@ -133,6 +134,7 @@ void KeyBoard_Service(void)
 			ucKeyBoard_State		= KEYBOARD_DEBOUNCE;
 		}
 	}
+	//消抖 定时
 	else if (KEYBOARD_DEBOUNCE == ucKeyBoard_State)
 	{
         uint8 value = KeyBoard_InState();
@@ -218,7 +220,7 @@ void KeyBoard_Service(void)
 ****************************************************************************************/
 void KeyBoard_FunReg(uint8 key, void (*pfnKey)(void))
 {
-	const uint8 code[] = {0, 1, 3, 2, 4};
+	const uint8 code[] = {0, 1, 3, 2, 4, 5};
 
 	if (key >= KEYBOARD_MAX_CNT)
 		return;

@@ -531,7 +531,7 @@ void ChordTone_Start(ChordTone_Music_e eMusic)
 	}
 
 	if (ret)
-		ucBuzzerState = BUZZER_STATE_START;*/
+		ucBuzzerState = BUZZER_STATE_START*/
 }
 
 /****************************************************************************************

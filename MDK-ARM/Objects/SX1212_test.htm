@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\Objects\SX1212_test.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\SX1212_test.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Mon Jun 05 11:34:30 2023
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Wed Jul 19 10:54:14 2023
 <BR><P>
 <H3>Maximum Stack Usage =       1132 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -23,13 +23,13 @@ Function Pointers
 </H3><UL>
  <LI><a href="#[12]">ADC1_COMP_IRQHandler</a> from startup_stm32f051.o(.text) referenced from startup_stm32f051.o(RESET)
  <LI><a href="#[22]">CEC_IRQHandler</a> from startup_stm32f051.o(.text) referenced from startup_stm32f051.o(RESET)
- <LI><a href="#[3e]">CookerParse_Addr</a> from cooker_parse.o(i.CookerParse_Addr) referenced from cooker_parse.o(.constdata)
- <LI><a href="#[42]">CookerParse_Check</a> from cooker_parse.o(i.CookerParse_Check) referenced from cooker_parse.o(.constdata)
- <LI><a href="#[40]">CookerParse_Cmd</a> from cooker_parse.o(i.CookerParse_Cmd) referenced from cooker_parse.o(.constdata)
- <LI><a href="#[3d]">CookerParse_Header</a> from cooker_parse.o(i.CookerParse_Header) referenced from cooker_parse.o(.constdata)
- <LI><a href="#[3f]">CookerParse_Length</a> from cooker_parse.o(i.CookerParse_Length) referenced from cooker_parse.o(.constdata)
- <LI><a href="#[3c]">CookerParse_Nop</a> from cooker_parse.o(i.CookerParse_Nop) referenced from cooker_parse.o(.constdata)
- <LI><a href="#[41]">CookerParse_Payload</a> from cooker_parse.o(i.CookerParse_Payload) referenced from cooker_parse.o(.constdata)
+ <LI><a href="#[3f]">CookerParse_Addr</a> from cooker_parse.o(i.CookerParse_Addr) referenced from cooker_parse.o(.constdata)
+ <LI><a href="#[43]">CookerParse_Check</a> from cooker_parse.o(i.CookerParse_Check) referenced from cooker_parse.o(.constdata)
+ <LI><a href="#[41]">CookerParse_Cmd</a> from cooker_parse.o(i.CookerParse_Cmd) referenced from cooker_parse.o(.constdata)
+ <LI><a href="#[3e]">CookerParse_Header</a> from cooker_parse.o(i.CookerParse_Header) referenced from cooker_parse.o(.constdata)
+ <LI><a href="#[40]">CookerParse_Length</a> from cooker_parse.o(i.CookerParse_Length) referenced from cooker_parse.o(.constdata)
+ <LI><a href="#[3d]">CookerParse_Nop</a> from cooker_parse.o(i.CookerParse_Nop) referenced from cooker_parse.o(.constdata)
+ <LI><a href="#[42]">CookerParse_Payload</a> from cooker_parse.o(i.CookerParse_Payload) referenced from cooker_parse.o(.constdata)
  <LI><a href="#[f]">DMA1_Channel1_IRQHandler</a> from startup_stm32f051.o(.text) referenced from startup_stm32f051.o(RESET)
  <LI><a href="#[10]">DMA1_Channel2_3_IRQHandler</a> from startup_stm32f051.o(.text) referenced from startup_stm32f051.o(RESET)
  <LI><a href="#[11]">DMA1_Channel4_5_IRQHandler</a> from startup_stm32f051.o(.text) referenced from startup_stm32f051.o(RESET)
@@ -37,12 +37,13 @@ Function Pointers
  <LI><a href="#[c]">EXTI2_3_IRQHandler</a> from startup_stm32f051.o(.text) referenced from startup_stm32f051.o(RESET)
  <LI><a href="#[d]">EXTI4_15_IRQHandler</a> from startup_stm32f051.o(.text) referenced from startup_stm32f051.o(RESET)
  <LI><a href="#[9]">FLASH_IRQHandler</a> from startup_stm32f051.o(.text) referenced from startup_stm32f051.o(RESET)
- <LI><a href="#[39]">GasStove_DisRTC</a> from gasstove_service.o(i.GasStove_DisRTC) referenced from gasstove_service.o(.constdata)
- <LI><a href="#[3b]">GasStove_DisSet</a> from gasstove_service.o(i.GasStove_DisSet) referenced from gasstove_service.o(.constdata)
+ <LI><a href="#[3a]">GasStove_DisRTC</a> from gasstove_service.o(i.GasStove_DisRTC) referenced from gasstove_service.o(.constdata)
+ <LI><a href="#[3c]">GasStove_DisSet</a> from gasstove_service.o(i.GasStove_DisSet) referenced from gasstove_service.o(.constdata)
  <LI><a href="#[37]">GasStove_DisSetButton</a> from gasstove_service.o(i.GasStove_DisSetButton) referenced from gasstove_service.o(i.GasStove_Init)
- <LI><a href="#[3a]">GasStove_DisTiming</a> from gasstove_service.o(i.GasStove_DisTiming) referenced from gasstove_service.o(.constdata)
+ <LI><a href="#[3b]">GasStove_DisTiming</a> from gasstove_service.o(i.GasStove_DisTiming) referenced from gasstove_service.o(.constdata)
+ <LI><a href="#[38]">GasStove_Flameout</a> from cooker_extafn.o(i.GasStove_Flameout) referenced from gasstove_service.o(i.GasStove_Init)
  <LI><a href="#[36]">GasStove_GasSensorAlarmCancle</a> from gasstove_service.o(i.GasStove_GasSensorAlarmCancle) referenced from gasstove_service.o(i.GasStove_GasSensorAlarmChk)
- <LI><a href="#[38]">GasStove_TimingIRQHandler</a> from gasstove_service.o(i.GasStove_TimingIRQHandler) referenced from gasstove_service.o(i.SettingTiming_Ensure)
+ <LI><a href="#[39]">GasStove_TimingIRQHandler</a> from gasstove_service.o(i.GasStove_TimingIRQHandler) referenced from gasstove_service.o(i.SettingTiming_Ensure)
  <LI><a href="#[2]">HardFault_Handler</a> from startup_stm32f051.o(.text) referenced from startup_stm32f051.o(RESET)
  <LI><a href="#[1c]">I2C1_IRQHandler</a> from startup_stm32f051.o(.text) referenced from startup_stm32f051.o(RESET)
  <LI><a href="#[1d]">I2C2_IRQHandler</a> from startup_stm32f051.o(.text) referenced from startup_stm32f051.o(RESET)
@@ -117,12 +118,12 @@ Global Symbols
 </UL>
 <P><STRONG><a name="[cf]"></a>_main_stk</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry2.o(.ARM.Collect$$$$00000001))
 
-<P><STRONG><a name="[43]"></a>_main_scatterload</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry5.o(.ARM.Collect$$$$00000004))
-<BR><BR>[Calls]<UL><LI><a href="#[44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
+<P><STRONG><a name="[44]"></a>_main_scatterload</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry5.o(.ARM.Collect$$$$00000004))
+<BR><BR>[Calls]<UL><LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
 </UL>
 
-<P><STRONG><a name="[4a]"></a>__main_after_scatterload</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry5.o(.ARM.Collect$$$$00000004))
-<BR><BR>[Called By]<UL><LI><a href="#[44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
+<P><STRONG><a name="[4b]"></a>__main_after_scatterload</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry5.o(.ARM.Collect$$$$00000004))
+<BR><BR>[Called By]<UL><LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
 </UL>
 
 <P><STRONG><a name="[d0]"></a>_main_clock</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry7b.o(.ARM.Collect$$$$00000008))
@@ -253,32 +254,32 @@ Global Symbols
 </UL>
 <P><STRONG><a name="[d5]"></a>__aeabi_uidiv</STRONG> (Thumb, 0 bytes, Stack size 12 bytes, uidiv.o(.text), UNUSED)
 
-<P><STRONG><a name="[46]"></a>__aeabi_uidivmod</STRONG> (Thumb, 44 bytes, Stack size 12 bytes, uidiv.o(.text))
+<P><STRONG><a name="[47]"></a>__aeabi_uidivmod</STRONG> (Thumb, 44 bytes, Stack size 12 bytes, uidiv.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = __aeabi_uidivmod
 </UL>
-<BR>[Called By]<UL><LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GasStove_DisTiming
+<BR>[Called By]<UL><LI><a href="#[3b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GasStove_DisTiming
 <LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_HandleInit
-<LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_idivmod
+<LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_idivmod
 </UL>
 
 <P><STRONG><a name="[d6]"></a>__aeabi_idiv</STRONG> (Thumb, 0 bytes, Stack size 16 bytes, idiv.o(.text), UNUSED)
 
-<P><STRONG><a name="[45]"></a>__aeabi_idivmod</STRONG> (Thumb, 40 bytes, Stack size 16 bytes, idiv.o(.text))
+<P><STRONG><a name="[46]"></a>__aeabi_idivmod</STRONG> (Thumb, 40 bytes, Stack size 16 bytes, idiv.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = __aeabi_idivmod &rArr; __aeabi_uidivmod
 </UL>
-<BR>[Calls]<UL><LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
+<BR>[Calls]<UL><LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
 </UL>
 <BR>[Called By]<UL><LI><a href="#[26]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SettingRTC_AddHour
 <LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GasStove_DisSettingStartTime
 <LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GasStove_DisSettingEndTime
-<LI><a href="#[39]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GasStove_DisRTC
-<LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LeapYear
+<LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GasStove_DisRTC
+<LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LeapYear
 </UL>
 
-<P><STRONG><a name="[65]"></a>__aeabi_memcpy</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, memcpya.o(.text))
+<P><STRONG><a name="[66]"></a>__aeabi_memcpy</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, memcpya.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;STM32Fxx_FlashPageWrite
 <LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HT1621_SignService
-<LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Cooker_GetId
+<LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Cooker_GetId
 <LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_SEG_Service
 </UL>
 
@@ -286,35 +287,35 @@ Global Symbols
 
 <P><STRONG><a name="[d8]"></a>__aeabi_memcpy8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memcpya.o(.text), UNUSED)
 
-<P><STRONG><a name="[48]"></a>__aeabi_memset</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, memseta.o(.text))
+<P><STRONG><a name="[49]"></a>__aeabi_memset</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, memseta.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HT1621_Init
-<LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GasStove_Flameout
-<LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_memset$wrapper
-<LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr
+<LI><a href="#[38]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GasStove_Flameout
+<LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_memset$wrapper
+<LI><a href="#[48]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr
 </UL>
 
 <P><STRONG><a name="[d9]"></a>__aeabi_memset4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
 
 <P><STRONG><a name="[da]"></a>__aeabi_memset8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
 
-<P><STRONG><a name="[47]"></a>__aeabi_memclr</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, memseta.o(.text))
-<BR><BR>[Calls]<UL><LI><a href="#[48]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memset
+<P><STRONG><a name="[48]"></a>__aeabi_memclr</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, memseta.o(.text))
+<BR><BR>[Calls]<UL><LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memset
 </UL>
-<BR>[Called By]<UL><LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Cooker_Parse
+<BR>[Called By]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Cooker_Parse
 </UL>
 
 <P><STRONG><a name="[db]"></a>__aeabi_memclr4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
 
 <P><STRONG><a name="[dc]"></a>__aeabi_memclr8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
 
-<P><STRONG><a name="[49]"></a>_memset$wrapper</STRONG> (Thumb, 18 bytes, Stack size 8 bytes, memseta.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[48]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memset
+<P><STRONG><a name="[4a]"></a>_memset$wrapper</STRONG> (Thumb, 18 bytes, Stack size 8 bytes, memseta.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memset
 </UL>
 
-<P><STRONG><a name="[44]"></a>__scatterload</STRONG> (Thumb, 28 bytes, Stack size 0 bytes, init.o(.text))
-<BR><BR>[Calls]<UL><LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__main_after_scatterload
+<P><STRONG><a name="[45]"></a>__scatterload</STRONG> (Thumb, 28 bytes, Stack size 0 bytes, init.o(.text))
+<BR><BR>[Calls]<UL><LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__main_after_scatterload
 </UL>
-<BR>[Called By]<UL><LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_main_scatterload
+<BR>[Called By]<UL><LI><a href="#[44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_main_scatterload
 </UL>
 
 <P><STRONG><a name="[dd]"></a>__scatterload_rt2</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, init.o(.text), UNUSED)
@@ -327,7 +328,7 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SX1212_DelayMs
 </UL>
 
-<P><STRONG><a name="[61]"></a>BSP_OS_TimeGet</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, stm32fxxx_misc.o(i.BSP_OS_TimeGet))
+<P><STRONG><a name="[62]"></a>BSP_OS_TimeGet</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, stm32fxxx_misc.o(i.BSP_OS_TimeGet))
 <BR><BR>[Called By]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_SEGBlinkSet
 <LI><a href="#[2f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Setting_SysIdMatchStart
 <LI><a href="#[32]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SettingTiming_TenMinute
@@ -336,75 +337,75 @@ Global Symbols
 <LI><a href="#[35]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SettingTiming_Ensure
 <LI><a href="#[34]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SettingTiming_Cancle
 <LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GasStove_GasSensorAlarmChk
-<LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GasStove_DisTiming
-<LI><a href="#[39]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GasStove_DisRTC
-<LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GasStove_AlarmChk
+<LI><a href="#[3b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GasStove_DisTiming
+<LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GasStove_DisRTC
+<LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GasStove_AlarmChk
 <LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KeyBoard_Service
 <LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GasStove_Init
 <LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GasStove_DisplayService
-<LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FanRotation_Service
-<LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Cooker_Parse
-<LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Cooker_AFNChk
+<LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FanRotation_Service
+<LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Cooker_Parse
+<LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Cooker_AFNChk
 <LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Led_DisplayService
 <LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_SEG_Service
 </UL>
 
-<P><STRONG><a name="[73]"></a>BSP_OS_Timeout</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, stm32fxxx_misc.o(i.BSP_OS_Timeout))
+<P><STRONG><a name="[74]"></a>BSP_OS_Timeout</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, stm32fxxx_misc.o(i.BSP_OS_Timeout))
 <BR><BR>[Called By]<UL><LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GasStove_GasSensorAlarmChk
-<LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GasStove_DisTiming
-<LI><a href="#[3b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GasStove_DisSet
-<LI><a href="#[39]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GasStove_DisRTC
-<LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GasStove_AlarmChk
+<LI><a href="#[3b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GasStove_DisTiming
+<LI><a href="#[3c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GasStove_DisSet
+<LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GasStove_DisRTC
+<LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GasStove_AlarmChk
 <LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KeyBoard_Service
 <LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GasStove_GasBatStateChkService
 <LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GasStove_FireStateChkService
 <LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GasStove_DisplayService
-<LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FanRotation_Service
+<LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FanRotation_Service
 <LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Led_DisplayService
 <LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_SEG_Service
 </UL>
 
-<P><STRONG><a name="[4b]"></a>BSP_RTCGet</STRONG> (Thumb, 60 bytes, Stack size 16 bytes, stm32fxxx_rtc.o(i.BSP_RTCGet))
+<P><STRONG><a name="[4c]"></a>BSP_RTCGet</STRONG> (Thumb, 60 bytes, Stack size 16 bytes, stm32fxxx_rtc.o(i.BSP_RTCGet))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = BSP_RTCGet &rArr; RTC_GetTime
 </UL>
-<BR>[Calls]<UL><LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_GetTime
-<LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_GetDate
+<BR>[Calls]<UL><LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_GetTime
+<LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_GetDate
 </UL>
 <BR>[Called By]<UL><LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_rtc
 </UL>
 
-<P><STRONG><a name="[4e]"></a>BSP_RTCSet</STRONG> (Thumb, 70 bytes, Stack size 16 bytes, stm32fxxx_rtc.o(i.BSP_RTCSet))
+<P><STRONG><a name="[4f]"></a>BSP_RTCSet</STRONG> (Thumb, 70 bytes, Stack size 16 bytes, stm32fxxx_rtc.o(i.BSP_RTCSet))
 <BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = BSP_RTCSet &rArr; RTC_SetTime &rArr; RTC_WaitForSynchro
 </UL>
-<BR>[Calls]<UL><LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_SetTime
-<LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_SetDate
-<LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_GetTime
-<LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_GetDate
+<BR>[Calls]<UL><LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_SetTime
+<LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_SetDate
+<LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_GetTime
+<LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_GetDate
 </UL>
 <BR>[Called By]<UL><LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_rtc
 </UL>
 
-<P><STRONG><a name="[6a]"></a>BuildPacket</STRONG> (Thumb, 68 bytes, Stack size 16 bytes, sx1212.o(i.BuildPacket))
+<P><STRONG><a name="[6b]"></a>BuildPacket</STRONG> (Thumb, 68 bytes, Stack size 16 bytes, sx1212.o(i.BuildPacket))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = BuildPacket
 </UL>
-<BR>[Called By]<UL><LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Cooker_WirelessSendLoad
+<BR>[Called By]<UL><LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Cooker_WirelessSendLoad
 </UL>
 
-<P><STRONG><a name="[51]"></a>Buzzer_GPIOInit</STRONG> (Thumb, 44 bytes, Stack size 16 bytes, platform_chordtone.o(i.Buzzer_GPIOInit))
+<P><STRONG><a name="[52]"></a>Buzzer_GPIOInit</STRONG> (Thumb, 44 bytes, Stack size 16 bytes, platform_chordtone.o(i.Buzzer_GPIOInit))
 <BR><BR>[Stack]<UL><LI>Max Depth = 36<LI>Call Chain = Buzzer_GPIOInit &rArr; GPIO_Init
 </UL>
-<BR>[Calls]<UL><LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_AHBPeriphClockCmd
-<LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Init
+<BR>[Calls]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_AHBPeriphClockCmd
+<LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Init
 </UL>
-<BR>[Called By]<UL><LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ChordTone_Init
+<BR>[Called By]<UL><LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ChordTone_Init
 </UL>
 
-<P><STRONG><a name="[54]"></a>Buzzer_PwrOff</STRONG> (Thumb, 14 bytes, Stack size 8 bytes, platform_chordtone.o(i.Buzzer_PwrOff))
+<P><STRONG><a name="[55]"></a>Buzzer_PwrOff</STRONG> (Thumb, 14 bytes, Stack size 8 bytes, platform_chordtone.o(i.Buzzer_PwrOff))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = Buzzer_PwrOff
 </UL>
-<BR>[Calls]<UL><LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_SetBits
+<BR>[Calls]<UL><LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_SetBits
 </UL>
-<BR>[Called By]<UL><LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ChordTone_Init
+<BR>[Called By]<UL><LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ChordTone_Init
 </UL>
 
 <P><STRONG><a name="[cb]"></a>CRC_CalcBlockCRC</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, stm32f0xx_crc.o(i.CRC_CalcBlockCRC))
@@ -421,11 +422,11 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;crc32_ethernet_block
 </UL>
 
-<P><STRONG><a name="[56]"></a>CheckRTCRight</STRONG> (Thumb, 170 bytes, Stack size 16 bytes, utilities.o(i.CheckRTCRight))
+<P><STRONG><a name="[57]"></a>CheckRTCRight</STRONG> (Thumb, 170 bytes, Stack size 16 bytes, utilities.o(i.CheckRTCRight))
 <BR><BR>[Stack]<UL><LI>Max Depth = 60<LI>Call Chain = CheckRTCRight &rArr; LeapYear &rArr; __aeabi_idivmod &rArr; __aeabi_uidivmod
 </UL>
-<BR>[Calls]<UL><LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_common_switch8
-<LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LeapYear
+<BR>[Calls]<UL><LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_common_switch8
+<LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LeapYear
 </UL>
 <BR>[Called By]<UL><LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_rtc
 <LI><a href="#[29]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SettingRTC_Ensure
@@ -435,107 +436,107 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[23]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[59]"></a>ChordTone_Init</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, chordtone.o(i.ChordTone_Init))
+<P><STRONG><a name="[5a]"></a>ChordTone_Init</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, chordtone.o(i.ChordTone_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 44<LI>Call Chain = ChordTone_Init &rArr; ChordTone_PWMDevInit &rArr; GPIO_PinAFConfig
 </UL>
-<BR>[Calls]<UL><LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ChordTone_PWMDevInit
-<LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Buzzer_PwrOff
-<LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Buzzer_GPIOInit
+<BR>[Calls]<UL><LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ChordTone_PWMDevInit
+<LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Buzzer_PwrOff
+<LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Buzzer_GPIOInit
 </UL>
 <BR>[Called By]<UL><LI><a href="#[23]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[5a]"></a>ChordTone_PWMDevInit</STRONG> (Thumb, 54 bytes, Stack size 16 bytes, platform_chordtone.o(i.ChordTone_PWMDevInit))
+<P><STRONG><a name="[5b]"></a>ChordTone_PWMDevInit</STRONG> (Thumb, 54 bytes, Stack size 16 bytes, platform_chordtone.o(i.ChordTone_PWMDevInit))
 <BR><BR>[Stack]<UL><LI>Max Depth = 36<LI>Call Chain = ChordTone_PWMDevInit &rArr; GPIO_PinAFConfig
 </UL>
-<BR>[Calls]<UL><LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_AHBPeriphClockCmd
-<LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_PinAFConfig
-<LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Init
+<BR>[Calls]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_AHBPeriphClockCmd
+<LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_PinAFConfig
+<LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Init
 </UL>
-<BR>[Called By]<UL><LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ChordTone_Init
+<BR>[Called By]<UL><LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ChordTone_Init
 </UL>
 
 <P><STRONG><a name="[78]"></a>ChordTone_Start</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, chordtone.o(i.ChordTone_Start))
 <BR><BR>[Called By]<UL><LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GasStove_GasSensorAlarmChk
 <LI><a href="#[36]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GasStove_GasSensorAlarmCancle
-<LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GasStove_AlarmChk
+<LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GasStove_AlarmChk
 <LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KeyBoard_Service
 <LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GasStove_DisplayService
 </UL>
 
-<P><STRONG><a name="[5e]"></a>Cooker_AFNChk</STRONG> (Thumb, 244 bytes, Stack size 8 bytes, cooker_extafn.o(i.Cooker_AFNChk))
+<P><STRONG><a name="[5f]"></a>Cooker_AFNChk</STRONG> (Thumb, 244 bytes, Stack size 8 bytes, cooker_extafn.o(i.Cooker_AFNChk))
 <BR><BR>[Stack]<UL><LI>Max Depth = 184<LI>Call Chain = Cooker_AFNChk &rArr; Cooker_Load &rArr; Cooker_WirelessSendLoad &rArr; SendRfFrame &rArr; SetRFMode &rArr; _SpiConfig &rArr; SpiInOut &rArr; SX1212_SCKSet
 </UL>
-<BR>[Calls]<UL><LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_common_switch8
-<LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Led_DisplayOn
-<LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Led_DisplayOff
-<LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_OS_TimeGet
-<LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Cooker_Load
+<BR>[Calls]<UL><LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_common_switch8
+<LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Led_DisplayOn
+<LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Led_DisplayOff
+<LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_OS_TimeGet
+<LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Cooker_Load
 </UL>
-<BR>[Called By]<UL><LI><a href="#[42]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CookerParse_Check
+<BR>[Called By]<UL><LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CookerParse_Check
 </UL>
 
-<P><STRONG><a name="[63]"></a>Cooker_ExtPinGPIOInit</STRONG> (Thumb, 58 bytes, Stack size 16 bytes, platform_extpin.o(i.Cooker_ExtPinGPIOInit))
+<P><STRONG><a name="[64]"></a>Cooker_ExtPinGPIOInit</STRONG> (Thumb, 58 bytes, Stack size 16 bytes, platform_extpin.o(i.Cooker_ExtPinGPIOInit))
 <BR><BR>[Stack]<UL><LI>Max Depth = 36<LI>Call Chain = Cooker_ExtPinGPIOInit &rArr; GPIO_Init
 </UL>
-<BR>[Calls]<UL><LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_AHBPeriphClockCmd
-<LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Init
+<BR>[Calls]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_AHBPeriphClockCmd
+<LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Init
 </UL>
 <BR>[Called By]<UL><LI><a href="#[23]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[5c]"></a>Cooker_GetId</STRONG> (Thumb, 22 bytes, Stack size 24 bytes, cooker_parse.o(i.Cooker_GetId))
+<P><STRONG><a name="[5d]"></a>Cooker_GetId</STRONG> (Thumb, 22 bytes, Stack size 24 bytes, cooker_parse.o(i.Cooker_GetId))
 <BR><BR>[Stack]<UL><LI>Max Depth = 36<LI>Call Chain = Cooker_GetId &rArr; STM32Fxxx_GetEtag
 </UL>
-<BR>[Calls]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;STM32Fxxx_GetEtag
-<LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
+<BR>[Calls]<UL><LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;STM32Fxxx_GetEtag
+<LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
 </UL>
-<BR>[Called By]<UL><LI><a href="#[42]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CookerParse_Check
-<LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Cooker_Load
+<BR>[Called By]<UL><LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CookerParse_Check
+<LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Cooker_Load
 </UL>
 
-<P><STRONG><a name="[62]"></a>Cooker_Load</STRONG> (Thumb, 184 bytes, Stack size 96 bytes, cooker_parse.o(i.Cooker_Load))
+<P><STRONG><a name="[63]"></a>Cooker_Load</STRONG> (Thumb, 184 bytes, Stack size 96 bytes, cooker_parse.o(i.Cooker_Load))
 <BR><BR>[Stack]<UL><LI>Max Depth = 176<LI>Call Chain = Cooker_Load &rArr; Cooker_WirelessSendLoad &rArr; SendRfFrame &rArr; SetRFMode &rArr; _SpiConfig &rArr; SpiInOut &rArr; SX1212_SCKSet
 </UL>
-<BR>[Calls]<UL><LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Cooker_GetId
-<LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;crc16_ccitt_byte
-<LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Cooker_WirelessSendLoad
+<BR>[Calls]<UL><LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Cooker_GetId
+<LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;crc16_ccitt_byte
+<LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Cooker_WirelessSendLoad
 </UL>
-<BR>[Called By]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Cooker_SysIdMatch
-<LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GasStove_Flameout
-<LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Cooker_AFNChk
+<BR>[Called By]<UL><LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Cooker_SysIdMatch
+<LI><a href="#[38]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GasStove_Flameout
+<LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Cooker_AFNChk
 </UL>
 
-<P><STRONG><a name="[68]"></a>Cooker_Parse</STRONG> (Thumb, 124 bytes, Stack size 8 bytes, cooker_parse.o(i.Cooker_Parse))
+<P><STRONG><a name="[69]"></a>Cooker_Parse</STRONG> (Thumb, 124 bytes, Stack size 8 bytes, cooker_parse.o(i.Cooker_Parse))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = Cooker_Parse &rArr; crc16_ccitt_byte
 </UL>
-<BR>[Calls]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_OS_TimeGet
-<LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;crc16_ccitt_byte
-<LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr
+<BR>[Calls]<UL><LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_OS_TimeGet
+<LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;crc16_ccitt_byte
+<LI><a href="#[48]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr
 </UL>
 <BR>[Called By]<UL><LI><a href="#[23]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[69]"></a>Cooker_SysIdMatch</STRONG> (Thumb, 28 bytes, Stack size 48 bytes, cooker_extafn.o(i.Cooker_SysIdMatch))
+<P><STRONG><a name="[6a]"></a>Cooker_SysIdMatch</STRONG> (Thumb, 28 bytes, Stack size 48 bytes, cooker_extafn.o(i.Cooker_SysIdMatch))
 <BR><BR>[Stack]<UL><LI>Max Depth = 224<LI>Call Chain = Cooker_SysIdMatch &rArr; Cooker_Load &rArr; Cooker_WirelessSendLoad &rArr; SendRfFrame &rArr; SetRFMode &rArr; _SpiConfig &rArr; SpiInOut &rArr; SX1212_SCKSet
 </UL>
-<BR>[Calls]<UL><LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Cooker_Load
+<BR>[Calls]<UL><LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Cooker_Load
 </UL>
 <BR>[Called By]<UL><LI><a href="#[2f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Setting_SysIdMatchStart
 </UL>
 
 <P><STRONG><a name="[7c]"></a>Cooker_SysIdMatchResult</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, cooker_extafn.o(i.Cooker_SysIdMatchResult))
-<BR><BR>[Called By]<UL><LI><a href="#[3b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GasStove_DisSet
+<BR><BR>[Called By]<UL><LI><a href="#[3c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GasStove_DisSet
 </UL>
 
-<P><STRONG><a name="[67]"></a>Cooker_WirelessSendLoad</STRONG> (Thumb, 28 bytes, Stack size 16 bytes, cooker_parse.o(i.Cooker_WirelessSendLoad))
+<P><STRONG><a name="[68]"></a>Cooker_WirelessSendLoad</STRONG> (Thumb, 28 bytes, Stack size 16 bytes, cooker_parse.o(i.Cooker_WirelessSendLoad))
 <BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = Cooker_WirelessSendLoad &rArr; SendRfFrame &rArr; SetRFMode &rArr; _SpiConfig &rArr; SpiInOut &rArr; SX1212_SCKSet
 </UL>
-<BR>[Calls]<UL><LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SendRfFrame
-<LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BuildPacket
+<BR>[Calls]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SendRfFrame
+<LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BuildPacket
 </UL>
-<BR>[Called By]<UL><LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Cooker_Load
-<LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GasStove_Flameout
+<BR>[Called By]<UL><LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Cooker_Load
+<LI><a href="#[38]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GasStove_Flameout
 </UL>
 
 <P><STRONG><a name="[af]"></a>FLASH_ClearFlag</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, stm32f0xx_flash.o(i.FLASH_ClearFlag))
@@ -543,16 +544,16 @@ Global Symbols
 <LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;STM32Fxxx_FlashErase
 </UL>
 
-<P><STRONG><a name="[6c]"></a>FLASH_ErasePage</STRONG> (Thumb, 72 bytes, Stack size 12 bytes, stm32f0xx_flash.o(i.FLASH_ErasePage))
+<P><STRONG><a name="[6d]"></a>FLASH_ErasePage</STRONG> (Thumb, 72 bytes, Stack size 12 bytes, stm32f0xx_flash.o(i.FLASH_ErasePage))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = FLASH_ErasePage &rArr; FLASH_WaitForLastOperation
 </UL>
-<BR>[Calls]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FLASH_WaitForLastOperation
+<BR>[Calls]<UL><LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FLASH_WaitForLastOperation
 </UL>
 <BR>[Called By]<UL><LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;STM32Fxxx_FlashErase
 </UL>
 
-<P><STRONG><a name="[6f]"></a>FLASH_GetStatus</STRONG> (Thumb, 54 bytes, Stack size 0 bytes, stm32f0xx_flash.o(i.FLASH_GetStatus))
-<BR><BR>[Called By]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FLASH_WaitForLastOperation
+<P><STRONG><a name="[70]"></a>FLASH_GetStatus</STRONG> (Thumb, 54 bytes, Stack size 0 bytes, stm32f0xx_flash.o(i.FLASH_GetStatus))
+<BR><BR>[Called By]<UL><LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FLASH_WaitForLastOperation
 </UL>
 
 <P><STRONG><a name="[b1]"></a>FLASH_Lock</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, stm32f0xx_flash.o(i.FLASH_Lock))
@@ -560,10 +561,10 @@ Global Symbols
 <LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;STM32Fxxx_FlashErase
 </UL>
 
-<P><STRONG><a name="[6e]"></a>FLASH_ProgramWord</STRONG> (Thumb, 104 bytes, Stack size 20 bytes, stm32f0xx_flash.o(i.FLASH_ProgramWord))
+<P><STRONG><a name="[6f]"></a>FLASH_ProgramWord</STRONG> (Thumb, 104 bytes, Stack size 20 bytes, stm32f0xx_flash.o(i.FLASH_ProgramWord))
 <BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = FLASH_ProgramWord &rArr; FLASH_WaitForLastOperation
 </UL>
-<BR>[Calls]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FLASH_WaitForLastOperation
+<BR>[Calls]<UL><LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FLASH_WaitForLastOperation
 </UL>
 <BR>[Called By]<UL><LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;STM32Fxxx_FlashWrite
 </UL>
@@ -573,45 +574,45 @@ Global Symbols
 <LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;STM32Fxxx_FlashErase
 </UL>
 
-<P><STRONG><a name="[6d]"></a>FLASH_WaitForLastOperation</STRONG> (Thumb, 40 bytes, Stack size 8 bytes, stm32f0xx_flash.o(i.FLASH_WaitForLastOperation))
+<P><STRONG><a name="[6e]"></a>FLASH_WaitForLastOperation</STRONG> (Thumb, 40 bytes, Stack size 8 bytes, stm32f0xx_flash.o(i.FLASH_WaitForLastOperation))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = FLASH_WaitForLastOperation
 </UL>
-<BR>[Calls]<UL><LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FLASH_GetStatus
+<BR>[Calls]<UL><LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FLASH_GetStatus
 </UL>
-<BR>[Called By]<UL><LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FLASH_ProgramWord
-<LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FLASH_ErasePage
+<BR>[Called By]<UL><LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FLASH_ProgramWord
+<LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FLASH_ErasePage
 </UL>
 
-<P><STRONG><a name="[72]"></a>FanRotation_Service</STRONG> (Thumb, 54 bytes, Stack size 8 bytes, platform_extpin.o(i.FanRotation_Service))
+<P><STRONG><a name="[73]"></a>FanRotation_Service</STRONG> (Thumb, 54 bytes, Stack size 8 bytes, platform_extpin.o(i.FanRotation_Service))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = FanRotation_Service &rArr; FanRotation_Level
 </UL>
-<BR>[Calls]<UL><LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_OS_Timeout
-<LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_OS_TimeGet
-<LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FanRotation_Level
+<BR>[Calls]<UL><LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_OS_Timeout
+<LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_OS_TimeGet
+<LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FanRotation_Level
 </UL>
 <BR>[Called By]<UL><LI><a href="#[23]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[53]"></a>GPIO_Init</STRONG> (Thumb, 144 bytes, Stack size 20 bytes, stm32f0xx_gpio.o(i.GPIO_Init))
+<P><STRONG><a name="[54]"></a>GPIO_Init</STRONG> (Thumb, 144 bytes, Stack size 20 bytes, stm32f0xx_gpio.o(i.GPIO_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = GPIO_Init
 </UL>
 <BR>[Called By]<UL><LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SX1212_DevInit
 <LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KeyBoard_Init
-<LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Cooker_ExtPinGPIOInit
+<LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Cooker_ExtPinGPIOInit
 <LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HT1621_GPIOInit
-<LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ChordTone_PWMDevInit
-<LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Buzzer_GPIOInit
+<LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ChordTone_PWMDevInit
+<LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Buzzer_GPIOInit
 </UL>
 
-<P><STRONG><a name="[5b]"></a>GPIO_PinAFConfig</STRONG> (Thumb, 68 bytes, Stack size 20 bytes, stm32f0xx_gpio.o(i.GPIO_PinAFConfig))
+<P><STRONG><a name="[5c]"></a>GPIO_PinAFConfig</STRONG> (Thumb, 68 bytes, Stack size 20 bytes, stm32f0xx_gpio.o(i.GPIO_PinAFConfig))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = GPIO_PinAFConfig
 </UL>
-<BR>[Called By]<UL><LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ChordTone_PWMDevInit
+<BR>[Called By]<UL><LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ChordTone_PWMDevInit
 </UL>
 
-<P><STRONG><a name="[71]"></a>GPIO_ReadInputDataBit</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, stm32f0xx_gpio.o(i.GPIO_ReadInputDataBit))
+<P><STRONG><a name="[72]"></a>GPIO_ReadInputDataBit</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, stm32f0xx_gpio.o(i.GPIO_ReadInputDataBit))
 <BR><BR>[Called By]<UL><LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GasStove_GasSensor
-<LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FanRotation_Level
+<LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FanRotation_Level
 <LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KeyBoard_InState
 <LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SX1212_MISOGet
 <LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SX1212_IRQ1Get
@@ -627,10 +628,10 @@ Global Symbols
 <LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HT1621_WriteCmd
 </UL>
 
-<P><STRONG><a name="[55]"></a>GPIO_SetBits</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, stm32f0xx_gpio.o(i.GPIO_SetBits))
+<P><STRONG><a name="[56]"></a>GPIO_SetBits</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, stm32f0xx_gpio.o(i.GPIO_SetBits))
 <BR><BR>[Called By]<UL><LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HT1621_GPIOInit
 <LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HT1621_WriteData
-<LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Buzzer_PwrOff
+<LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Buzzer_PwrOff
 <LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SX1212_SCKSet
 <LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SX1212_NSSDataSet
 <LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SX1212_NSSCfgSet
@@ -638,56 +639,59 @@ Global Symbols
 <LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HT1621_WriteCmd
 </UL>
 
-<P><STRONG><a name="[82]"></a>GasStove_DisplayService</STRONG> (Thumb, 124 bytes, Stack size 8 bytes, gasstove_service.o(i.GasStove_DisplayService))
+<P><STRONG><a name="[82]"></a>GasStove_DisplayService</STRONG> (Thumb, 140 bytes, Stack size 8 bytes, gasstove_service.o(i.GasStove_DisplayService))
 <BR><BR>[Stack]<UL><LI>Max Depth = 264<LI>Call Chain = GasStove_DisplayService &rArr; GasStove_AlarmChk &rArr; GasStove_Flameout &rArr; Cooker_Load &rArr; Cooker_WirelessSendLoad &rArr; SendRfFrame &rArr; SetRFMode &rArr; _SpiConfig &rArr; SpiInOut &rArr; SX1212_SCKSet
 </UL>
 <BR>[Calls]<UL><LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_FunReg
 <LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ChordTone_Start
-<LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_OS_Timeout
-<LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_OS_TimeGet
+<LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_OS_Timeout
+<LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_OS_TimeGet
 <LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GasStove_GasSensorAlarmChk
-<LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GasStove_AlarmChk
-<LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GasStove_Flameout
+<LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GasStove_AlarmChk
+<LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GasStove_FanRotation
+<LI><a href="#[38]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GasStove_Flameout
 </UL>
 <BR>[Called By]<UL><LI><a href="#[23]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[75]"></a>GasStove_FanRotation</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, platform_extpin.o(i.GasStove_FanRotation))
-<BR><BR>[Called By]<UL><LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GasStove_AlarmChk
+<P><STRONG><a name="[76]"></a>GasStove_FanRotation</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, platform_extpin.o(i.GasStove_FanRotation))
+<BR><BR>[Called By]<UL><LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GasStove_AlarmChk
+<LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GasStove_DisplayService
 </UL>
 
-<P><STRONG><a name="[76]"></a>GasStove_FireState</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, cooker_extafn.o(i.GasStove_FireState))
-<BR><BR>[Called By]<UL><LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GasStove_AlarmChk
+<P><STRONG><a name="[77]"></a>GasStove_FireState</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, cooker_extafn.o(i.GasStove_FireState))
+<BR><BR>[Called By]<UL><LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GasStove_AlarmChk
 </UL>
 
 <P><STRONG><a name="[86]"></a>GasStove_FireStateChkService</STRONG> (Thumb, 38 bytes, Stack size 8 bytes, cooker_extafn.o(i.GasStove_FireStateChkService))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = GasStove_FireStateChkService
 </UL>
-<BR>[Calls]<UL><LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Led_DisplayOff
-<LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_OS_Timeout
+<BR>[Calls]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Led_DisplayOff
+<LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_OS_Timeout
 </UL>
 <BR>[Called By]<UL><LI><a href="#[23]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[77]"></a>GasStove_Flameout</STRONG> (Thumb, 70 bytes, Stack size 56 bytes, cooker_extafn.o(i.GasStove_Flameout))
+<P><STRONG><a name="[38]"></a>GasStove_Flameout</STRONG> (Thumb, 70 bytes, Stack size 56 bytes, cooker_extafn.o(i.GasStove_Flameout))
 <BR><BR>[Stack]<UL><LI>Max Depth = 232<LI>Call Chain = GasStove_Flameout &rArr; Cooker_Load &rArr; Cooker_WirelessSendLoad &rArr; SendRfFrame &rArr; SetRFMode &rArr; _SpiConfig &rArr; SpiInOut &rArr; SX1212_SCKSet
 </UL>
-<BR>[Calls]<UL><LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Cooker_WirelessSendLoad
-<LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Cooker_Load
+<BR>[Calls]<UL><LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Cooker_WirelessSendLoad
+<LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Cooker_Load
 <LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Updata_Normal_Config
 <LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Updata_Awaken_Config
-<LI><a href="#[48]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memset
+<LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memset
 </UL>
 <BR>[Called By]<UL><LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GasStove_GasSensorAlarmChk
-<LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GasStove_AlarmChk
+<LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GasStove_AlarmChk
 <LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GasStove_DisplayService
 </UL>
-
+<BR>[Address Reference Count : 1]<UL><LI> gasstove_service.o(i.GasStove_Init)
+</UL>
 <P><STRONG><a name="[89]"></a>GasStove_GasBatStateChkService</STRONG> (Thumb, 74 bytes, Stack size 8 bytes, cooker_extafn.o(i.GasStove_GasBatStateChkService))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = GasStove_GasBatStateChkService
 </UL>
-<BR>[Calls]<UL><LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Led_DisplayOff
-<LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_OS_Timeout
+<BR>[Calls]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Led_DisplayOff
+<LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_OS_Timeout
 </UL>
 <BR>[Called By]<UL><LI><a href="#[23]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
@@ -695,12 +699,12 @@ Global Symbols
 <P><STRONG><a name="[8a]"></a>GasStove_GasSensor</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, platform_extpin.o(i.GasStove_GasSensor))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = GasStove_GasSensor
 </UL>
-<BR>[Calls]<UL><LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ReadInputDataBit
+<BR>[Calls]<UL><LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ReadInputDataBit
 </UL>
 <BR>[Called By]<UL><LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GasStove_GasSensorAlarmChk
 </UL>
 
-<P><STRONG><a name="[8b]"></a>GasStove_Init</STRONG> (Thumb, 118 bytes, Stack size 8 bytes, gasstove_service.o(i.GasStove_Init))
+<P><STRONG><a name="[8b]"></a>GasStove_Init</STRONG> (Thumb, 126 bytes, Stack size 8 bytes, gasstove_service.o(i.GasStove_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = GasStove_Init &rArr; crc32_ethernet_block &rArr; CRC_CalcBlockCRC
 </UL>
 <BR>[Calls]<UL><LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;crc32_ethernet_block
@@ -708,7 +712,7 @@ Global Symbols
 <LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_SEG_Update
 <LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_SEGBlinkSet
 <LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KeyBoard_FunReg
-<LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_OS_TimeGet
+<LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_OS_TimeGet
 </UL>
 <BR>[Called By]<UL><LI><a href="#[23]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
@@ -718,7 +722,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HT1621_GPIOInit
 <LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HT1621_WriteData
-<LI><a href="#[48]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memset
+<LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memset
 <LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HT1621_WriteCmd
 </UL>
 <BR>[Called By]<UL><LI><a href="#[23]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
@@ -727,11 +731,11 @@ Global Symbols
 <P><STRONG><a name="[92]"></a>HT1621_SignService</STRONG> (Thumb, 116 bytes, Stack size 16 bytes, ht1621.o(i.HT1621_SignService))
 <BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = HT1621_SignService &rArr; HT1621_WriteData
 </UL>
-<BR>[Calls]<UL><LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cmp_buf
+<BR>[Calls]<UL><LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cmp_buf
 <LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HT1621_WriteData
 <LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Led_DisplayService
 <LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_SEG_Service
-<LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
+<LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
 </UL>
 <BR>[Called By]<UL><LI><a href="#[23]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
@@ -739,7 +743,7 @@ Global Symbols
 <P><STRONG><a name="[90]"></a>HT1621_WriteCmd</STRONG> (Thumb, 186 bytes, Stack size 16 bytes, platform_ht1621.o(i.HT1621_WriteCmd))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = HT1621_WriteCmd
 </UL>
-<BR>[Calls]<UL><LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_SetBits
+<BR>[Calls]<UL><LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_SetBits
 <LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ResetBits
 <LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HT1621_Delay
 </UL>
@@ -749,7 +753,7 @@ Global Symbols
 <P><STRONG><a name="[91]"></a>HT1621_WriteData</STRONG> (Thumb, 306 bytes, Stack size 40 bytes, platform_ht1621.o(i.HT1621_WriteData))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = HT1621_WriteData
 </UL>
-<BR>[Calls]<UL><LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_SetBits
+<BR>[Calls]<UL><LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_SetBits
 <LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ResetBits
 <LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HT1621_Delay
 </UL>
@@ -787,7 +791,7 @@ Global Symbols
 <P><STRONG><a name="[9e]"></a>KeyBoard_InState</STRONG> (Thumb, 90 bytes, Stack size 8 bytes, keyboard.o(i.KeyBoard_InState))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = KeyBoard_InState
 </UL>
-<BR>[Calls]<UL><LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ReadInputDataBit
+<BR>[Calls]<UL><LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ReadInputDataBit
 </UL>
 <BR>[Called By]<UL><LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KeyBoard_Service
 </UL>
@@ -795,8 +799,8 @@ Global Symbols
 <P><STRONG><a name="[9f]"></a>KeyBoard_Init</STRONG> (Thumb, 110 bytes, Stack size 16 bytes, keyboard.o(i.KeyBoard_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 36<LI>Call Chain = KeyBoard_Init &rArr; GPIO_Init
 </UL>
-<BR>[Calls]<UL><LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_AHBPeriphClockCmd
-<LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Init
+<BR>[Calls]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_AHBPeriphClockCmd
+<LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Init
 </UL>
 <BR>[Called By]<UL><LI><a href="#[23]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
@@ -805,8 +809,8 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = KeyBoard_Service &rArr; KeyBoard_InState
 </UL>
 <BR>[Calls]<UL><LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ChordTone_Start
-<LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_OS_Timeout
-<LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_OS_TimeGet
+<LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_OS_Timeout
+<LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_OS_TimeGet
 <LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KeyBoard_InState
 </UL>
 <BR>[Called By]<UL><LI><a href="#[23]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
@@ -815,7 +819,7 @@ Global Symbols
 <P><STRONG><a name="[7a]"></a>LED_SEGBlinkSet</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, ht1621.o(i.LED_SEGBlinkSet))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = LED_SEGBlinkSet
 </UL>
-<BR>[Calls]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_OS_TimeGet
+<BR>[Calls]<UL><LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_OS_TimeGet
 </UL>
 <BR>[Called By]<UL><LI><a href="#[2f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Setting_SysIdMatchStart
 <LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Setting_SysIdMatch
@@ -831,12 +835,12 @@ Global Symbols
 <LI><a href="#[28]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SettingRTC_AddMinute
 <LI><a href="#[26]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SettingRTC_AddHour
 <LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GasStove_ExtEnsure
-<LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GasStove_DisTiming
+<LI><a href="#[3b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GasStove_DisTiming
 <LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GasStove_DisSettingStartTime
 <LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GasStove_DisSettingRTC
 <LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GasStove_DisSettingEndTime
 <LI><a href="#[37]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GasStove_DisSetButton
-<LI><a href="#[39]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GasStove_DisRTC
+<LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GasStove_DisRTC
 <LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GasStove_Init
 </UL>
 
@@ -851,53 +855,53 @@ Global Symbols
 <LI><a href="#[2c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SettingStartTime_Minute
 <LI><a href="#[2a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SettingStartTime_Hour
 <LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GasStove_ExtEnsure
-<LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GasStove_DisTiming
+<LI><a href="#[3b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GasStove_DisTiming
 <LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GasStove_DisSettingStartTime
 <LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GasStove_DisSettingRTC
 <LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GasStove_DisSettingEndTime
 <LI><a href="#[37]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GasStove_DisSetButton
-<LI><a href="#[39]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GasStove_DisRTC
+<LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GasStove_DisRTC
 <LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GasStove_Init
 </UL>
 
-<P><STRONG><a name="[58]"></a>LeapYear</STRONG> (Thumb, 60 bytes, Stack size 16 bytes, utilities.o(i.LeapYear))
+<P><STRONG><a name="[59]"></a>LeapYear</STRONG> (Thumb, 60 bytes, Stack size 16 bytes, utilities.o(i.LeapYear))
 <BR><BR>[Stack]<UL><LI>Max Depth = 44<LI>Call Chain = LeapYear &rArr; __aeabi_idivmod &rArr; __aeabi_uidivmod
 </UL>
-<BR>[Calls]<UL><LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_idivmod
+<BR>[Calls]<UL><LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_idivmod
 </UL>
-<BR>[Called By]<UL><LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CheckRTCRight
+<BR>[Called By]<UL><LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CheckRTCRight
 </UL>
 
-<P><STRONG><a name="[60]"></a>Led_DisplayOff</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, ht1621.o(i.Led_DisplayOff))
+<P><STRONG><a name="[61]"></a>Led_DisplayOff</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, ht1621.o(i.Led_DisplayOff))
 <BR><BR>[Called By]<UL><LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GasStove_GasSensorAlarmChk
 <LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GasStove_ExtEnsure
 <LI><a href="#[37]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GasStove_DisSetButton
-<LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GasStove_AlarmChk
+<LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GasStove_AlarmChk
 <LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GasStove_GasBatStateChkService
 <LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GasStove_FireStateChkService
-<LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Cooker_AFNChk
+<LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Cooker_AFNChk
 </UL>
 
-<P><STRONG><a name="[5f]"></a>Led_DisplayOn</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, ht1621.o(i.Led_DisplayOn))
+<P><STRONG><a name="[60]"></a>Led_DisplayOn</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, ht1621.o(i.Led_DisplayOn))
 <BR><BR>[Called By]<UL><LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GasStove_GasSensorAlarmChk
 <LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GasStove_ExtEnsure
 <LI><a href="#[37]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GasStove_DisSetButton
-<LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GasStove_AlarmChk
-<LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Cooker_AFNChk
+<LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GasStove_AlarmChk
+<LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Cooker_AFNChk
 </UL>
 
 <P><STRONG><a name="[b5]"></a>PWR_BackupAccessCmd</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, stm32f0xx_pwr.o(i.PWR_BackupAccessCmd))
 <BR><BR>[Called By]<UL><LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;STM32Fxxx_RTCInit
 </UL>
 
-<P><STRONG><a name="[52]"></a>RCC_AHBPeriphClockCmd</STRONG> (Thumb, 28 bytes, Stack size 0 bytes, stm32f0xx_rcc.o(i.RCC_AHBPeriphClockCmd))
+<P><STRONG><a name="[53]"></a>RCC_AHBPeriphClockCmd</STRONG> (Thumb, 28 bytes, Stack size 0 bytes, stm32f0xx_rcc.o(i.RCC_AHBPeriphClockCmd))
 <BR><BR>[Called By]<UL><LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;crc32_ethernet_block
 <LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SX1212_DevInit
 <LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KeyBoard_Init
-<LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Cooker_ExtPinGPIOInit
+<LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Cooker_ExtPinGPIOInit
 <LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HT1621_GPIOInit
-<LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ChordTone_PWMDevInit
-<LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Buzzer_GPIOInit
+<LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ChordTone_PWMDevInit
+<LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Buzzer_GPIOInit
 </UL>
 
 <P><STRONG><a name="[b4]"></a>RCC_APB1PeriphClockCmd</STRONG> (Thumb, 28 bytes, Stack size 0 bytes, stm32f0xx_rcc.o(i.RCC_APB1PeriphClockCmd))
@@ -929,33 +933,33 @@ Global Symbols
 <P><STRONG><a name="[a4]"></a>RTC_EnterInitMode</STRONG> (Thumb, 82 bytes, Stack size 8 bytes, stm32f0xx_rtc.o(i.RTC_EnterInitMode))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = RTC_EnterInitMode
 </UL>
-<BR>[Called By]<UL><LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_SetTime
-<LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_SetDate
+<BR>[Called By]<UL><LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_SetTime
+<LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_SetDate
 <LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_Init
 </UL>
 
 <P><STRONG><a name="[a5]"></a>RTC_ExitInitMode</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, stm32f0xx_rtc.o(i.RTC_ExitInitMode))
-<BR><BR>[Called By]<UL><LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_SetTime
-<LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_SetDate
+<BR><BR>[Called By]<UL><LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_SetTime
+<LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_SetDate
 <LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_Init
 </UL>
 
-<P><STRONG><a name="[4d]"></a>RTC_GetDate</STRONG> (Thumb, 88 bytes, Stack size 16 bytes, stm32f0xx_rtc.o(i.RTC_GetDate))
+<P><STRONG><a name="[4e]"></a>RTC_GetDate</STRONG> (Thumb, 88 bytes, Stack size 16 bytes, stm32f0xx_rtc.o(i.RTC_GetDate))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = RTC_GetDate
 </UL>
 <BR>[Calls]<UL><LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_Bcd2ToByte
 </UL>
-<BR>[Called By]<UL><LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_RTCSet
-<LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_RTCGet
+<BR>[Called By]<UL><LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_RTCSet
+<LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_RTCGet
 </UL>
 
-<P><STRONG><a name="[4c]"></a>RTC_GetTime</STRONG> (Thumb, 84 bytes, Stack size 16 bytes, stm32f0xx_rtc.o(i.RTC_GetTime))
+<P><STRONG><a name="[4d]"></a>RTC_GetTime</STRONG> (Thumb, 84 bytes, Stack size 16 bytes, stm32f0xx_rtc.o(i.RTC_GetTime))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = RTC_GetTime
 </UL>
 <BR>[Calls]<UL><LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_Bcd2ToByte
 </UL>
-<BR>[Called By]<UL><LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_RTCSet
-<LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_RTCGet
+<BR>[Called By]<UL><LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_RTCSet
+<LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_RTCGet
 </UL>
 
 <P><STRONG><a name="[a3]"></a>RTC_Init</STRONG> (Thumb, 84 bytes, Stack size 12 bytes, stm32f0xx_rtc.o(i.RTC_Init))
@@ -973,7 +977,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;STM32Fxxx_RTCInit
 </UL>
 
-<P><STRONG><a name="[50]"></a>RTC_SetDate</STRONG> (Thumb, 198 bytes, Stack size 24 bytes, stm32f0xx_rtc.o(i.RTC_SetDate))
+<P><STRONG><a name="[51]"></a>RTC_SetDate</STRONG> (Thumb, 198 bytes, Stack size 24 bytes, stm32f0xx_rtc.o(i.RTC_SetDate))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = RTC_SetDate &rArr; RTC_WaitForSynchro
 </UL>
 <BR>[Calls]<UL><LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_WaitForSynchro
@@ -982,10 +986,10 @@ Global Symbols
 <LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_ExitInitMode
 <LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_EnterInitMode
 </UL>
-<BR>[Called By]<UL><LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_RTCSet
+<BR>[Called By]<UL><LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_RTCSet
 </UL>
 
-<P><STRONG><a name="[4f]"></a>RTC_SetTime</STRONG> (Thumb, 208 bytes, Stack size 24 bytes, stm32f0xx_rtc.o(i.RTC_SetTime))
+<P><STRONG><a name="[50]"></a>RTC_SetTime</STRONG> (Thumb, 208 bytes, Stack size 24 bytes, stm32f0xx_rtc.o(i.RTC_SetTime))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = RTC_SetTime &rArr; RTC_WaitForSynchro
 </UL>
 <BR>[Calls]<UL><LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_WaitForSynchro
@@ -994,14 +998,14 @@ Global Symbols
 <LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_ExitInitMode
 <LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_EnterInitMode
 </UL>
-<BR>[Called By]<UL><LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_RTCSet
+<BR>[Called By]<UL><LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_RTCSet
 </UL>
 
 <P><STRONG><a name="[a7]"></a>RTC_WaitForSynchro</STRONG> (Thumb, 104 bytes, Stack size 8 bytes, stm32f0xx_rtc.o(i.RTC_WaitForSynchro))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = RTC_WaitForSynchro
 </UL>
-<BR>[Called By]<UL><LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_SetTime
-<LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_SetDate
+<BR>[Called By]<UL><LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_SetTime
+<LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_SetDate
 <LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;STM32Fxxx_RTCInit
 </UL>
 
@@ -1029,7 +1033,7 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;STM32Fxxx_FlashWrite
 <LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;STM32Fxxx_FlashErase
 <LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;STM32Fxxx_FlashRead
-<LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
+<LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
 </UL>
 <BR>[Called By]<UL><LI><a href="#[2d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SettingStartTime_Ensure
 <LI><a href="#[2e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SettingEndTime_Ensure
@@ -1038,7 +1042,7 @@ Global Symbols
 <P><STRONG><a name="[ae]"></a>STM32Fxxx_CountDelayus</STRONG> (Thumb, 74 bytes, Stack size 8 bytes, stm32fxxx_misc.o(i.STM32Fxxx_CountDelayus))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = STM32Fxxx_CountDelayus &rArr; __ARM_common_switch8
 </UL>
-<BR>[Calls]<UL><LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_common_switch8
+<BR>[Calls]<UL><LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_common_switch8
 </UL>
 <BR>[Called By]<UL><LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SX1212_Delayus
 </UL>
@@ -1048,7 +1052,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FLASH_Unlock
 <LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FLASH_Lock
-<LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FLASH_ErasePage
+<LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FLASH_ErasePage
 <LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FLASH_ClearFlag
 </UL>
 <BR>[Called By]<UL><LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;STM32Fxx_FlashPageWrite
@@ -1065,17 +1069,17 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 68<LI>Call Chain = STM32Fxxx_FlashWrite &rArr; FLASH_ProgramWord &rArr; FLASH_WaitForLastOperation
 </UL>
 <BR>[Calls]<UL><LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FLASH_Unlock
-<LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FLASH_ProgramWord
+<LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FLASH_ProgramWord
 <LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FLASH_Lock
 <LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FLASH_ClearFlag
 </UL>
 <BR>[Called By]<UL><LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;STM32Fxx_FlashPageWrite
 </UL>
 
-<P><STRONG><a name="[64]"></a>STM32Fxxx_GetEtag</STRONG> (Thumb, 80 bytes, Stack size 12 bytes, stm32fxxx_misc.o(i.STM32Fxxx_GetEtag))
+<P><STRONG><a name="[65]"></a>STM32Fxxx_GetEtag</STRONG> (Thumb, 80 bytes, Stack size 12 bytes, stm32fxxx_misc.o(i.STM32Fxxx_GetEtag))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = STM32Fxxx_GetEtag
 </UL>
-<BR>[Called By]<UL><LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Cooker_GetId
+<BR>[Called By]<UL><LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Cooker_GetId
 </UL>
 
 <P><STRONG><a name="[b2]"></a>STM32Fxxx_RTCInit</STRONG> (Thumb, 128 bytes, Stack size 16 bytes, stm32fxxx_rtc.o(i.STM32Fxxx_RTCInit))
@@ -1115,8 +1119,8 @@ Global Symbols
 <P><STRONG><a name="[c3]"></a>SX1212_DevInit</STRONG> (Thumb, 104 bytes, Stack size 16 bytes, platform_sx1212.o(i.SX1212_DevInit))
 <BR><BR>[Stack]<UL><LI>Max Depth = 36<LI>Call Chain = SX1212_DevInit &rArr; GPIO_Init
 </UL>
-<BR>[Calls]<UL><LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_AHBPeriphClockCmd
-<LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Init
+<BR>[Calls]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_AHBPeriphClockCmd
+<LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Init
 </UL>
 <BR>[Called By]<UL><LI><a href="#[23]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
@@ -1124,7 +1128,7 @@ Global Symbols
 <P><STRONG><a name="[a9]"></a>SX1212_IRQ0Get</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, platform_sx1212.o(i.SX1212_IRQ0Get))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = SX1212_IRQ0Get
 </UL>
-<BR>[Calls]<UL><LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ReadInputDataBit
+<BR>[Calls]<UL><LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ReadInputDataBit
 </UL>
 <BR>[Called By]<UL><LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ReceiveRfFrame
 </UL>
@@ -1132,15 +1136,15 @@ Global Symbols
 <P><STRONG><a name="[c4]"></a>SX1212_IRQ1Get</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, platform_sx1212.o(i.SX1212_IRQ1Get))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = SX1212_IRQ1Get
 </UL>
-<BR>[Calls]<UL><LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ReadInputDataBit
+<BR>[Calls]<UL><LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ReadInputDataBit
 </UL>
-<BR>[Called By]<UL><LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SendRfFrame
+<BR>[Called By]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SendRfFrame
 </UL>
 
 <P><STRONG><a name="[c5]"></a>SX1212_MISOGet</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, platform_sx1212.o(i.SX1212_MISOGet))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = SX1212_MISOGet
 </UL>
-<BR>[Calls]<UL><LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ReadInputDataBit
+<BR>[Calls]<UL><LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ReadInputDataBit
 </UL>
 <BR>[Called By]<UL><LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SpiInOut
 </UL>
@@ -1148,7 +1152,7 @@ Global Symbols
 <P><STRONG><a name="[9a]"></a>SX1212_MOSISet</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, platform_sx1212.o(i.SX1212_MOSISet))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = SX1212_MOSISet
 </UL>
-<BR>[Calls]<UL><LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_SetBits
+<BR>[Calls]<UL><LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_SetBits
 <LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ResetBits
 </UL>
 <BR>[Called By]<UL><LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_SpiConfig
@@ -1159,7 +1163,7 @@ Global Symbols
 <P><STRONG><a name="[98]"></a>SX1212_NSSCfgSet</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, platform_sx1212.o(i.SX1212_NSSCfgSet))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = SX1212_NSSCfgSet
 </UL>
-<BR>[Calls]<UL><LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_SetBits
+<BR>[Calls]<UL><LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_SetBits
 <LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ResetBits
 </UL>
 <BR>[Called By]<UL><LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_SpiConfig
@@ -1169,19 +1173,19 @@ Global Symbols
 <P><STRONG><a name="[99]"></a>SX1212_NSSDataSet</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, platform_sx1212.o(i.SX1212_NSSDataSet))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = SX1212_NSSDataSet
 </UL>
-<BR>[Calls]<UL><LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_SetBits
+<BR>[Calls]<UL><LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_SetBits
 <LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ResetBits
 </UL>
 <BR>[Called By]<UL><LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_SpiConfig
 <LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ReceiveRfFrame
 <LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;InitSX1212
-<LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SendRfFrame
+<LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SendRfFrame
 </UL>
 
 <P><STRONG><a name="[9b]"></a>SX1212_SCKSet</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, platform_sx1212.o(i.SX1212_SCKSet))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = SX1212_SCKSet
 </UL>
-<BR>[Calls]<UL><LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_SetBits
+<BR>[Calls]<UL><LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_SetBits
 <LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ResetBits
 </UL>
 <BR>[Called By]<UL><LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_SpiConfig
@@ -1189,7 +1193,7 @@ Global Symbols
 <LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SpiInOut
 </UL>
 
-<P><STRONG><a name="[6b]"></a>SendRfFrame</STRONG> (Thumb, 90 bytes, Stack size 16 bytes, sx1212.o(i.SendRfFrame))
+<P><STRONG><a name="[6c]"></a>SendRfFrame</STRONG> (Thumb, 90 bytes, Stack size 16 bytes, sx1212.o(i.SendRfFrame))
 <BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = SendRfFrame &rArr; SetRFMode &rArr; _SpiConfig &rArr; SpiInOut &rArr; SX1212_SCKSet
 </UL>
 <BR>[Calls]<UL><LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_SpiConfig
@@ -1198,7 +1202,7 @@ Global Symbols
 <LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetRFMode
 <LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SpiInOut
 </UL>
-<BR>[Called By]<UL><LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Cooker_WirelessSendLoad
+<BR>[Called By]<UL><LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Cooker_WirelessSendLoad
 </UL>
 
 <P><STRONG><a name="[9c]"></a>SetRFMode</STRONG> (Thumb, 480 bytes, Stack size 8 bytes, sx1212.o(i.SetRFMode))
@@ -1210,13 +1214,13 @@ Global Symbols
 </UL>
 <BR>[Called By]<UL><LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ReceiveRfFrame
 <LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;InitSX1212
-<LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SendRfFrame
+<LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SendRfFrame
 </UL>
 
 <P><STRONG><a name="[83]"></a>SysTick_FunReg</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, stm32fxxx_misc.o(i.SysTick_FunReg))
 <BR><BR>[Called By]<UL><LI><a href="#[35]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SettingTiming_Ensure
 <LI><a href="#[34]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SettingTiming_Cancle
-<LI><a href="#[38]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GasStove_TimingIRQHandler
+<LI><a href="#[39]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GasStove_TimingIRQHandler
 <LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GasStove_DisplayService
 </UL>
 
@@ -1224,7 +1228,7 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = SysTick_HandleInit &rArr; __aeabi_uidivmod
 </UL>
 <BR>[Calls]<UL><LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_SetPriority
-<LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
+<LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
 </UL>
 <BR>[Called By]<UL><LI><a href="#[23]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
@@ -1274,7 +1278,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_SpiConfig
 </UL>
-<BR>[Called By]<UL><LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GasStove_Flameout
+<BR>[Called By]<UL><LI><a href="#[38]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GasStove_Flameout
 </UL>
 
 <P><STRONG><a name="[88]"></a>Updata_Normal_Config</STRONG> (Thumb, 36 bytes, Stack size 8 bytes, sx1212.o(i.Updata_Normal_Config))
@@ -1282,7 +1286,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_SpiConfig
 </UL>
-<BR>[Called By]<UL><LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GasStove_Flameout
+<BR>[Called By]<UL><LI><a href="#[38]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GasStove_Flameout
 </UL>
 
 <P><STRONG><a name="[9d]"></a>_SpiConfig</STRONG> (Thumb, 64 bytes, Stack size 16 bytes, sx1212.o(i._SpiConfig))
@@ -1300,15 +1304,15 @@ Global Symbols
 <LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Updata_Normal_Config
 <LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Updata_Awaken_Config
 <LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetRFMode
-<LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SendRfFrame
+<LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SendRfFrame
 </UL>
 
-<P><STRONG><a name="[57]"></a>__ARM_common_switch8</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, stm32fxxx_misc.o(i.__ARM_common_switch8))
+<P><STRONG><a name="[58]"></a>__ARM_common_switch8</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, stm32fxxx_misc.o(i.__ARM_common_switch8))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = __ARM_common_switch8
 </UL>
 <BR>[Called By]<UL><LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;STM32Fxxx_CountDelayus
-<LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CheckRTCRight
-<LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Cooker_AFNChk
+<LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CheckRTCRight
+<LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Cooker_AFNChk
 </UL>
 
 <P><STRONG><a name="[e0]"></a>__scatterload_copy</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_copy), UNUSED)
@@ -1317,24 +1321,24 @@ Global Symbols
 
 <P><STRONG><a name="[e2]"></a>__scatterload_zeroinit</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_zeroinit), UNUSED)
 
-<P><STRONG><a name="[5d]"></a>cmp_buf</STRONG> (Thumb, 36 bytes, Stack size 12 bytes, utilities.o(i.cmp_buf))
+<P><STRONG><a name="[5e]"></a>cmp_buf</STRONG> (Thumb, 36 bytes, Stack size 12 bytes, utilities.o(i.cmp_buf))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = cmp_buf
 </UL>
 <BR>[Called By]<UL><LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HT1621_SignService
-<LI><a href="#[42]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CookerParse_Check
+<LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CookerParse_Check
 </UL>
 
-<P><STRONG><a name="[66]"></a>crc16_ccitt_byte</STRONG> (Thumb, 22 bytes, Stack size 8 bytes, crc.o(i.crc16_ccitt_byte))
+<P><STRONG><a name="[67]"></a>crc16_ccitt_byte</STRONG> (Thumb, 22 bytes, Stack size 8 bytes, crc.o(i.crc16_ccitt_byte))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = crc16_ccitt_byte
 </UL>
-<BR>[Called By]<UL><LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Cooker_Parse
-<LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Cooker_Load
+<BR>[Called By]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Cooker_Parse
+<LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Cooker_Load
 </UL>
 
 <P><STRONG><a name="[8d]"></a>crc32_ethernet_block</STRONG> (Thumb, 122 bytes, Stack size 40 bytes, crc32ethernetstm32.o(i.crc32_ethernet_block))
 <BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = crc32_ethernet_block &rArr; CRC_CalcBlockCRC
 </UL>
-<BR>[Calls]<UL><LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_AHBPeriphClockCmd
+<BR>[Calls]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_AHBPeriphClockCmd
 <LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CRC_ResetDR
 <LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CRC_CalcCRC
 <LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CRC_CalcBlockCRC
@@ -1347,10 +1351,10 @@ Global Symbols
 <P><STRONG><a name="[7b]"></a>get_rtc</STRONG> (Thumb, 16 bytes, Stack size 16 bytes, rtc.o(i.get_rtc))
 <BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = get_rtc &rArr; BSP_RTCGet &rArr; RTC_GetTime
 </UL>
-<BR>[Calls]<UL><LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_RTCGet
+<BR>[Calls]<UL><LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_RTCGet
 </UL>
 <BR>[Called By]<UL><LI><a href="#[29]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SettingRTC_Ensure
-<LI><a href="#[39]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GasStove_DisRTC
+<LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GasStove_DisRTC
 </UL>
 
 <P><STRONG><a name="[23]"></a>main</STRONG> (Thumb, 232 bytes, Stack size 8 bytes, app.o(i.main))
@@ -1370,10 +1374,10 @@ Global Symbols
 <LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GasStove_GasBatStateChkService
 <LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GasStove_FireStateChkService
 <LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GasStove_DisplayService
-<LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FanRotation_Service
-<LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Cooker_Parse
-<LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Cooker_ExtPinGPIOInit
-<LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ChordTone_Init
+<LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FanRotation_Service
+<LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Cooker_Parse
+<LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Cooker_ExtPinGPIOInit
+<LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ChordTone_Init
 <LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ChordTone_CtrlService
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> entry9a.o(.ARM.Collect$$$$0000000B)
@@ -1389,8 +1393,8 @@ Global Symbols
 <P><STRONG><a name="[c6]"></a>set_rtc</STRONG> (Thumb, 28 bytes, Stack size 16 bytes, rtc.o(i.set_rtc))
 <BR><BR>[Stack]<UL><LI>Max Depth = 76<LI>Call Chain = set_rtc &rArr; CheckRTCRight &rArr; LeapYear &rArr; __aeabi_idivmod &rArr; __aeabi_uidivmod
 </UL>
-<BR>[Calls]<UL><LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_RTCSet
-<LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CheckRTCRight
+<BR>[Calls]<UL><LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_RTCSet
+<LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CheckRTCRight
 </UL>
 <BR>[Called By]<UL><LI><a href="#[29]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SettingRTC_Ensure
 </UL>
@@ -1404,38 +1408,38 @@ Local Symbols
 <BR>[Called By]<UL><LI><a href="#[24]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemInit
 </UL>
 
-<P><STRONG><a name="[74]"></a>GasStove_AlarmChk</STRONG> (Thumb, 382 bytes, Stack size 24 bytes, gasstove_service.o(i.GasStove_AlarmChk))
+<P><STRONG><a name="[75]"></a>GasStove_AlarmChk</STRONG> (Thumb, 382 bytes, Stack size 24 bytes, gasstove_service.o(i.GasStove_AlarmChk))
 <BR><BR>[Stack]<UL><LI>Max Depth = 256<LI>Call Chain = GasStove_AlarmChk &rArr; GasStove_Flameout &rArr; Cooker_Load &rArr; Cooker_WirelessSendLoad &rArr; SendRfFrame &rArr; SetRFMode &rArr; _SpiConfig &rArr; SpiInOut &rArr; SX1212_SCKSet
 </UL>
-<BR>[Calls]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Led_DisplayOn
-<LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Led_DisplayOff
+<BR>[Calls]<UL><LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Led_DisplayOn
+<LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Led_DisplayOff
 <LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ChordTone_Start
-<LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_OS_Timeout
-<LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_OS_TimeGet
-<LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GasStove_FanRotation
-<LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GasStove_Flameout
-<LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GasStove_FireState
+<LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_OS_Timeout
+<LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_OS_TimeGet
+<LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GasStove_FanRotation
+<LI><a href="#[38]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GasStove_Flameout
+<LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GasStove_FireState
 </UL>
 <BR>[Called By]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GasStove_DisplayService
 </UL>
 
-<P><STRONG><a name="[39]"></a>GasStove_DisRTC</STRONG> (Thumb, 208 bytes, Stack size 16 bytes, gasstove_service.o(i.GasStove_DisRTC))
+<P><STRONG><a name="[3a]"></a>GasStove_DisRTC</STRONG> (Thumb, 208 bytes, Stack size 16 bytes, gasstove_service.o(i.GasStove_DisRTC))
 <BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = GasStove_DisRTC &rArr; get_rtc &rArr; BSP_RTCGet &rArr; RTC_GetTime
 </UL>
 <BR>[Calls]<UL><LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_rtc
 <LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_SEG_Update
 <LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_SEGBlinkSet
-<LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_OS_Timeout
-<LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_OS_TimeGet
-<LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_idivmod
+<LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_OS_Timeout
+<LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_OS_TimeGet
+<LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_idivmod
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> gasstove_service.o(.constdata)
 </UL>
-<P><STRONG><a name="[3b]"></a>GasStove_DisSet</STRONG> (Thumb, 102 bytes, Stack size 8 bytes, gasstove_service.o(i.GasStove_DisSet))
+<P><STRONG><a name="[3c]"></a>GasStove_DisSet</STRONG> (Thumb, 102 bytes, Stack size 8 bytes, gasstove_service.o(i.GasStove_DisSet))
 <BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = GasStove_DisSet &rArr; SettingTiming_Ensure &rArr; KeyBoard_FunReg
 </UL>
 <BR>[Calls]<UL><LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Cooker_SysIdMatchResult
-<LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_OS_Timeout
+<LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_OS_Timeout
 <LI><a href="#[35]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SettingTiming_Ensure
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> gasstove_service.o(.constdata)
@@ -1443,8 +1447,8 @@ Local Symbols
 <P><STRONG><a name="[37]"></a>GasStove_DisSetButton</STRONG> (Thumb, 338 bytes, Stack size 8 bytes, gasstove_service.o(i.GasStove_DisSetButton))
 <BR><BR>[Stack]<UL><LI>Max Depth = 60<LI>Call Chain = GasStove_DisSetButton &rArr; GasStove_DisSettingStartTime &rArr; __aeabi_idivmod &rArr; __aeabi_uidivmod
 </UL>
-<BR>[Calls]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Led_DisplayOn
-<LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Led_DisplayOff
+<BR>[Calls]<UL><LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Led_DisplayOn
+<LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Led_DisplayOff
 <LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_SEG_Update
 <LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_SEGBlinkSet
 <LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KeyBoard_FunReg
@@ -1460,7 +1464,7 @@ Local Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_SEG_Update
 <LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_SEGBlinkSet
-<LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_idivmod
+<LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_idivmod
 </UL>
 <BR>[Called By]<UL><LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GasStove_ExtEnsure
 <LI><a href="#[37]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GasStove_DisSetButton
@@ -1480,28 +1484,28 @@ Local Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_SEG_Update
 <LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_SEGBlinkSet
-<LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_idivmod
+<LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_idivmod
 </UL>
 <BR>[Called By]<UL><LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GasStove_ExtEnsure
 <LI><a href="#[37]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GasStove_DisSetButton
 </UL>
 
-<P><STRONG><a name="[3a]"></a>GasStove_DisTiming</STRONG> (Thumb, 190 bytes, Stack size 16 bytes, gasstove_service.o(i.GasStove_DisTiming))
+<P><STRONG><a name="[3b]"></a>GasStove_DisTiming</STRONG> (Thumb, 190 bytes, Stack size 16 bytes, gasstove_service.o(i.GasStove_DisTiming))
 <BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = GasStove_DisTiming &rArr; __aeabi_uidivmod
 </UL>
 <BR>[Calls]<UL><LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_SEG_Update
 <LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_SEGBlinkSet
-<LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_OS_Timeout
-<LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_OS_TimeGet
-<LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
+<LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_OS_Timeout
+<LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_OS_TimeGet
+<LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> gasstove_service.o(.constdata)
 </UL>
 <P><STRONG><a name="[85]"></a>GasStove_ExtEnsure</STRONG> (Thumb, 260 bytes, Stack size 8 bytes, gasstove_service.o(i.GasStove_ExtEnsure))
 <BR><BR>[Stack]<UL><LI>Max Depth = 60<LI>Call Chain = GasStove_ExtEnsure &rArr; GasStove_DisSettingStartTime &rArr; __aeabi_idivmod &rArr; __aeabi_uidivmod
 </UL>
-<BR>[Calls]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Led_DisplayOn
-<LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Led_DisplayOff
+<BR>[Calls]<UL><LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Led_DisplayOn
+<LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Led_DisplayOff
 <LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_SEG_Update
 <LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_SEGBlinkSet
 <LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KeyBoard_FunReg
@@ -1526,19 +1530,19 @@ Local Symbols
 <P><STRONG><a name="[84]"></a>GasStove_GasSensorAlarmChk</STRONG> (Thumb, 136 bytes, Stack size 8 bytes, gasstove_service.o(i.GasStove_GasSensorAlarmChk))
 <BR><BR>[Stack]<UL><LI>Max Depth = 240<LI>Call Chain = GasStove_GasSensorAlarmChk &rArr; GasStove_Flameout &rArr; Cooker_Load &rArr; Cooker_WirelessSendLoad &rArr; SendRfFrame &rArr; SetRFMode &rArr; _SpiConfig &rArr; SpiInOut &rArr; SX1212_SCKSet
 </UL>
-<BR>[Calls]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Led_DisplayOn
-<LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Led_DisplayOff
+<BR>[Calls]<UL><LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Led_DisplayOn
+<LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Led_DisplayOff
 <LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KeyBoard_FunReg
 <LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ChordTone_Start
-<LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_OS_Timeout
-<LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_OS_TimeGet
+<LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_OS_Timeout
+<LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_OS_TimeGet
 <LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GasStove_GasSensor
-<LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GasStove_Flameout
+<LI><a href="#[38]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GasStove_Flameout
 </UL>
 <BR>[Called By]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GasStove_DisplayService
 </UL>
 
-<P><STRONG><a name="[38]"></a>GasStove_TimingIRQHandler</STRONG> (Thumb, 48 bytes, Stack size 8 bytes, gasstove_service.o(i.GasStove_TimingIRQHandler))
+<P><STRONG><a name="[39]"></a>GasStove_TimingIRQHandler</STRONG> (Thumb, 48 bytes, Stack size 8 bytes, gasstove_service.o(i.GasStove_TimingIRQHandler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = GasStove_TimingIRQHandler
 </UL>
 <BR>[Calls]<UL><LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_FunReg
@@ -1559,7 +1563,7 @@ Local Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 36<LI>Call Chain = SettingRTC_AddHour &rArr; __aeabi_idivmod &rArr; __aeabi_uidivmod
 </UL>
 <BR>[Calls]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_SEGBlinkSet
-<LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_idivmod
+<LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_idivmod
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> gasstove_service.o(i.GasStove_DisSetButton)
 </UL>
@@ -1582,7 +1586,7 @@ Local Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_rtc
 <LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_rtc
-<LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CheckRTCRight
+<LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CheckRTCRight
 <LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GasStove_ExtEnsure
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> gasstove_service.o(i.GasStove_DisSetButton)
@@ -1630,7 +1634,7 @@ Local Symbols
 <BR>[Calls]<UL><LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_FunReg
 <LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_SEG_Update
 <LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_SEGBlinkSet
-<LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_OS_TimeGet
+<LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_OS_TimeGet
 </UL>
 <BR>[Address Reference Count : 4]<UL><LI> gasstove_service.o(i.GasStove_DisSetButton)
 <LI> gasstove_service.o(i.GasStove_ExtEnsure)
@@ -1644,9 +1648,9 @@ Local Symbols
 <LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_SEG_Update
 <LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_SEGBlinkSet
 <LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KeyBoard_FunReg
-<LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_OS_TimeGet
+<LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_OS_TimeGet
 </UL>
-<BR>[Called By]<UL><LI><a href="#[3b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GasStove_DisSet
+<BR>[Called By]<UL><LI><a href="#[3c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GasStove_DisSet
 </UL>
 <BR>[Address Reference Count : 4]<UL><LI> gasstove_service.o(i.GasStove_GasSensorAlarmCancle)
 <LI> gasstove_service.o(i.SettingTiming_Hour)
@@ -1659,7 +1663,7 @@ Local Symbols
 <BR>[Calls]<UL><LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_SEG_Update
 <LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_SEGBlinkSet
 <LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KeyBoard_FunReg
-<LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_OS_TimeGet
+<LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_OS_TimeGet
 </UL>
 <BR>[Address Reference Count : 3]<UL><LI> gasstove_service.o(i.GasStove_DisSetButton)
 <LI> gasstove_service.o(i.GasStove_ExtEnsure)
@@ -1671,7 +1675,7 @@ Local Symbols
 <BR>[Calls]<UL><LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_SEG_Update
 <LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_SEGBlinkSet
 <LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KeyBoard_FunReg
-<LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_OS_TimeGet
+<LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_OS_TimeGet
 </UL>
 <BR>[Address Reference Count : 3]<UL><LI> gasstove_service.o(i.GasStove_DisSetButton)
 <LI> gasstove_service.o(i.GasStove_ExtEnsure)
@@ -1683,7 +1687,7 @@ Local Symbols
 <BR>[Calls]<UL><LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_SEG_Update
 <LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_SEGBlinkSet
 <LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KeyBoard_FunReg
-<LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_OS_TimeGet
+<LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_OS_TimeGet
 </UL>
 <BR>[Address Reference Count : 3]<UL><LI> gasstove_service.o(i.GasStove_DisSetButton)
 <LI> gasstove_service.o(i.GasStove_ExtEnsure)
@@ -1711,8 +1715,8 @@ Local Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 232<LI>Call Chain = Setting_SysIdMatchStart &rArr; Cooker_SysIdMatch &rArr; Cooker_Load &rArr; Cooker_WirelessSendLoad &rArr; SendRfFrame &rArr; SetRFMode &rArr; _SpiConfig &rArr; SpiInOut &rArr; SX1212_SCKSet
 </UL>
 <BR>[Calls]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_SEGBlinkSet
-<LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Cooker_SysIdMatch
-<LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_OS_TimeGet
+<LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Cooker_SysIdMatch
+<LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_OS_TimeGet
 </UL>
 <BR>[Address Reference Count : 2]<UL><LI> gasstove_service.o(i.GasStove_DisSetButton)
 <LI> gasstove_service.o(i.GasStove_ExtEnsure)
@@ -1735,15 +1739,15 @@ Local Symbols
 </UL>
 
 <P><STRONG><a name="[a2]"></a>RTC_Bcd2ToByte</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, stm32f0xx_rtc.o(i.RTC_Bcd2ToByte))
-<BR><BR>[Called By]<UL><LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_SetTime
-<LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_SetDate
-<LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_GetTime
-<LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_GetDate
+<BR><BR>[Called By]<UL><LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_SetTime
+<LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_SetDate
+<LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_GetTime
+<LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_GetDate
 </UL>
 
 <P><STRONG><a name="[a6]"></a>RTC_ByteToBcd2</STRONG> (Thumb, 28 bytes, Stack size 0 bytes, stm32f0xx_rtc.o(i.RTC_ByteToBcd2))
-<BR><BR>[Called By]<UL><LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_SetTime
-<LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_SetDate
+<BR><BR>[Called By]<UL><LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_SetTime
+<LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_SetDate
 </UL>
 
 <P><STRONG><a name="[aa]"></a>SpiInOut</STRONG> (Thumb, 70 bytes, Stack size 16 bytes, sx1212.o(i.SpiInOut))
@@ -1755,15 +1759,15 @@ Local Symbols
 </UL>
 <BR>[Called By]<UL><LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_SpiConfig
 <LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ReceiveRfFrame
-<LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SendRfFrame
+<LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SendRfFrame
 </UL>
 
 <P><STRONG><a name="[93]"></a>LED_SEG_Service</STRONG> (Thumb, 258 bytes, Stack size 16 bytes, ht1621.o(i.LED_SEG_Service))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = LED_SEG_Service
 </UL>
-<BR>[Calls]<UL><LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_OS_Timeout
-<LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_OS_TimeGet
-<LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
+<BR>[Calls]<UL><LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_OS_Timeout
+<LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_OS_TimeGet
+<LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
 </UL>
 <BR>[Called By]<UL><LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HT1621_SignService
 </UL>
@@ -1775,50 +1779,50 @@ Local Symbols
 <P><STRONG><a name="[94]"></a>Led_DisplayService</STRONG> (Thumb, 654 bytes, Stack size 8 bytes, ht1621.o(i.Led_DisplayService))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = Led_DisplayService
 </UL>
-<BR>[Calls]<UL><LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_OS_Timeout
-<LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_OS_TimeGet
+<BR>[Calls]<UL><LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_OS_Timeout
+<LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_OS_TimeGet
 <LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Led_Display
 </UL>
 <BR>[Called By]<UL><LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HT1621_SignService
 </UL>
 
-<P><STRONG><a name="[3e]"></a>CookerParse_Addr</STRONG> (Thumb, 40 bytes, Stack size 8 bytes, cooker_parse.o(i.CookerParse_Addr))
+<P><STRONG><a name="[3f]"></a>CookerParse_Addr</STRONG> (Thumb, 40 bytes, Stack size 8 bytes, cooker_parse.o(i.CookerParse_Addr))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = CookerParse_Addr
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> cooker_parse.o(.constdata)
 </UL>
-<P><STRONG><a name="[42]"></a>CookerParse_Check</STRONG> (Thumb, 62 bytes, Stack size 24 bytes, cooker_parse.o(i.CookerParse_Check))
+<P><STRONG><a name="[43]"></a>CookerParse_Check</STRONG> (Thumb, 62 bytes, Stack size 24 bytes, cooker_parse.o(i.CookerParse_Check))
 <BR><BR>[Stack]<UL><LI>Max Depth = 208<LI>Call Chain = CookerParse_Check &rArr; Cooker_AFNChk &rArr; Cooker_Load &rArr; Cooker_WirelessSendLoad &rArr; SendRfFrame &rArr; SetRFMode &rArr; _SpiConfig &rArr; SpiInOut &rArr; SX1212_SCKSet
 </UL>
-<BR>[Calls]<UL><LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Cooker_GetId
-<LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Cooker_AFNChk
-<LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cmp_buf
+<BR>[Calls]<UL><LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Cooker_GetId
+<LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Cooker_AFNChk
+<LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cmp_buf
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> cooker_parse.o(.constdata)
 </UL>
-<P><STRONG><a name="[40]"></a>CookerParse_Cmd</STRONG> (Thumb, 28 bytes, Stack size 0 bytes, cooker_parse.o(i.CookerParse_Cmd))
+<P><STRONG><a name="[41]"></a>CookerParse_Cmd</STRONG> (Thumb, 28 bytes, Stack size 0 bytes, cooker_parse.o(i.CookerParse_Cmd))
 <BR>[Address Reference Count : 1]<UL><LI> cooker_parse.o(.constdata)
 </UL>
-<P><STRONG><a name="[3d]"></a>CookerParse_Header</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, cooker_parse.o(i.CookerParse_Header))
+<P><STRONG><a name="[3e]"></a>CookerParse_Header</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, cooker_parse.o(i.CookerParse_Header))
 <BR>[Address Reference Count : 1]<UL><LI> cooker_parse.o(.constdata)
 </UL>
-<P><STRONG><a name="[3f]"></a>CookerParse_Length</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, cooker_parse.o(i.CookerParse_Length))
+<P><STRONG><a name="[40]"></a>CookerParse_Length</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, cooker_parse.o(i.CookerParse_Length))
 <BR>[Address Reference Count : 1]<UL><LI> cooker_parse.o(.constdata)
 </UL>
-<P><STRONG><a name="[3c]"></a>CookerParse_Nop</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, cooker_parse.o(i.CookerParse_Nop))
+<P><STRONG><a name="[3d]"></a>CookerParse_Nop</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, cooker_parse.o(i.CookerParse_Nop))
 <BR>[Address Reference Count : 1]<UL><LI> cooker_parse.o(.constdata)
 </UL>
-<P><STRONG><a name="[41]"></a>CookerParse_Payload</STRONG> (Thumb, 52 bytes, Stack size 8 bytes, cooker_parse.o(i.CookerParse_Payload))
+<P><STRONG><a name="[42]"></a>CookerParse_Payload</STRONG> (Thumb, 52 bytes, Stack size 8 bytes, cooker_parse.o(i.CookerParse_Payload))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = CookerParse_Payload
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> cooker_parse.o(.constdata)
 </UL>
-<P><STRONG><a name="[70]"></a>FanRotation_Level</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, platform_extpin.o(i.FanRotation_Level))
+<P><STRONG><a name="[71]"></a>FanRotation_Level</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, platform_extpin.o(i.FanRotation_Level))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = FanRotation_Level
 </UL>
-<BR>[Calls]<UL><LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ReadInputDataBit
+<BR>[Calls]<UL><LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ReadInputDataBit
 </UL>
-<BR>[Called By]<UL><LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FanRotation_Service
+<BR>[Called By]<UL><LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FanRotation_Service
 </UL>
 
 <P><STRONG><a name="[96]"></a>HT1621_Delay</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, platform_ht1621.o(i.HT1621_Delay))
@@ -1829,9 +1833,9 @@ Local Symbols
 <P><STRONG><a name="[8e]"></a>HT1621_GPIOInit</STRONG> (Thumb, 92 bytes, Stack size 16 bytes, platform_ht1621.o(i.HT1621_GPIOInit))
 <BR><BR>[Stack]<UL><LI>Max Depth = 36<LI>Call Chain = HT1621_GPIOInit &rArr; GPIO_Init
 </UL>
-<BR>[Calls]<UL><LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_AHBPeriphClockCmd
-<LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Init
-<LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_SetBits
+<BR>[Calls]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_AHBPeriphClockCmd
+<LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Init
+<LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_SetBits
 </UL>
 <BR>[Called By]<UL><LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HT1621_Init
 </UL>
