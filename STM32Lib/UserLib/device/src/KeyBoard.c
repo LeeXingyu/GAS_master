@@ -193,6 +193,7 @@ void KeyBoard_Service(void)
 							eCHORD_TONE_MUSIC_SONG1,
 							eCHORD_TONE_MUSIC_SONG2,
 							eCHORD_TONE_MUSIC_SONG3,
+							eCHORD_TONE_MUSIC_SONG4,
 						};
 
 						if (count < sizeof(a_tMusic) / sizeof(ChordTone_Music_e))

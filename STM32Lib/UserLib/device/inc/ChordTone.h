@@ -64,6 +64,7 @@ typedef enum _ChordTone_Music_e
 	eCHORD_TONE_MUSIC_SONG1,
 	eCHORD_TONE_MUSIC_SONG2,
 	eCHORD_TONE_MUSIC_SONG3,
+	eCHORD_TONE_MUSIC_SONG4,
 }ChordTone_Music_e;
 
 /* 原型声明部分 -----------------------------------------------------------------------*/

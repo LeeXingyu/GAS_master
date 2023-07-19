@@ -369,6 +369,19 @@ static const ChordTone_t a_tChordTone_Song3[] =				//关机和弦音
 	{0, 0, 0},
 };
 
+static const ChordTone_t a_tChordTone_Song4[] =				//关闭气阀门和弦音
+{
+	//{4000, 20, 20},
+	//{3200, 20, 20},
+	//{2000, 40, 10},        //{2300, 210, 10},
+	//{0, 0, 0},
+
+	{800, 10, 10},		    //1
+	{2500, 40, 10},			//2
+
+	{0, 0, 0},
+};
+
 static const ChordTone_t a_tChordTone_TwoTigerSong[] =		//两只老虎和弦音
 {
 	{2000, 25, 25},			//1
@@ -401,7 +414,7 @@ static BOOL bChordTone_Running = FALSE;
 ****************************************************************************************/
 void ChordTone_CtrlService(void)
 {
-/*	static ChordTone_t	tTone;
+	static ChordTone_t	tTone;
 	static uint32		uiChordTone_RunDly = 0;
 
 	if (BSP_OS_Timeout(uiChordTone_RunDly, 10))
@@ -467,7 +480,7 @@ void ChordTone_CtrlService(void)
             bChordTone_Running = FALSE; 
         }
         break;
-	}*/
+	}
 }
 
 /****************************************************************************************
@@ -480,7 +493,7 @@ void ChordTone_CtrlService(void)
 ****************************************************************************************/
 void ChordTone_Start(ChordTone_Music_e eMusic)
 {
-/*	BOOL ret = TRUE;
+	BOOL ret = TRUE;
 
     if (bChordTone_Running)
     {
@@ -494,7 +507,7 @@ void ChordTone_Start(ChordTone_Music_e eMusic)
     
 	switch (eMusic)
 	{
-		case eCHORD_TONE_MUSIC_1_SINGLE		: p_tChordTone = (ChordTone_t *)a_tChordTone_1_SingleSong;	break;
+	    	case eCHORD_TONE_MUSIC_1_SINGLE		: p_tChordTone = (ChordTone_t *)a_tChordTone_1_SingleSong;	break;
         case eCHORD_TONE_MUSIC_2_SINGLE     : p_tChordTone = (ChordTone_t *)a_tChordTone_2_SingleSong;	break;
         case eCHORD_TONE_MUSIC_3_SINGLE     : p_tChordTone = (ChordTone_t *)a_tChordTone_3_SingleSong;	break;
         case eCHORD_TONE_MUSIC_4_SINGLE     : p_tChordTone = (ChordTone_t *)a_tChordTone_4_SingleSong;	break;
@@ -507,31 +520,32 @@ void ChordTone_Start(ChordTone_Music_e eMusic)
         case eCHORD_TONE_MUSIC_11_SINGLE    : p_tChordTone = (ChordTone_t *)a_tChordTone_11_SingleSong;	break;
         
         
-		case eCHORD_TONE_MUSIC_LONG_SINGLE	: p_tChordTone = (ChordTone_t *)a_tChordTone_LongSingleSong;break;
-		case eCHORD_TONE_MUSIC_OFF			: //p_tChordTone = (ChordTone_t *)a_tChordTone_OffSong;		break;
-		{
-			ret = FALSE;
+				case eCHORD_TONE_MUSIC_LONG_SINGLE	: p_tChordTone = (ChordTone_t *)a_tChordTone_LongSingleSong;break;
+				case eCHORD_TONE_MUSIC_OFF			: //p_tChordTone = (ChordTone_t *)a_tChordTone_OffSong;		break;
+				{
+					ret = FALSE;
 
-			p_tChordTone = NULL;
+					p_tChordTone = NULL;
 
-			Buzzer_PwrOff();
-			ChordTone_PWMDisable();
+					Buzzer_PwrOff();
+					ChordTone_PWMDisable();
 
-			ucBuzzerState = BUZZER_STATE_IDLE;
-		}
-		break;
-		case eCHORD_TONE_MUSIC_PWR_ON		: p_tChordTone = (ChordTone_t *)a_tChordTone_PwrOnSong;	    break;
-		case eCHORD_TONE_MUSIC_PWR_OFF		: p_tChordTone = (ChordTone_t *)a_tChordTone_PwrOffSong;	break;
-		case eCHORD_TONE_MUSIC_TWO_TIGER	: p_tChordTone = (ChordTone_t *)a_tChordTone_TwoTigerSong;	break;
-		case eCHORD_TONE_MUSIC_SONG1		: p_tChordTone = (ChordTone_t *)a_tChordTone_Song1;			break;
-		case eCHORD_TONE_MUSIC_SONG2		: p_tChordTone = (ChordTone_t *)a_tChordTone_Song2;			break;
-		case eCHORD_TONE_MUSIC_SONG3		: p_tChordTone = (ChordTone_t *)a_tChordTone_Song3;			break;
-
-		default                             : p_tChordTone = (ChordTone_t *)a_tChordTone_1_SingleSong;  break;
+					ucBuzzerState = BUZZER_STATE_IDLE;
+				}
+				break;
+		  	case eCHORD_TONE_MUSIC_PWR_ON		: p_tChordTone = (ChordTone_t *)a_tChordTone_PwrOnSong;	    break;
+			  case eCHORD_TONE_MUSIC_PWR_OFF		: p_tChordTone = (ChordTone_t *)a_tChordTone_PwrOffSong;	break;
+		  	case eCHORD_TONE_MUSIC_TWO_TIGER	: p_tChordTone = (ChordTone_t *)a_tChordTone_TwoTigerSong;	break;
+			  case eCHORD_TONE_MUSIC_SONG1		: p_tChordTone = (ChordTone_t *)a_tChordTone_Song1;			break;
+				case eCHORD_TONE_MUSIC_SONG2		: p_tChordTone = (ChordTone_t *)a_tChordTone_Song2;			break;
+				case eCHORD_TONE_MUSIC_SONG3		: p_tChordTone = (ChordTone_t *)a_tChordTone_Song3;			break;
+        //关闭指令语音
+				case eCHORD_TONE_MUSIC_SONG4		: p_tChordTone = (ChordTone_t *)a_tChordTone_Song4;			break;
+				default                             : p_tChordTone = (ChordTone_t *)a_tChordTone_1_SingleSong;  break;
 	}
 
 	if (ret)
-		ucBuzzerState = BUZZER_STATE_START*/
+		ucBuzzerState = BUZZER_STATE_START;
 }
 
 /****************************************************************************************
