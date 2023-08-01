@@ -414,6 +414,7 @@ static BOOL bChordTone_Running = FALSE;
 ****************************************************************************************/
 void ChordTone_CtrlService(void)
 {
+	/*
 	static ChordTone_t	tTone;
 	static uint32		uiChordTone_RunDly = 0;
 
@@ -481,7 +482,7 @@ void ChordTone_CtrlService(void)
         }
         break;
 	}
-	
+	*/
 }
 /****************************************************************************************
 * 函数名称：ChordTone_Start()
@@ -492,7 +493,7 @@ void ChordTone_CtrlService(void)
 * 生成时间：2017-10-07 15:43
 ****************************************************************************************/
 void ChordTone_Start(ChordTone_Music_e eMusic)
-{
+{/*
 	BOOL ret = TRUE;
 
     if (bChordTone_Running)
@@ -545,7 +546,7 @@ void ChordTone_Start(ChordTone_Music_e eMusic)
 	}
 
 	if (ret)
-		ucBuzzerState = BUZZER_STATE_START;
+		ucBuzzerState = BUZZER_STATE_START;*/
 }
 
 /****************************************************************************************
