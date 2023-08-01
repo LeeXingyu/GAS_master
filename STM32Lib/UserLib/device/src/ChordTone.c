@@ -325,32 +325,32 @@ static const ChordTone_t a_tChordTone_LongSingleSong[] =	//长单音
 
 static const ChordTone_t a_tChordTone_PwrOnSong[] =			//1
 {
-	{800, 20, 20},
+	{600, 20, 20},
 	{900, 10, 20},
-	{1100, 40, 60},        //{2900, 210, 10},
+	{1200, 40, 60},        //{2900, 210, 10},
 	{0, 0, 0},
 };
 static const ChordTone_t a_tChordTone_PwrOffSong[] =		//2
 {
-	{500, 20, 20},
-	{600, 10, 20},
-	{800, 40, 60},        //{2300, 210, 10},
+	{300, 20, 20},
+  {600, 10, 20},
+	{1000, 40, 60},        //{2300, 210, 10},
 	{0, 0, 0},
 };
 
 static const ChordTone_t a_tChordTone_Song2[] =				//3
 {
-	{300, 20, 20},
+	{100, 20, 20},
 	{400, 10, 20},
-	{500, 40, 60},        //{2300, 210, 10},
+	{700, 40, 60},        //{2300, 210, 10},
 	{0, 0, 0},
 };
 
 static const ChordTone_t a_tChordTone_Song1[] =				//4
 {
-	{1000, 20, 20},
+  {1000, 20, 20},
 	{800, 20, 30},
-	{500, 50, 80},        //{2900, 210, 10},
+	{200, 50, 80},        //{2900, 210, 10},
 	{0, 0, 0},
 };
 
@@ -363,7 +363,7 @@ static const ChordTone_t a_tChordTone_Song3[] =				//关机和弦音
 
 	{1200, 10, 10},		    //1
 	{1200, 10, 10},			//2
-	{1200, 10, 10},			//3
+{400, 10, 10},			//3
 
 	{1200, 10, 10},			//4	稍有停顿
 	{0, 0, 0},
@@ -376,9 +376,9 @@ static const ChordTone_t a_tChordTone_Song4[] =				//关闭气阀门和弦音
 	//{2000, 40, 10},        //{2300, 210, 10},
 	//{0, 0, 0},
 
-	{800, 10, 10},		    //1
-	{2500, 40, 10},			//2
-
+	{200, 10, 10},		    //1
+	{2500, 30, 10},			//2
+//  {100, 10, 10},
 	{0, 0, 0},
 };
 
@@ -481,10 +481,10 @@ void ChordTone_CtrlService(void)
         }
         break;
 	}
+	
 }
-
 /****************************************************************************************
-* 函数名称：ChordTone_Init()
+* 函数名称：ChordTone_Start()
 * 功能描述: 
 * 入口参数：
 * 返回值  ：
@@ -563,6 +563,58 @@ void ChordTone_Init(void)
     //ChordTone_PWMEnable(100);
 
 	Buzzer_PwrOff();
+}
+
+
+/****************************************************************************************
+* 函数名称：ChordTone_GasClosevoice()
+* 功能描述: 气阀关闭按键声音函数
+* 入口参数：
+* 返回值  ：
+* 其它    ：
+* 生成时间：2017-10-07 15:43
+****************************************************************************************/
+void ChordTone_GasClosevoice(ChordTone_Music_e eMusic)
+{
+  static ChordTone_t	tTone;
+  static uint32		uiChordTone_RunDly = 0;
+	
+    if (bChordTone_Running)
+    {
+        if (eCHORD_TONE_MUSIC_OFF == eMusic)
+            bChordTone_Running = FALSE;
+        else
+            return;
+    }
+    else
+        bChordTone_Running = TRUE;
+  p_tChordTone = (ChordTone_t *)a_tChordTone_Song4;
+
+BUZZER_STATE:		
+			memcpy((char *)&tTone, (char *)p_tChordTone, sizeof(ChordTone_t));
+		  tTone.uiPWRTime = tTone.uiPWRTime * 40000;
+		  tTone.uiOSCTime = tTone.uiOSCTime * 40000;
+			Buzzer_PwrOn();
+			ChordTone_PWMEnable(tTone.uiFreq);
+			while(tTone.uiPWRTime != 0 && tTone.uiOSCTime != 0)
+			{	
+				if (tTone.uiPWRTime)
+					tTone.uiPWRTime--;
+				else
+					Buzzer_PwrOff();
+
+				if (tTone.uiOSCTime)
+					tTone.uiOSCTime--;
+				else
+				{
+					ChordTone_PWMDisable();
+					p_tChordTone++;
+					goto BUZZER_STATE;
+				}
+			}
+			Buzzer_PwrOff();
+			ChordTone_PWMDisable();
+			bChordTone_Running = FALSE; 
 }
 
 /*******************************版权所有(c)**************END OF FILE********************/

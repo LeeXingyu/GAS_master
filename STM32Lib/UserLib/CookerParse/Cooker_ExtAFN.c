@@ -15,6 +15,7 @@
 
 /* 调试部分开关 -----------------------------------------------------------------------*/
 
+
 /* 包含文件 ---------------------------------------------------------------------------*/
 #include "Cooker_Parse.h"
 
@@ -22,8 +23,9 @@
 #include "HT1621.h"
 #include "STM32Fxxx_Misc.h"
 #include "string.h"
+#include "ChordTone.h"
 /* 宏定义 -----------------------------------------------------------------------------*/
-#define GSA_STOVE_OFF_FIRE_TIME             31000
+#define GSA_STOVE_OFF_FIRE_TIME             14000
 
 /* 结构类型定义 -----------------------------------------------------------------------*/
 
@@ -85,6 +87,32 @@ void GasStove_Flameout(void)
 	unsigned int i = 0;
 	Cooker_Parse_t entity;
 	
+	Updata_Awaken_Config();
+	memset(Awaken_data,0xAA,30);
+	//19200bitrate 52ms从机接收一次
+	//循环发送 唤醒
+	//220次  5.3s    440次 10.6s  单次24ms
+	for(i = 0;i<416;i++)
+	{	
+			Cooker_WirelessSendLoad(Awaken_data,30);
+	}
+	Updata_Normal_Config();
+
+	
+	entity.cmd			= eCOOKER_CTRL_Gas;
+	entity.payload[0]	= COOKER_PARSE_FALSE;
+	entity.length		= 1;
+
+	Cooker_Load(&entity);
+}
+//按键发送关闭气阀指令函数  先发送按键语音
+void GasStove_FlameoutButton(void)
+{	
+	unsigned int i = 0;
+	Cooker_Parse_t entity;
+	
+	ChordTone_GasClosevoice(eCHORD_TONE_MUSIC_SONG4);
+
 	Updata_Awaken_Config();
 	memset(Awaken_data,0xAA,30);
 	//19200bitrate 52ms从机接收一次

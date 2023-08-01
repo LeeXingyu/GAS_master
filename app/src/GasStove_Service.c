@@ -23,7 +23,7 @@
 #include "HT1621.h"
 
 #include "utilities.h"
-
+#include "ChordTone.h"
 /* ??? -----------------------------------------------------------------------------*/
 #define GAS_STOVE_DIS_RTC 0x00
 #define GAS_STOVE_DIS_TIMING 0x01
@@ -90,6 +90,8 @@ static void GasStove_DisSet(void);
 extern BOOL GasStove_FireState(void);   //??????
 extern BOOL GasStove_FanRotation(void); //??????
 extern void GasStove_Flameout(void);    //????
+extern void GasStove_FlameoutButton(void);    //????
+extern void ChordTone_GasClosevoice(ChordTone_Music_e eMusic);
 extern BOOL GasStove_GasSensor(void);   //????
 
 extern void Cooker_SysIdMatch(void);
@@ -1281,7 +1283,7 @@ void GasStove_Init(void)
     KeyBoard_FunReg(3, SettingTiming_Cancle);
 
     KeyBoard_FunReg(4, GasStove_DisSetButton);
-  	KeyBoard_FunReg(5, GasStove_Flameout);
+  	KeyBoard_FunReg(5, GasStove_FlameoutButton);
 	
     if (STM32Fxxx_FlashRead((uint8 *)&tGasStove_Para, GAS_STOVE_STORAGE_PARA_ADDR, sizeof(GasStove_Para_t)))
     {

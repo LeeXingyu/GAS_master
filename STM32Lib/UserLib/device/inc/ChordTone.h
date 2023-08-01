@@ -71,7 +71,7 @@ typedef enum _ChordTone_Music_e
 CHORDTONE_EXT void ChordTone_CtrlService(void);
 CHORDTONE_EXT void ChordTone_Start(ChordTone_Music_e eMusic);
 CHORDTONE_EXT void ChordTone_Init(void);
-
+CHORDTONE_EXT void ChordTone_GasClosevoice(ChordTone_Music_e eMusic);  //气阀关闭语音启动函数
 CHORDTONE_EXT void ChordTone_PWMDevInit(void);
 CHORDTONE_EXT void ChordTone_PWMEnable(uint32 freq);
 CHORDTONE_EXT void ChordTone_PWMDisable(void);
