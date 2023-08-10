@@ -272,20 +272,20 @@ static void Led_DisplayService(void)
 		ucLastValue &= ~LED_DIS_GAS_LEAK;
 	
 //	//T9 气阀关闭标识
-//		if (ucLed_DisValue & LED_DIS_GASCHECK)
-//	{
-//		if (BSP_OS_Timeout(uiLed_DisQuickBlinkDly, 1000))
-//		{
-//			uiLed_DisQuickBlinkDly = BSP_OS_TimeGet();
+		if (ucLed_DisValue & LED_DIS_GASCHECK)
+	{
+		if (BSP_OS_Timeout(uiLed_DisQuickBlinkDly, 1000))
+		{
+			uiLed_DisQuickBlinkDly = BSP_OS_TimeGet();
 
-//			if (ucLastValue & LED_DIS_GASCHECK)
-//				ucLastValue &= (~LED_DIS_GASCHECK);
-//			else
-//				ucLastValue |= LED_DIS_GASCHECK;
-//		}
-//	}
-//	else
-//		ucLastValue &= ~LED_DIS_GASCHECK;
+			if (ucLastValue & LED_DIS_GASCHECK)
+				ucLastValue &= (~LED_DIS_GASCHECK);
+			else
+				ucLastValue |= LED_DIS_GASCHECK;
+		}
+	}
+	else
+		ucLastValue &= ~LED_DIS_GASCHECK;
 	
 	
 	//T6 火焰标志状态标识   无火焰时 T9亮

@@ -36,6 +36,7 @@ extern void Updata_Awaken_Config(void);
 extern void Updata_Normal_Config(void);
 /* 全局变量声明 -----------------------------------------------------------------------*/
 static BOOL	bGasStove_FireState = FALSE;
+static BOOL bGas_CLientSend_FireState = FALSE;
 static BOOL bCooker_SysIdMatchState = FALSE;
 static BOOL bGasStove_BatState = FALSE;
 static BOOL bGasStove_GasCtrlState = FALSE;
@@ -54,11 +55,19 @@ static char Awaken_data[30] = {0xAA};
 ****************************************************************************************/
 void GasStove_FireStateChkService(void)
 {
+/*	if(bGasStove_FireState == FALSE && bGas_CLientSend_FireState == TRUE)
+	{
+		Led_DisplayOn(LED_DIS_GAS_FIRE);
+		bGasStove_BatState = TRUE;
+		uiBatState_ChkDly = BSP_OS_TimeGet();
+	}
+	
 	if (bGasStove_FireState && (BSP_OS_Timeout(uiFireState_ChkDly, GSA_STOVE_OFF_FIRE_TIME)))
 	{
 		bGasStove_FireState = FALSE;
 		Led_DisplayOff(LED_DIS_GAS_FIRE);
 	}
+	*/
 }
 
 /****************************************************************************************
@@ -118,7 +127,7 @@ void GasStove_FlameoutButton(void)
 	//19200bitrate 52ms从机接收一次
 	//循环发送 唤醒
 	//220次  5.3s    440次 10.6s  单次24ms
-	for(i = 0;i<416;i++)
+	for(i = 0;i<220;i++)
 	{	
 			Cooker_WirelessSendLoad(Awaken_data,30);
 	}
@@ -164,6 +173,20 @@ BOOL Cooker_SysIdMatchResult(void)
 {
 	return bCooker_SysIdMatchState;
 }
+/****************************************************************************************
+* 函数名称：
+* 功能描述: 
+* 入口参数：
+* 返回值  ：
+* 其它    ：
+* 生成时间：2017-11-19 23:22
+****************************************************************************************/
+void LED_DIS_GASCHECK_Init(void)
+{
+	Led_DisplayOn(LED_DIS_GASCHECK);
+	bGasStove_GasCtrlState = TRUE;
+}
+
 
 /****************************************************************************************
 * 函数名称：Cooker_AFNChk()
@@ -214,6 +237,9 @@ void Cooker_AFNChk(Cooker_Parse_t *entity)
 				{
 					Led_DisplayOn(LED_DIS_GASCHECK);
 					bGasStove_GasCtrlState = TRUE;
+					Led_DisplayOff(LED_DIS_GAS_FIRE);
+					bGasStove_FireState = FALSE;
+					uiFireState_ChkDly = BSP_OS_TimeGet();
 				}
 				else
 				{
@@ -233,11 +259,13 @@ void Cooker_AFNChk(Cooker_Parse_t *entity)
 				{
 					Led_DisplayOn(LED_DIS_GAS_FIRE);
 					bGasStove_FireState = TRUE;
+					bGas_CLientSend_FireState = TRUE;
 				}
 				else
 				{
 					Led_DisplayOff(LED_DIS_GAS_FIRE);
 					bGasStove_FireState = FALSE;
+					bGas_CLientSend_FireState = FALSE;
 				}
 				uiFireState_ChkDly = BSP_OS_TimeGet();
 
@@ -268,16 +296,19 @@ void Cooker_AFNChk(Cooker_Parse_t *entity)
 
 void GasStove_GasBatStateChkService(void)
 {
+	/*
 	if((bGasStove_BatState) && (BSP_OS_Timeout(uiBatState_ChkDly, GSA_STOVE_OFF_FIRE_TIME)))
 	{
 		Led_DisplayOff(LED_DIS_BATTERY);
 		bGasStove_BatState = FALSE;
-	} 
-	if((bGasStove_GasCtrlState) && (BSP_OS_Timeout(uiGasCtrlState_ChkDly, GSA_STOVE_OFF_FIRE_TIME)))
+	}
+	*/
+	//初始化中已注释  请打开调试
+	/*if((bGasStove_GasCtrlState) && (BSP_OS_Timeout(uiGasCtrlState_ChkDly, GSA_STOVE_OFF_FIRE_TIME)))
 	{
 		Led_DisplayOff(LED_DIS_GASCHECK);
 		bGasStove_GasCtrlState = FALSE;
-	} 	
+	} */	
 }
 
 

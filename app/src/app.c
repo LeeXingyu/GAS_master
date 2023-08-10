@@ -49,7 +49,7 @@ extern void SX1212_DevInit(void);
 
 extern void GasStove_DisplayService(void);
 extern void GasStove_Init(void);
-
+extern void LED_DIS_GASCHECK_Init(void);
 extern void Cooker_ExtPinGPIOInit(void);
 extern void FanRotation_Service(void);
 extern void GasStove_GasBatStateChkService(void);
@@ -115,7 +115,8 @@ int main(void)
 		APP_TRACE("\n3.something wrong with SPI\n");		// something wrong with SPI
 	}
 #endif
-
+	//初始化气阀显示开关图标
+	  LED_DIS_GASCHECK_Init();
 //	Package_SX1212_Init();
     while (1)
     {
@@ -126,7 +127,7 @@ int main(void)
 //GasStove_Flameout();
 		FanRotation_Service();
 		HT1621_SignService();
-		for(i = 0; i<50; i++)	
+//		for(i = 0; i<50; i++)	
 		{
 			unsigned char rc = ERROR;
 
